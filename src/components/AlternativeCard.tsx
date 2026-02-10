@@ -16,11 +16,13 @@ const pricingLabels: Record<string, string> = {
 
 export default function AlternativeCard({ alternative, viewMode }: AlternativeCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const category = categories.find((c) => c.id === alternative.category);
-  const description = viewMode === 'grid' && alternative.description.length > 120
-    ? alternative.description.slice(0, 120).trim() + '...'
-    : alternative.description;
+  const description =
+    viewMode === 'grid' && alternative.description.length > 120
+      ? alternative.description.slice(0, 120).trim() + '...'
+      : alternative.description;
 
   return (
     <motion.div
@@ -30,13 +32,27 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
       layout
     >
       <div className="alt-card-header">
-        <div className="alt-card-flag-wrap">
-          <span className={`fi fi-${alternative.country} alt-card-flag`}></span>
+        <div className="alt-card-logo-wrap">
+          {alternative.logo && !logoError ? (
+            <img
+              src={alternative.logo}
+              alt={`${alternative.name} logo`}
+              className="alt-card-logo"
+              loading="lazy"
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <span className={`fi fi-${alternative.country} alt-card-logo-fallback`}></span>
+          )}
+          <span className={`fi fi-${alternative.country} alt-card-flag-badge`}></span>
         </div>
         <div className="alt-card-title-section">
           <h3 className="alt-card-name">{alternative.name}</h3>
           {category && (
-            <span className="alt-card-category">{category.name}</span>
+            <span className="alt-card-category">
+              <span className="alt-card-category-emoji">{category.emoji}</span>
+              {category.name}
+            </span>
           )}
         </div>
       </div>
@@ -58,6 +74,9 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
         </span>
         {alternative.isOpenSource && (
           <span className="alt-card-badge alt-card-badge-oss">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
             Open Source
           </span>
         )}
@@ -95,9 +114,38 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
           >
             <div className="alt-card-details-content">
               <div className="alt-detail-section">
-                <h4 className="alt-detail-title">Description</h4>
+                <h4 className="alt-detail-title">About</h4>
                 <p className="alt-detail-text">{alternative.description}</p>
               </div>
+
+              {(alternative.foundedYear != null || alternative.headquartersCity || alternative.license) && (
+                <div className="alt-detail-section">
+                  <h4 className="alt-detail-title">Details</h4>
+                  <div className="alt-detail-meta">
+                    {alternative.foundedYear != null && (
+                      <div className="alt-detail-meta-item">
+                        <span className="alt-detail-meta-label">Founded</span>
+                        <span className="alt-detail-meta-value">{alternative.foundedYear}</span>
+                      </div>
+                    )}
+                    {alternative.headquartersCity && (
+                      <div className="alt-detail-meta-item">
+                        <span className="alt-detail-meta-label">Headquarters</span>
+                        <span className="alt-detail-meta-value">
+                          {alternative.headquartersCity}
+                          <span className={`fi fi-${alternative.country} alt-detail-meta-flag`}></span>
+                        </span>
+                      </div>
+                    )}
+                    {alternative.license && (
+                      <div className="alt-detail-meta-item">
+                        <span className="alt-detail-meta-label">License</span>
+                        <span className="alt-detail-meta-value">{alternative.license}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               {alternative.tags.length > 0 && (
                 <div className="alt-detail-section">

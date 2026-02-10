@@ -11,6 +11,9 @@ export interface Alternative {
   githubUrl?: string;
   pricing: 'free' | 'freemium' | 'paid';
   tags: string[];
+  foundedYear?: number;
+  headquartersCity?: string;
+  license?: string;
 }
 
 export type CountryCode =
@@ -46,6 +49,7 @@ export interface Category {
   name: string;
   description: string;
   usGiants: string[];
+  emoji: string;
 }
 
 export type SortBy = 'name' | 'country' | 'category';

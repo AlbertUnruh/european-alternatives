@@ -34,6 +34,7 @@ interface FiltersProps {
   onSearchChange: (term: string) => void;
   selectedFilters: SelectedFilters;
   onFilterChange: (filterType: keyof SelectedFilters, values: string[] | boolean) => void;
+  onClearAll: () => void;
   sortBy: SortBy;
   onSortChange: (sort: SortBy) => void;
   viewMode: ViewMode;
@@ -47,6 +48,7 @@ export default function Filters({
   onSearchChange,
   selectedFilters,
   onFilterChange,
+  onClearAll,
   sortBy,
   onSortChange,
   viewMode,
@@ -63,11 +65,7 @@ export default function Filters({
     selectedFilters.openSourceOnly;
 
   const clearAllFilters = () => {
-    onFilterChange('category', []);
-    onFilterChange('country', []);
-    onFilterChange('pricing', []);
-    onFilterChange('openSourceOnly', false);
-    onSearchChange('');
+    onClearAll();
   };
 
   const toggleFilter = (type: 'category' | 'country' | 'pricing', value: string) => {
@@ -196,7 +194,10 @@ export default function Filters({
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
                     </span>
-                    <span className="filter-label-text">{cat.name}</span>
+                    <span className="filter-label-text">
+                      <span className="filter-emoji">{cat.emoji}</span>
+                      {cat.name}
+                    </span>
                   </label>
                 ))}
               </div>
