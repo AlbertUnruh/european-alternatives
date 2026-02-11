@@ -36,15 +36,6 @@
     "website": "Website",
     "github": "{{name}} on GitHub (opens in new tab)",
     "githubLabel": "GitHub",
-    "trustScorePending": "Trust-Score Pending",
-    "reservations": "Reservations",
-    "reservationsCount_one": "{{count}} reservation",
-    "reservationsCount_other": "{{count}} reservations",
-    "reservationSeverity": {
-      "minor": "Minor concern",
-      "moderate": "Moderate concern",
-      "major": "Major concern"
-    },
-    "reservationSource": "Source"
+    "trustScorePending": "Trust-Score Pending"
   }
 }

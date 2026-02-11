@@ -36,15 +36,6 @@
     "website": "Webseite",
     "github": "{{name}} auf GitHub (öffnet in neuem Tab)",
     "githubLabel": "GitHub",
-    "trustScorePending": "Trust-Score ausstehend",
-    "reservations": "Vorbehalte",
-    "reservationsCount_one": "{{count}} Vorbehalt",
-    "reservationsCount_other": "{{count}} Vorbehalte",
-    "reservationSeverity": {
-      "minor": "Leichter Vorbehalt",
-      "moderate": "Mittlerer Vorbehalt",
-      "major": "Schwerer Vorbehalt"
-    },
-    "reservationSource": "Quelle"
+    "trustScorePending": "Trust-Score ausstehend"
   }
 }
