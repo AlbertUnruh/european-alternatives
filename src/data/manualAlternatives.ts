@@ -130,4 +130,25 @@ export const manualAlternatives: Alternative[] = [
     foundedYear: 2009,
     headquartersCity: 'Berlin',
   },
+  {
+    id: 'openstreetmap',
+    name: 'OpenStreetMap',
+    description:
+      'Community-built open map of the world, founded in 2004 to provide a free, editable alternative to proprietary mapping platforms. OpenStreetMap data powers countless apps and humanitarian responses, and can be used offline or self-hosted through many tools.',
+    localizedDescriptions: {
+      de: 'Community-getragene offene Weltkarte, gegruendet 2004 als freie, bearbeitbare Alternative zu proprietaeren Kartenplattformen. OpenStreetMap-Daten treiben unzaehlige Apps und humanitaere Einsaetze an und koennen mit vielen Tools offline oder selbst gehostet genutzt werden.',
+    },
+    website: 'https://www.openstreetmap.org',
+    country: 'gb',
+    category: 'maps',
+    replacesUS: ['Google Maps', 'Apple Maps'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    githubUrl: 'https://github.com/openstreetmap',
+    pricing: 'free',
+    tags: ['open-data', 'open-source', 'community-driven', 'navigation', 'privacy', 'self-hosting'],
+    foundedYear: 2004,
+    headquartersCity: 'London',
+    license: 'ODbL 1.0',
+  },
 ];
