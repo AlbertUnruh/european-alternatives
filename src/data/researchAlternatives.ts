@@ -809,6 +809,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "paid",
     "website": "https://www.mollie.com",
+    "logo": "/logos/mollie.svg?v=20260212",
     "description": "Dutch payment service provider and regulated e-money institution focused on European merchants, with broad local-method coverage, API tooling, and public status transparency. Core tradeoffs are typical PSP constraints (reserves/termination mechanics), AI-related processing language in privacy terms, and security exposure in popular third-party plugin integrations if patching is delayed.",
     "localizedDescriptions": {
       "de": "Niederlaendischer Zahlungsdienstleister und reguliertes E-Geld-Institut mit Fokus auf europaeische Haendler, breiter lokaler Zahlungsmethoden-Abdeckung, API-Tooling und oeffentlicher Status-Transparenz. Zentrale Trade-offs sind typische PSP-Einschraenkungen (Reserven/Kuendigungsmechanik), KI-bezogene Verarbeitungszwecke in den Privacy-Texten sowie Sicherheitsrisiken in populaeren Drittanbieter-Plugin-Integrationen bei verzoegertem Patchen."
@@ -1490,6 +1491,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://saleor.io",
+    "logo": "/logos/saleor.svg?v=20260212",
     "description": "Polish-built, GraphQL-first headless commerce platform designed for composable, API-driven storefronts. With 21,000+ GitHub stars and a BSD-3-Clause license, Saleor is ideal for developers who need full flexibility and modern stack integration.",
     "localizedDescriptions": {
       "de": "In Polen entwickelte, GraphQL-first Headless-Commerce-Plattform für modulare, API-gesteuerte Storefronts. Mit über 21.000 GitHub-Stars und einer BSD-3-Clause-Lizenz ist Saleor ideal für Entwickler, die volle Flexibilität und moderne Stack-Integration benötigen."
