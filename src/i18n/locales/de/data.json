@@ -77,6 +77,9 @@
     },
     "ecosia": {
       "description": "Berliner Suchmaschine, die mindestens 80 % ihrer Gewinne an Baumpflanzprojekte weltweit spendet und seit 2009 über 200 Millionen Bäume finanziert hat. Als zertifiziertes B Corp in Verantwortungseigentum betreibt Ecosia seine Dienste mit 100 % erneuerbarer Energie und bietet eine datenschutzfreundliche Alternative zu US-Suchmaschinen."
+    },
+    "jitsi": {
+      "description": "Open-Source-Video-Konferenzplattform fuer browserbasierte Meetings mit Chat, Bildschirmfreigabe und kollaborativen Notizen. Jitsi bietet eine kostenlose Oeffentliche Instanz unter meet.jit.si ohne Konto und unterstuetzt Self-Hosting fuer Teams, die EU-konforme Daten- und Infrastrukturkontrolle wuenschen."
     }
   }
 }
