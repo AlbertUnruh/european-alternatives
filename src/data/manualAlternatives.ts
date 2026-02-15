@@ -543,7 +543,7 @@ export const manualAlternatives: Alternative[] = [
     name: 'Graphene OS',
     description: 'The private and secure mobile operating system with Android app compatibility. Developed as a non-profit open source project.',
     website: 'https://grapheneos.org',
-    logo: '/favicon.svg',
+    logo: 'https://grapheneos.org/favicon.svg',
     country: 'ca',
     category: 'mobile-os', 
     replacesUS: ['Android', 'iOS'],
