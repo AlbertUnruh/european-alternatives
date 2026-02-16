@@ -793,4 +793,26 @@ export const manualAlternatives: Alternative[] = [
       },
     ],
   },
+  {
+    id: 'opentalk',
+    name: 'OpenTalk',
+    logo: '/logos/opentalk.svg',
+    description:
+        'OpenTalk is the video conferencing solution for anyone who values digital sovereignty and data protection. OpenTalk can be operated both in your custom data center (on-premises) and on our servers in Germany (SaaS) OpenTalk consistently implements the requirements of the GDPR and is aimed at public authorities, educational institutions, providers, and companies. Behind OpenTalk is the Heinlein Group with around 30 years of experience in secure communication.',
+    localizedDescriptions: {
+      de: 'OpenTalk ist die Videokonferenzlösung für alle, die Wert auf digitale Souveränität und Datenschutz legen. Der Betrieb von OpenTalk ist sowohl im eigenen Rechenzentrum (OnPremises) als auch auf unseren Servern in Deutschland (SaaS) möglich. OpenTalk setzt dabei konsequent die Anforderungen der DSGVO um und richtet sich an Behörden, Bildungseinrichtungen, Provider und Unternehmen. Hinter OpenTalk steht die Heinlein Gruppe mit rund 30 Jahren Erfahrung in sicherer Kommunikation.',
+    },
+    website: 'https://opentalk.eu',
+    country: 'de',
+    category: "meeting-software",
+    replacesUS: ["Google Meet", "Microsoft Teams", "Zoom"],
+    isOpenSource: true,
+    openSourceLevel: 'partial',
+    sourceCodeUrl: 'https://gitlab.opencode.de/opentalk',
+    pricing: 'freemium',
+    tags: ["meeting-software", "videoconferencing", "webrtc", "open-source", "self-hosting", "saas", "e2ee", "streaming", "privacy", "data-sovereignty", "gdpr", "enterprise"],
+    foundedYear: 2020,
+    headquartersCity: 'Berlin',
+    license: 'EUPL-1.2',
+  }
 ];
