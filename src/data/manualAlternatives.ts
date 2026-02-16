@@ -649,7 +649,32 @@ export const manualAlternatives: Alternative[] = [
     sourceCodeUrl: 'https://github.com/stratumauth/app',
     pricing: 'free',
     tags: ['2fa', 'authenticator', 'open-source', 'local-app', 'wearos'],
-    headquartersCity: '-',
     license: 'GPL-3.0',
+  },
+  {
+    id: 'helium',
+    name: 'Helium',
+    logo: '/logos/helium.svg',
+    description:
+      'Helium is a privacy-focused browser built on Chromium, designed to be fast and secure. It offers a clean interface with built-in privacy features like ad and tracker blocking.',
+    localizedDescriptions: {
+      de: 'Helium ist ein datenschutzorientierter Browser, der auf Chromium basiert und auf Geschwindigkeit und Sicherheit ausgelegt ist. Er bietet eine saubere Oberfläche mit integrierten Datenschutzfunktionen wie Werbe- und Tracker-Blockierung.',
+    },
+    website: 'https://helium.computer/',
+    country: 'us',
+    category: 'browser',
+    replacesUS: ['Google Chrome', "Safari", "Edge"],
+    pricing: 'free',
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    tags: [
+      'browser',
+      'free',
+      'adblock',
+      'google-chrome',
+      'safari'
+    ],
+    sourceCodeUrl: 'https://github.com/imputnet/helium',
+    license: 'BSD 3-Clause, GPL-3.0',
   },
 ];
