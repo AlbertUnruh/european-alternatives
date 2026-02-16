@@ -754,4 +754,24 @@ export const manualAlternatives: Alternative[] = [
     tags: ['encryption', 'privacy', 'docker', 'spam-filter', 'self-hosted', 'easy-admin-interface'],
     license: 'MIT License',
   },
+  {
+    id: 'papra',
+    name: 'Papra',
+    description:
+      'Open-source, self-hostable document archiving. You can use Papra as freemium on servers hosted in europe or host it yourself for free.',
+    localizedDescriptions: {
+      de: 'Open-Source, selbst hostbares Dokumenten-Archiv. Sie können Papra als Freemium auf Servern in Europa nutzen oder es selbst kostenlos hosten.',
+    },
+    website: 'https://papra.app/',
+    logo: '/logos/papra.png',
+    country: 'eu',
+    category: 'cloud-storage',
+    replacesUS: ['Google Drive', 'Dropbox', 'iCloud', 'OneDrive'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://github.com/papra-hq/papra',
+    pricing: 'free',
+    tags: ['docker', 'self-hosted', 'document-archiving', 'open-source', 'privacy'],
+    license: 'AGPL-3.0',
+  },
 ];
