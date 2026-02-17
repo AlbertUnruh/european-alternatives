@@ -56,6 +56,7 @@ export type CountryCode =
   | 'lt' | 'lu' | 'mt' | 'nl' | 'pl' | 'pt' | 'ro' | 'sk'
   | 'si' | 'es' | 'se'
   | 'ch' | 'no' | 'gb' | 'is'
+  | 'ca'
   | 'eu' | 'us';
 
 export type CategoryId =
@@ -71,6 +72,7 @@ export type CategoryId =
   | 'maps'
   | 'browser'
   | 'desktop-os'
+  | 'mobile-os'
   | 'vpn'
   | 'analytics'
   | 'project-management'
