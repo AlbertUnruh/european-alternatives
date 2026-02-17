@@ -903,4 +903,24 @@ export const manualAlternatives: Alternative[] = [
     headquartersCity: 'Toronto',
     license: 'MIT, Apache-2.0',
   },
+  {
+    id: 'herewego',
+    name: 'HERE WeGo',
+    description:
+      'Free personal navigation app from Dutch-based HERE Technologies, offering turn-by-turn navigation, real-time traffic, offline maps, and multi-modal route planning (car, transit, bike, walk). Available on web, iOS, and Android with CarPlay and Android Auto support.',
+    localizedDescriptions: {
+      de: 'Kostenlose Navigations-App von HERE Technologies aus den Niederlanden mit Echtzeit-Verkehrsinformationen, Offline-Karten und multimodaler Routenplanung (Auto, OEPNV, Fahrrad, zu Fuss). Verfuegbar als Web-App sowie fuer iOS und Android mit CarPlay- und Android-Auto-Unterstuetzung.',
+    },
+    website: 'https://www.here.com/products/wego',
+    logo: '/logos/herewego.svg',
+    country: 'nl',
+    category: 'maps',
+    replacesUS: ['Google Maps', 'Apple Maps'],
+    isOpenSource: false,
+    openSourceLevel: 'none',
+    pricing: 'free',
+    tags: ['maps', 'navigation', 'privacy', 'offline-maps'],
+    foundedYear: 2016,
+    headquartersCity: 'Eindhoven',
+  },
 ];
