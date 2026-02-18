@@ -163,6 +163,13 @@ export const categories: Category[] = [
     usGiants: ['Shopify', 'Amazon', 'eBay'],
   },
   {
+    id: 'version-control',
+    name: 'Version Control Services',
+    description: 'Version control services and platforms',
+    emoji: '🧑‍💻',
+    usGiants: ['GitHub', 'GitLab'],
+  },
+  {
     id: 'other',
     name: 'Other',
     description: 'Other tools and services',

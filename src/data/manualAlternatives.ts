@@ -1187,6 +1187,28 @@ export const manualAlternatives: Alternative[] = [
     ],
   },
   {
+    id: 'codeberg',
+    name: 'Codeberg',
+    logo: '/logos/codeberg.svg',
+    description:
+      'Codeberg is a free software development platform for open-source projects from Germany, powered by the open-source forge software Forgejo.',
+    localizedDescriptions: {
+      de: 'Codeberg ist eine freie Software-Entwicklungsplattform für Open-Source-Projekte aus Deutschland, betrieben mit der Open-Source-Forge-Software Forgejo.',
+    },
+    website: 'https://codeberg.org',
+    country: 'de',
+    category: 'version-control',
+    replacesUS: ['GitHub', 'GitLab'],
+    isOpenSource: true,
+    openSourceLevel: 'full',
+    sourceCodeUrl: 'https://codeberg.org/forgejo/forgejo',
+    pricing: 'free',
+    tags: ['version control', 'devops', 'git', 'code hosting'],
+    foundedYear: 2018,
+    headquartersCity: 'Berlin',
+    license: 'GPL-3.0-or-later',
+  },
+  {
     id: 'opentalk',
     name: 'OpenTalk',
     logo: '/logos/opentalk.svg',
