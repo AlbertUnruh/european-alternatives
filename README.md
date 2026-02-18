@@ -144,7 +144,9 @@ See [**CONTRIBUTING.md**](CONTRIBUTING.md) for the full guide, including:
 - Coding standards and commit conventions
 - Design system guidelines
 
-The fastest way to contribute: add or improve an entry in `data/research/master-research.md` and run `npm run generate:research`.
+Not every proposed alternative makes it in. Entries that fail our vetting process (e.g. non-European ownership misrepresented as European, serious trust/legal concerns) are documented with full reasoning and sources in [**DENIED_ALTERNATIVES.md**](DENIED_ALTERNATIVES.md).
+
+The fastest way to contribute: add or improve an entry in `src/data/manualAlternatives` and run `npm run generate:research`.
 
 ## License
 

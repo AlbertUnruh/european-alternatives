@@ -23,7 +23,7 @@ export const trustScoresById: Record<string, number> = {
   'magic-earth': 7.0,
   'linux-kernel': 10.0,
   mastodon: 9.5,
-  mistral: 8.1,
+  mistral: 6.8,
   mollie: 7.1,
   'mullvad-vpn': 8.9,
   ollama: 9.4,
@@ -1220,6 +1220,14 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Oeffentliches Uptime-Tracking zeigt wiederholte Stoerungen, darunter Major-Disruptions Anfang 2026.',
       severity: 'moderate',
       sourceUrl: 'https://statusgator.com/services/mistral-ai',
+    },
+    {
+      id: 'g42-uae-partnership-2025',
+      text: 'Mistral entered a strategic partnership with UAE-based G42 in 2025 to co-develop AI platforms and infrastructure across Europe, the Middle East, and the Global South, raising concerns about non-European influence on a key EU AI company.',
+      textDe: 'Mistral ging 2025 eine strategische Partnerschaft mit dem in den VAE ansaessigen G42 ein, um gemeinsam KI-Plattformen und Infrastruktur in Europa, dem Nahen Osten und dem Globalen Sueden zu entwickeln, was Bedenken hinsichtlich nicht-europaeischen Einflusses auf ein wichtiges EU-KI-Unternehmen aufwirft.',
+      severity: 'major',
+      date: '2025-06-02',
+      sourceUrl: 'https://www.intelligenttechchannels.com/2025/06/02/uae-based-g42-and-french-mistral-ai-partner-to-build-next-generation-ai-platforms-and-infrastructure/',
     },
   ],
   'mullvad-vpn': [
