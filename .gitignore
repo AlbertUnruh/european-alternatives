@@ -30,4 +30,4 @@ dist-ssr
 # Agent documentation (local only)
 agents/
 CLAUDE.md
-AGENT.md
+AGENTS.md
