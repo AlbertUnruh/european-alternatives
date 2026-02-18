@@ -12,16 +12,14 @@ Alternatives that were evaluated and rejected from the catalogue, with reasoning
 
 ### Reason for Denial
 
-The sole owner and developer, Patrick Brunner, has a documented SEC and CFTC enforcement history. Brunner was CEO and sole owner of 1pool Ltd. (a.k.a. 1Broker), a Marshall Islands-registered bitcoin derivatives platform that was charged in September 2018 with illegally offering securities-based swaps and failing to implement anti-money laundering procedures. The FBI seized the 1broker.com domain, and the total settlement was approximately $990,000.
+The founder, Patrick Brunner, has a documented SEC and CFTC enforcement history. Brunner was CEO and sole owner of 1pool Ltd. (a.k.a. 1Broker), a Marshall Islands-registered bitcoin derivatives platform that was charged in September 2018 with illegally offering securities-based swaps and failing to implement anti-money laundering procedures. The FBI seized the 1broker.com domain, and the total settlement was approximately $990,000.
 
 Beyond the founder's background, black.com fails multiple trust and transparency criteria:
 
 - **Proprietary and closed-source** — encryption claims cannot be independently verified
 - **No independent security audit** published
-- **One-person operation** with no team transparency (bus factor of 1)
 - **No PGP support**
 - **AI features** integrated into email contradict genuine privacy commitment
-- **Missing legally required Austrian Impressum** on website
 - **Privacy Guides explicitly refuses to recommend it**, calling it "proprietary trash"
 
 ### Sources
