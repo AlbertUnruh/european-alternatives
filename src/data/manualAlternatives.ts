@@ -485,9 +485,9 @@ export const manualAlternatives: Alternative[] = [
     id: 'wero',
     name: 'Wero',
     description:
-      'European digital wallet by EPI (European Payments Initiative), a consortium of 16 major banks, enabling instant account-to-account payments across Europe. Send money using just a phone number, pay at online merchants directly from your bank account, and enjoy real-time SEPA Instant transfers in seconds — all free for consumers.',
+      'European digital wallet by EPI (European Payments Initiative), a consortium of 16 major banks, enabling instant account-to-account payments across Europe. Send money using just a phone number or email address, pay at online merchants directly from your bank account, and enjoy real-time SEPA Instant transfers in seconds — all free for consumers.',
     localizedDescriptions: {
-      de: 'Europaeische digitale Wallet von EPI (European Payments Initiative), einem Konsortium aus 16 grossen Banken, fuer sofortige Konto-zu-Konto-Zahlungen in Europa. Geld senden nur mit Telefonnummer, online direkt vom Bankkonto bezahlen und SEPA-Instant-Ueberweisungen in Sekunden nutzen — fuer Verbraucher kostenlos.',
+      de: 'Europaeische digitale Wallet von EPI (European Payments Initiative), einem Konsortium aus 16 grossen Banken, fuer sofortige Konto-zu-Konto-Zahlungen in Europa. Geld senden nur mit Telefonnummer oder E-Mail-Adresse, online direkt vom Bankkonto bezahlen und SEPA-Instant-Ueberweisungen in Sekunden nutzen — fuer Verbraucher kostenlos.',
     },
     website: 'https://wero-wallet.eu',
     logo: '/logos/wero.svg?v=20260216',
