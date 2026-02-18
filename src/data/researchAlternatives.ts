@@ -74,6 +74,7 @@ export const researchAlternatives: Alternative[] = [
     "replacesUS": [
       "OpenAI DALL-E",
       "Google Imagen",
+      "Nano Banana Pro",
       "Midjourney"
     ],
     "pricing": "freemium",
@@ -1605,6 +1606,7 @@ export const researchAlternatives: Alternative[] = [
     "replacesUS": [
       "OpenAI DALL-E",
       "Google Imagen",
+      "Nano Banana Pro",
       "Midjourney"
     ],
     "pricing": "freemium",
