@@ -86,6 +86,13 @@ export const categories: Category[] = [
     usGiants: ['Microsoft Windows', 'Apple macOS'],
   },
   {
+    id: 'mobile-os',
+    name: 'Mobile Operating Systems',
+    description: 'Mobile operating systems',
+    emoji: '📱',
+    usGiants: ['Android', 'iOS'],
+  },
+  {
     id: 'vpn',
     name: 'VPN',
     description: 'Virtual private network services',
@@ -154,6 +161,13 @@ export const categories: Category[] = [
     description: 'Online store platforms',
     emoji: '🛒',
     usGiants: ['Shopify', 'Amazon', 'eBay'],
+  },
+  {
+    id: 'version-control',
+    name: 'Version Control Services',
+    description: 'Version control services and platforms',
+    emoji: '🧑‍💻',
+    usGiants: ['GitHub', 'GitLab'],
   },
   {
     id: 'other',

@@ -101,12 +101,16 @@ export default function LandingPage() {
                       {t('landing:alternative', { count })}
                     </span>
                     {cat.usGiants.length > 0 && (
-                      <span className="landing-category-replaces">
-                        {t('landing:replacesGiants', {
-                          giants: cat.usGiants.slice(0, 2).join(', ') +
-                            (cat.usGiants.length > 2 ? ` +${cat.usGiants.length - 2}` : ''),
-                        })}
-                      </span>
+                      <div className="landing-category-replaces">
+                        <span className="landing-category-replaces-label">
+                          {t('landing:replacesLabel')}
+                        </span>
+                        <ul className="landing-category-giants-list">
+                          {cat.usGiants.map((giant) => (
+                            <li key={giant}>{giant}</li>
+                          ))}
+                        </ul>
+                      </div>
                     )}
                   </Link>
                 );

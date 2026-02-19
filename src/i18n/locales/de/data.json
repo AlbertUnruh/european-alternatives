@@ -1,28 +1,105 @@
 {
   "categories": {
-    "cloud-storage": { "name": "Cloud-Speicher", "description": "Dateispeicher- und Synchronisierungsdienste" },
-    "email": { "name": "E-Mail-Dienste", "description": "Gehostete E-Mail-Anbieter und Suiten" },
-    "mail-client": { "name": "Mail-Clients", "description": "Desktop- und mobile E-Mail-Apps" },
-    "search-engine": { "name": "Suchmaschine", "description": "Web-Suchmaschinen" },
-    "social-media": { "name": "Soziale Medien", "description": "Soziale Netzwerke und Plattformen" },
-    "messaging": { "name": "Messaging", "description": "Instant Messaging und Kommunikation" },
-    "meeting-software": { "name": "Meeting-Software", "description": "Videokonferenz- und Online-Meeting-Tools" },
-    "video-hosting": { "name": "Video-Hosting", "description": "Videoplattformen und Streaming" },
-    "office-suite": { "name": "Office-Paket", "description": "Dokumentbearbeitung und Zusammenarbeit" },
-    "maps": { "name": "Karten & Navigation", "description": "Karten- und Navigationsdienste" },
-    "browser": { "name": "Browser", "description": "Webbrowser" },
-    "desktop-os": { "name": "Desktop-Betriebssysteme", "description": "Desktop-Betriebssysteme und Kernel" },
-    "vpn": { "name": "VPN", "description": "VPN-Dienste" },
-    "analytics": { "name": "Analyse", "description": "Web- und Produktanalyse" },
-    "project-management": { "name": "Projektmanagement", "description": "Aufgaben- und Projektmanagement-Tools" },
-    "password-manager": { "name": "Passwort-Manager", "description": "Passwortverwaltung und Sicherheit" },
-    "2fa-authenticator": { "name": "2FA-Authenticator", "description": "Apps fuer Einmalpasswoerter und Push-Authentifizierung" },
-    "ai-ml": { "name": "KI & Maschinelles Lernen", "description": "Plattformen und Tools für künstliche Intelligenz" },
-    "hosting": { "name": "Cloud & Hosting", "description": "Webhosting und Cloud-Infrastruktur" },
-    "payments": { "name": "Zahlungen", "description": "Zahlungsabwicklung und Fintech" },
-    "smart-home": { "name": "Smart Home", "description": "Smart-Home-Hubs und Hausautomationsplattformen" },
-    "ecommerce": { "name": "E-Commerce", "description": "Online-Shop-Plattformen" },
-    "other": { "name": "Sonstiges", "description": "Weitere Tools und Dienste" }
+    "cloud-storage": {
+      "name": "Cloud-Speicher",
+      "description": "Dateispeicher- und Synchronisierungsdienste"
+    },
+    "email": {
+      "name": "E-Mail-Dienste",
+      "description": "Gehostete E-Mail-Anbieter und Suiten"
+    },
+    "mail-client": {
+      "name": "Mail-Clients",
+      "description": "Desktop- und mobile E-Mail-Apps"
+    },
+    "search-engine": {
+      "name": "Suchmaschine",
+      "description": "Web-Suchmaschinen"
+    },
+    "social-media": {
+      "name": "Soziale Medien",
+      "description": "Soziale Netzwerke und Plattformen"
+    },
+    "messaging": {
+      "name": "Messaging",
+      "description": "Instant Messaging und Kommunikation"
+    },
+    "meeting-software": {
+      "name": "Meeting-Software",
+      "description": "Videokonferenz- und Online-Meeting-Tools"
+    },
+    "video-hosting": {
+      "name": "Video-Hosting",
+      "description": "Videoplattformen und Streaming"
+    },
+    "office-suite": {
+      "name": "Office-Paket",
+      "description": "Dokumentbearbeitung und Zusammenarbeit"
+    },
+    "maps": {
+      "name": "Karten & Navigation",
+      "description": "Karten- und Navigationsdienste"
+    },
+    "browser": {
+      "name": "Browser",
+      "description": "Webbrowser"
+    },
+    "desktop-os": {
+      "name": "Desktop-Betriebssysteme",
+      "description": "Desktop-Betriebssysteme und Kernel"
+    },
+    "mobile-os": {
+      "name": "Mobile-Betriebssysteme",
+      "description": "Mobile-Betriebssysteme"
+    },
+    "vpn": {
+      "name": "VPN",
+      "description": "VPN-Dienste"
+    },
+    "analytics": {
+      "name": "Analyse",
+      "description": "Web- und Produktanalyse"
+    },
+    "project-management": {
+      "name": "Projektmanagement",
+      "description": "Aufgaben- und Projektmanagement-Tools"
+    },
+    "password-manager": {
+      "name": "Passwort-Manager",
+      "description": "Passwortverwaltung und Sicherheit"
+    },
+    "2fa-authenticator": {
+      "name": "2FA-Authenticator",
+      "description": "Apps für Einmalpasswörter und Push-Authentifizierung"
+    },
+    "ai-ml": {
+      "name": "KI & Maschinelles Lernen",
+      "description": "Plattformen und Tools für künstliche Intelligenz"
+    },
+    "hosting": {
+      "name": "Cloud & Hosting",
+      "description": "Webhosting und Cloud-Infrastruktur"
+    },
+    "payments": {
+      "name": "Zahlungen",
+      "description": "Zahlungsabwicklung und Fintech"
+    },
+    "smart-home": {
+      "name": "Smart Home",
+      "description": "Smart-Home-Hubs und Hausautomationsplattformen"
+    },
+    "ecommerce": {
+      "name": "E-Commerce",
+      "description": "Online-Shop-Plattformen"
+    },
+    "version-control": {
+      "name": "Versionsverwaltung",
+      "description": "Versionsverwaltungs-Dienste und -Plattformen"
+    },
+    "other": {
+      "name": "Sonstiges",
+      "description": "Weitere Tools und Dienste"
+    }
   },
   "countries": {
     "at": "Österreich",
@@ -57,6 +134,7 @@
     "gb": "Vereinigtes Königreich",
     "is": "Island",
     "us": "Vereinigte Staaten",
+    "ca": "Kanada",
     "eu": "Open Source (Nicht-EU-HQ)"
   },
   "alternatives": {
@@ -73,13 +151,13 @@
       "description": "Niederländische Suchmaschine mit Fokus auf Datenschutz, die Google-Suchergebnisse liefert, ohne zu tracken, IP-Adressen zu speichern oder persönliche Daten zu erfassen. Bietet einen Anonymous-View-Proxy zum anonymen Durchsuchen von Ergebnissen und trägt seit 2011 das Europäische Datenschutzsiegel."
     },
     "lumo": {
-      "description": "Schweizer KI-Assistent von Proton mit Fokus auf private Chat-Workflows. Lumo nutzt Zero-Access-verschluesselte Verlaufsdaten, No-Training-Defaults und optionale Websuche, waehrend Trust-Reviews weiterhin Debatten zum Open-Source-Umfang und die Proton-weite Outage-Historie beruecksichtigen sollten."
+      "description": "Schweizer KI-Assistent von Proton mit Fokus auf private Chat-Workflows. Lumo nutzt Zero-Access-verschlüsselte Verlaufsdaten, No-Training-Defaults und optionale Websuche, während Trust-Reviews weiterhin Debatten zum Open-Source-Umfang und die Proton-weite Outage-Historie berücksichtigen sollten."
     },
     "ecosia": {
       "description": "Berliner Suchmaschine, die mindestens 80 % ihrer Gewinne an Baumpflanzprojekte weltweit spendet und seit 2009 über 200 Millionen Bäume finanziert hat. Als zertifiziertes B Corp in Verantwortungseigentum betreibt Ecosia seine Dienste mit 100 % erneuerbarer Energie und bietet eine datenschutzfreundliche Alternative zu US-Suchmaschinen."
     },
     "jitsi": {
-      "description": "Open-Source-Video-Konferenzplattform fuer browserbasierte Meetings mit Chat, Bildschirmfreigabe und kollaborativen Notizen. Jitsi bietet eine kostenlose Oeffentliche Instanz unter meet.jit.si ohne Konto und unterstuetzt Self-Hosting fuer Teams, die EU-konforme Daten- und Infrastrukturkontrolle wuenschen."
+      "description": "Open-Source-Video-Konferenzplattform für browserbasierte Meetings mit Chat, Bildschirmfreigabe und kollaborativen Notizen. Jitsi bietet eine kostenlose öffentliche Instanz unter meet.jit.si ohne Konto und unterstützt Self-Hosting für Teams, die EU-konforme Daten- und Infrastrukturkontrolle wünschen."
     }
   }
 }

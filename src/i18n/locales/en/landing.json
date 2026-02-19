@@ -12,7 +12,7 @@
   "browseByCategory": "Browse by Category",
   "alternative_one": "{{count}} alternative",
   "alternative_other": "{{count}} alternatives",
-  "replacesGiants": "Alternatives to {{giants}}",
+  "replacesLabel": "Alternatives to:",
   "visit": "Visit {{name}}",
   "seeAll": "See All Alternatives",
   "values": {

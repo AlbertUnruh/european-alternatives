@@ -20,7 +20,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Italienisches Privatsphäre-VPN, gegründet von Hacktivisten und Bürgerrechtlern, mit erweiterten Funktionen wie SSH/SSL-Tunneling und direkter Tor-Integration. Betreibt eigene Bare-Metal-Server mit Festplattenverschlüsselung und veröffentlicht Echtzeit-Serverauslastung."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/AirVPN/repositories",
     "tags": [
       "vpn",
       "paid",
@@ -32,7 +33,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2010,
     "headquartersCity": "Perugia",
     "sourceCodeUrl": "https://github.com/AirVPN/Eddie",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (Eddie client); proprietary server infrastructure"
   },
   {
     "id": "bitwarden",
@@ -74,6 +75,7 @@ export const researchAlternatives: Alternative[] = [
     "replacesUS": [
       "OpenAI DALL-E",
       "Google Imagen",
+      "Nano Banana Pro",
       "Midjourney"
     ],
     "pricing": "freemium",
@@ -84,6 +86,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/black-forest-labs/flux",
     "tags": [
       "ai-ml",
       "freemium",
@@ -293,7 +296,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Zero-Knowledge-verschlüsselter Cloud-Speicher, vollständig in Deutschland entwickelt und gehostet, mit allen Apps unter der AGPL-3.0-Lizenz quelloffen. Filen bietet günstige Lifetime-Tarife und verzichtet auf Logs, Tracker und Hintertüren — eine datenschutzorientierte Alternative zu Big-Tech-Clouds."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/FilenCloudDienste/repositories",
     "tags": [
       "cloud-storage",
       "freemium",
@@ -307,7 +311,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2021,
     "headquartersCity": "Recklinghausen",
     "sourceCodeUrl": "https://github.com/FilenCloudDienste",
-    "license": "AGPL-3.0"
+    "license": "AGPL-3.0 (clients/SDKs); proprietary backend"
   },
   {
     "id": "friendica",
@@ -416,7 +420,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Die führende Open-Source-KI-Plattform und Modell-Hub, gegründet von französischen Unternehmern in Paris. Beherbergt über 500.000 Modelle, 100.000 Datensätze und die weit verbreitete Transformers-Bibliothek. Bietet kostenlosen Community-Zugang neben kostenpflichtigen Rechen- und Enterprise-Funktionen und setzt sich für offene und kollaborative KI-Entwicklung ein."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/huggingface/repositories",
     "tags": [
       "ai-ml",
       "freemium",
@@ -427,7 +432,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2016,
     "headquartersCity": "Paris",
     "sourceCodeUrl": "https://github.com/huggingface",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0 (libraries/tools); proprietary Hub platform"
   },
   {
     "id": "infomaniak",
@@ -474,10 +479,11 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://www.infomaniak.com/en/ksuite/kdrive",
     "description": "Swiss cloud storage by Infomaniak with 15 GB free and integrated online office tools. kDrive data is hosted in Swiss data centers operated by Infomaniak, while the open-source footprint is focused on clients and regular storage is not end-to-end zero-knowledge encrypted by default.",
     "localizedDescriptions": {
-      "de": "Schweizer Cloud-Speicher von Infomaniak mit 15 GB gratis und integrierten Online-Office-Tools. kDrive-Daten liegen in von Infomaniak betriebenen Schweizer Rechenzentren; quelloffen sind vor allem die Clients, waehrend regulaerer Speicher standardmaessig nicht Ende-zu-Ende- bzw. Zero-Knowledge-verschluesselt ist."
+      "de": "Schweizer Cloud-Speicher von Infomaniak mit 15 GB gratis und integrierten Online-Office-Tools. kDrive-Daten liegen in von Infomaniak betriebenen Schweizer Rechenzentren; quelloffen sind vor allem die Clients, während regulärer Speicher standardmässig nicht Ende-zu-Ende- bzw. Zero-Knowledge-verschlüsselt ist."
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/Infomaniak/repositories",
     "tags": [
       "cloud-storage",
       "freemium",
@@ -508,7 +514,7 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://www.ionos.com",
     "description": "German hosting and cloud provider with EU jurisdiction, public-company governance, and strong assurance signals including ISO 27001/BSI certifications and a public cloud vulnerability register. Key trust caveats remain around pricing and renewal dynamics, no official public bug bounty program, and privacy-policy language that allows AI-related processing and possible international data transfers.",
     "localizedDescriptions": {
-      "de": "Deutscher Hosting- und Cloud-Anbieter mit EU-Jurisdiktion, boersennotierter Governance und starken Assurance-Signalen inklusive ISO-27001-/BSI-Zertifizierungen sowie einem oeffentlichen Cloud-Schwachstellenregister. Relevante Vertrauensvorbehalte bleiben bei Preis- und Verlaengerungsdynamik, fehlendem offiziellem oeffentlichem Bug-Bounty-Programm sowie Datenschutzklauseln zu KI-bezogener Verarbeitung und moeglichen internationalen Datentransfers."
+      "de": "Deutscher Hosting- und Cloud-Anbieter mit EU-Jurisdiktion, börsennotierter Governance und starken Assurance-Signalen inklusive ISO-27001-/BSI-Zertifizierungen sowie einem öffentlichen Cloud-Schwachstellenregister. Relevante Vertrauensvorbehalte bleiben bei Preis- und Verlängerungsdynamik, fehlendem offiziellem öffentlichem Bug-Bounty-Programm sowie Datenschutzklauseln zu KI-bezogener Verarbeitung und möglichen internationalen Datentransfers."
     },
     "isOpenSource": false,
     "openSourceLevel": "none",
@@ -539,7 +545,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "In Gibraltar ansässiges Privatsphäre-VPN, empfohlen von der Freedom of the Press Foundation, mit transparenter Anti-Tracking-Haltung und keinen Verbindungen zu Überwachungsjurisdiktionen. Unterstützt anonyme Anmeldung, akzeptiert Bar- und Kryptozahlungen und veröffentlicht eine Ethik-Seite."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://www.ivpn.net/blog/ivpn-applications-are-now-open-source/",
     "tags": [
       "vpn",
       "paid",
@@ -551,7 +558,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2009,
     "headquartersCity": "Gibraltar",
     "sourceCodeUrl": "https://github.com/ivpn",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (client apps); proprietary server infrastructure"
   },
   {
     "id": "keepassxc",
@@ -746,7 +753,7 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://joinmastodon.org",
     "description": "German-founded, AGPL-licensed federated social platform where independent servers interoperate via ActivityPub. Mastodon removes ad-driven ranking by default, while privacy and moderation practices depend on the instance you choose.",
     "localizedDescriptions": {
-      "de": "Deutsch gegruendete, AGPL-lizenzierte foederierte Social-Plattform, bei der unabhaengige Server ueber ActivityPub zusammenarbeiten. Mastodon verzichtet standardmaessig auf werbegetriebenes Ranking, waehrend Datenschutz und Moderation von der gewaehlten Instanz abhaengen."
+      "de": "Deutsch gegründete, AGPL-lizenzierte föderierte Social-Plattform, bei der unabhängige Server über ActivityPub zusammenarbeiten. Mastodon verzichtet standardmässig auf werbegetriebenes Ranking, während Datenschutz und Moderation von der gewählten Instanz abhängen."
     },
     "isOpenSource": true,
     "openSourceLevel": "full",
@@ -781,7 +788,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Die führende Open-Source-Alternative zu Google Analytics, im Einsatz auf über 1,4 Millionen Websites in mehr als 190 Ländern. Matomo bietet volle Datenhoheit durch Self-Hosting oder EU-gehostete Cloud, umfassende Besucheranalysen, Heatmaps und A/B-Tests — alles unter der GPL-Lizenz."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://matomo.org/faq/general/faq_22573/",
     "tags": [
       "analytics",
       "freemium",
@@ -795,7 +803,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2007,
     "headquartersCity": "French",
     "sourceCodeUrl": "https://github.com/matomo-org/matomo",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (core); InnoCraft EULA (premium plugins)"
   },
   {
     "id": "mollie",
@@ -812,7 +820,7 @@ export const researchAlternatives: Alternative[] = [
     "logo": "/logos/mollie.svg?v=20260212",
     "description": "Dutch payment service provider and regulated e-money institution focused on European merchants, with broad local-method coverage, API tooling, and public status transparency. Core tradeoffs are typical PSP constraints (reserves/termination mechanics), AI-related processing language in privacy terms, and security exposure in popular third-party plugin integrations if patching is delayed.",
     "localizedDescriptions": {
-      "de": "Niederlaendischer Zahlungsdienstleister und reguliertes E-Geld-Institut mit Fokus auf europaeische Haendler, breiter lokaler Zahlungsmethoden-Abdeckung, API-Tooling und oeffentlicher Status-Transparenz. Zentrale Trade-offs sind typische PSP-Einschraenkungen (Reserven/Kuendigungsmechanik), KI-bezogene Verarbeitungszwecke in den Privacy-Texten sowie Sicherheitsrisiken in populaeren Drittanbieter-Plugin-Integrationen bei verzoegertem Patchen."
+      "de": "Niederländischer Zahlungsdienstleister und reguliertes E-Geld-Institut mit Fokus auf europäische Händler, breiter lokaler Zahlungsmethoden-Abdeckung, API-Tooling und öffentlicher Status-Transparenz. Zentrale Trade-offs sind typische PSP-Einschränkungen (Reserven/Kündigungsmechanik), KI-bezogene Verarbeitungszwecke in den Privacy-Texten sowie Sicherheitsrisiken in populären Drittanbieter-Plugin-Integrationen bei verzögertem Patchen."
     },
     "isOpenSource": false,
     "openSourceLevel": "none",
@@ -877,7 +885,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Schwedisches VPN mit absolutem Fokus auf Privatsphäre — keine E-Mail, kein Name, keine persönlichen Daten erforderlich. Pauschal 5 EUR/Monat ohne Upselling, Vertragsbindung oder Rabattaktionen, zum gleichen Preis seit 2009."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/mullvad/repositories",
     "tags": [
       "vpn",
       "paid",
@@ -889,7 +898,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2009,
     "headquartersCity": "Gothenburg",
     "sourceCodeUrl": "https://github.com/mullvad/mullvadvpn-app",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (client app); relay server code not published"
   },
   {
     "id": "nextcloud",
@@ -937,10 +946,11 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://nordvpn.com",
     "description": "Large VPN provider under Nord Security (Amsterdam with major operations in Vilnius), with a global server network and the NordLynx protocol (WireGuard-based). The Linux client is open-source under GPL-3.0, while core backend and server infrastructure remain proprietary, so trust depends on audits, disclosures, and contract terms.",
     "localizedDescriptions": {
-      "de": "Grosser VPN-Anbieter unter Nord Security (Amsterdam mit starkem operativen Zentrum in Vilnius) mit globalem Servernetz und dem NordLynx-Protokoll auf WireGuard-Basis. Der Linux-Client ist unter GPL-3.0 quelloffen, waehrend Backend und Server-Infrastruktur proprietaer bleiben. Vertrauen haengt daher stark von Audits, Offenlegung und fairen Vertragsbedingungen ab."
+      "de": "Grosser VPN-Anbieter unter Nord Security (Amsterdam mit starkem operativen Zentrum in Vilnius) mit globalem Servernetz und dem NordLynx-Protokoll auf WireGuard-Basis. Der Linux-Client ist unter GPL-3.0 quelloffen, während Backend und Server-Infrastruktur proprietär bleiben. Vertrauen hängt daher stark von Audits, Offenlegung und fairen Vertragsbedingungen ab."
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/NordSecurity/nordvpn-linux",
     "tags": [
       "vpn",
       "paid",
@@ -969,7 +979,7 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://ollama.com",
     "description": "US-based but fully open-source (MIT) local-first runtime for running large language models on your own hardware. Ollama can run fully offline and also provides optional cloud models and paid plans when you need bigger remote capacity. Note: Ollama is headquartered in the US but included here for its open-source nature and strong local execution path.",
     "localizedDescriptions": {
-      "de": "In den USA ansaessiges, aber vollstaendig quelloffenes (MIT) Local-First-Tool zum Ausfuehren grosser Sprachmodelle auf eigener Hardware. Ollama kann komplett offline laufen und bietet optional Cloud-Modelle sowie bezahlte Plaene fuer mehr remote Rechenkapazitaet. Hinweis: Ollama hat seinen Sitz in den USA, wird aber wegen des Open-Source-Kerns und des starken lokalen Betriebswegs hier gelistet."
+      "de": "In den USA ansässiges, aber vollständig quelloffenes (MIT) Local-First-Tool zum Ausführen grosser Sprachmodelle auf eigener Hardware. Ollama kann komplett offline laufen und bietet optional Cloud-Modelle sowie bezahlte Pläne für mehr remote Rechenkapazität. Hinweis: Ollama hat seinen Sitz in den USA, wird aber wegen des Open-Source-Kerns und des starken lokalen Betriebswegs hier gelistet."
     },
     "isOpenSource": true,
     "openSourceLevel": "full",
@@ -1005,6 +1015,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "full",
+    "openSourceAuditUrl": "https://www.openproject.org/docs/enterprise-guide/enterprise-on-premises-guide/enterprise-on-premises-faq/",
     "tags": [
       "project-management",
       "freemium",
@@ -1123,6 +1134,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "full",
+    "openSourceAuditUrl": "https://www.passbolt.com/pricing/pro",
     "tags": [
       "password-manager",
       "freemium",
@@ -1216,7 +1228,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Datenschutzfreundliche, cookiefreie Webanalyse — entwickelt und gehostet in Deutschland. Pirsch ist eine serverseitige Lösung mit Open-Source-Kern, DSGVO-, CCPA- und Schrems-II-konform — gemacht für Entwickler, die übersichtliche Dashboards ohne Einbußen bei der Privatsphäre wollen."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/pirsch-analytics/repositories",
     "tags": [
       "analytics",
       "paid",
@@ -1229,7 +1242,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2020,
     "headquartersCity": "Rheda",
     "sourceCodeUrl": "https://github.com/pirsch-analytics/pirsch",
-    "license": "AGPL-3.0"
+    "license": "AGPL-3.0 (core engine/SDKs); proprietary SaaS dashboard"
   },
   {
     "id": "pixelfed",
@@ -1279,6 +1292,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://plausible.io/blog/open-source-licenses",
     "tags": [
       "analytics",
       "paid",
@@ -1373,6 +1387,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://github.com/orgs/ProtonDriveApps/repositories",
     "tags": [
       "cloud-storage",
       "freemium",
@@ -1402,10 +1417,11 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://proton.me/mail",
     "description": "Swiss encrypted email service by Proton AG with end-to-end and zero-access encryption, open-source clients, and a public legal transparency report. Swiss court orders can still compel targeted metadata logging for specific accounts, and parts of the service stack remain outside fully reproducible open builds.",
     "localizedDescriptions": {
-      "de": "Verschluesselter E-Mail-Dienst aus der Schweiz von Proton AG mit Ende-zu-Ende- und Zero-Access-Verschluesselung, quelloffenen Clients und oeffentlichem Transparenzbericht. Gueltige Schweizer Gerichtsanordnungen koennen dennoch gezieltes Metadaten-Logging erzwingen, und Teile des Stacks sind weiterhin nicht voll reproduzierbar offen buildbar."
+      "de": "Verschlüsselter E-Mail-Dienst aus der Schweiz von Proton AG mit Ende-zu-Ende- und Zero-Access-Verschlüsselung, quelloffenen Clients und öffentlichem Transparenzbericht. Gültige Schweizer Gerichtsanordnungen können dennoch gezieltes Metadaten-Logging erzwingen, und Teile des Stacks sind weiterhin nicht voll reproduzierbar offen buildbar."
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://proton.me/community/open-source",
     "tags": [
       "email",
       "freemium",
@@ -1438,6 +1454,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://proton.me/community/open-source",
     "tags": [
       "password-manager",
       "freemium",
@@ -1465,10 +1482,11 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://protonvpn.com",
     "description": "Swiss VPN from Proton AG with a large free tier, Secure Core multi-hop routing, open-source apps, recurring third-party no-logs audits, and reported ISO 27001 plus SOC 2 Type II assurance. Trade-offs remain around recurring high-severity client CVEs and auto-renewal at then-current pricing, so patch hygiene and renewal checks are still required.",
     "localizedDescriptions": {
-      "de": "Schweizer VPN von Proton AG mit grosser Gratis-Stufe, Secure-Core-Multi-Hop-Routing, Open-Source-Apps, wiederkehrenden No-Logs-Audits durch Dritte sowie gemeldeten ISO-27001- und SOC-2-Type-II-Nachweisen. Relevante Trade-offs bleiben wiederkehrende High-Severity-Client-CVEs und Auto-Renew zum dann gueltigen Preis, daher sind Patch-Disziplin und aktive Vertragskontrolle wichtig."
+      "de": "Schweizer VPN von Proton AG mit grosser Gratis-Stufe, Secure-Core-Multi-Hop-Routing, Open-Source-Apps, wiederkehrenden No-Logs-Audits durch Dritte sowie gemeldeten ISO-27001- und SOC-2-Type-II-Nachweisen. Relevante Trade-offs bleiben wiederkehrende High-Severity-Client-CVEs und Auto-Renew zum dann gültigen Preis, daher sind Patch-Disziplin und aktive Vertragskontrolle wichtig."
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://proton.me/community/open-source",
     "tags": [
       "vpn",
       "freemium",
@@ -1498,6 +1516,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "full",
+    "openSourceAuditUrl": "https://docs.saleor.io/overview/why-saleor/open-source",
     "tags": [
       "ecommerce",
       "freemium",
@@ -1524,7 +1543,7 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://www.scaleway.com",
     "description": "French cloud provider in the Iliad Group with EU-only data centers, broad IaaS/PaaS coverage, and strong compliance signals (including ISO 27001 and HDS). Scaleway also states it does not train AI models on customer data by default, but users should actively monitor pricing changes and support/incident handling quality.",
     "localizedDescriptions": {
-      "de": "Franzoesischer Cloud-Anbieter der Iliad-Gruppe mit EU-only-Rechenzentren, breitem IaaS/PaaS-Portfolio und starken Compliance-Signalen (u. a. ISO 27001 und HDS). Scaleway gibt zudem an, Kundendaten standardmaessig nicht fuer KI-Modelltraining zu nutzen, dennoch sollten Preisveraenderungen sowie Support- und Incident-Qualitaet aktiv beobachtet werden."
+      "de": "Französischer Cloud-Anbieter der Iliad-Gruppe mit EU-only-Rechenzentren, breitem IaaS/PaaS-Portfolio und starken Compliance-Signalen (u. a. ISO 27001 und HDS). Scaleway gibt zudem an, Kundendaten standardmässig nicht für KI-Modelltraining zu nutzen, dennoch sollten Preisveränderungen sowie Support- und Incident-Qualität aktiv beobachtet werden."
     },
     "isOpenSource": false,
     "openSourceLevel": "none",
@@ -1555,7 +1574,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "Deutsche Open-Source-E-Commerce-Plattform auf Basis von Symfony und Vue.js und Marktführer unter den Top-1000-Online-Shops in Deutschland. Die MIT-lizenzierte Community Edition ist kostenlos, während kommerzielle Pläne Headless-Fähigkeiten, B2B-Funktionen und SaaS-Hosting bieten."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://www.shopware.com/en/pricing/",
     "tags": [
       "ecommerce",
       "freemium",
@@ -1567,7 +1587,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2000,
     "headquartersCity": "Schöppingen",
     "sourceCodeUrl": "https://github.com/shopware/shopware",
-    "license": "MIT (Community Edition, with contributor CLA)"
+    "license": "MIT (Community Edition, with CLA); proprietary SwagCommercial plugin (enterprise features)"
   },
   {
     "id": "simple-analytics",
@@ -1605,6 +1625,7 @@ export const researchAlternatives: Alternative[] = [
     "replacesUS": [
       "OpenAI DALL-E",
       "Google Imagen",
+      "Nano Banana Pro",
       "Midjourney"
     ],
     "pricing": "freemium",
@@ -1615,6 +1636,7 @@ export const researchAlternatives: Alternative[] = [
     },
     "isOpenSource": true,
     "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://stability.ai/license",
     "tags": [
       "ai-ml",
       "freemium",
@@ -1642,7 +1664,7 @@ export const researchAlternatives: Alternative[] = [
     "website": "https://www.startmail.com",
     "description": "Dutch privacy-focused email service with unlimited aliases, built-in PGP support, and full IMAP access for exportability. Core mailbox data is hosted in the Netherlands, while payment and anti-abuse flows use selected third-party processors.",
     "localizedDescriptions": {
-      "de": "Niederlaendischer, auf Privatsphaere ausgerichteter E-Mail-Dienst mit unbegrenzten Aliasen, integrierter PGP-Unterstuetzung und vollem IMAP-Zugriff fuer den Datenexport. Kerndaten des Postfachs liegen in den Niederlanden, waehrend Zahlungs- und Abuse-Schutz-Prozesse ueber ausgewaehlte Drittanbieter laufen."
+      "de": "Niederländischer, auf Privatsphäre ausgerichteter E-Mail-Dienst mit unbegrenzten Aliasen, integrierter PGP-Unterstützung und vollem IMAP-Zugriff für den Datenexport. Kerndaten des Postfachs liegen in den Niederlanden, während Zahlungs- und Abuse-Schutz-Prozesse über ausgewählte Drittanbieter laufen."
     },
     "isOpenSource": false,
     "openSourceLevel": "none",
@@ -1703,7 +1725,8 @@ export const researchAlternatives: Alternative[] = [
       "de": "In der Schweiz entwickelter Ende-zu-Ende-verschlüsselter Messenger, der weder Telefonnummer noch E-Mail zur Registrierung benötigt und so maximale Anonymität bietet. Alle Server stehen in der Schweiz, die Apps sind vollständig Open Source, und ein einmaliger Kauf bedeutet keine Abonnements und keine Werbung."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://threema.ch/en/open-source",
     "tags": [
       "messaging",
       "paid",
@@ -1716,7 +1739,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2012,
     "headquartersCity": "Pfäffikon",
     "sourceCodeUrl": "https://github.com/threema-ch",
-    "license": "AGPL-3.0"
+    "license": "AGPL-3.0 (clients); proprietary server"
   },
   {
     "id": "vikunja",
@@ -1764,8 +1787,9 @@ export const researchAlternatives: Alternative[] = [
     "localizedDescriptions": {
       "de": "Funktionsreicher norwegischer Browser mit integriertem E-Mail-Client, Kalender, Feed-Reader und Übersetzung. Gegründet vom ehemaligen Opera-CEO Jon von Tetzchner, bietet Vivaldi unerreichte Anpassungsmöglichkeiten — Tab-Stacking, Split-Screen, Befehlsketten — und blockiert Werbung und Tracker standardmäßig."
     },
-    "isOpenSource": false,
-    "openSourceLevel": "none",
+    "isOpenSource": true,
+    "openSourceLevel": "partial",
+    "openSourceAuditUrl": "https://vivaldi.com/source/",
     "tags": [
       "browser",
       "free",
@@ -1775,6 +1799,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2013,
     "headquartersCity": "Oslo",
+    "sourceCodeUrl": "https://vivaldi.com/source/",
     "license": "proprietary UI, Chromium engine"
   }
 ];
