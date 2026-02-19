@@ -6,15 +6,18 @@ export interface CalculatedTrustScore {
     jurisdiction: number;
     openness: number;
     privacySignals: number;
+    sovereigntyBonus: number;
     reservationPenalty: number;
     usCapApplied: boolean;
   };
 }
 
-const europeanJurisdictions = new Set<CountryCode>([
+const euMemberStates = new Set<CountryCode>([
   'at', 'be', 'bg', 'hr', 'cy', 'cz', 'dk', 'ee', 'fi', 'fr', 'de', 'gr', 'hu', 'ie', 'it',
-  'lv', 'lt', 'lu', 'mt', 'nl', 'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se', 'ch', 'no', 'gb', 'is',
+  'lv', 'lt', 'lu', 'mt', 'nl', 'pl', 'pt', 'ro', 'sk', 'si', 'es', 'se',
 ]);
+
+const europeanNonEU = new Set<CountryCode>(['ch', 'no', 'gb', 'is']);
 
 const privacyTagGroupPrimary = new Set([
   'privacy',
@@ -25,18 +28,17 @@ const privacyTagGroupPrimary = new Set([
 ]);
 
 const privacyTagGroupSecondary = new Set([
-  'self-hosted',
-  'self-hosting',
   'offline',
   'federated',
   'local',
 ]);
 
 function getJurisdictionScore(country: CountryCode): number {
-  if (country === 'us') return 1;
+  if (euMemberStates.has(country)) return 4;
+  if (europeanNonEU.has(country)) return 3;
   if (country === 'eu') return 3;
-  if (europeanJurisdictions.has(country)) return 4;
-  return 3;
+  if (country === 'us') return 1;
+  return 2;
 }
 
 function getOpennessScore(alternative: Pick<Alternative, 'isOpenSource' | 'openSourceLevel'>): number {
@@ -62,6 +64,10 @@ function getPrivacySignalScore(tags: string[]): number {
   return score;
 }
 
+function getSovereigntyScore(selfHostable: boolean): number {
+  return selfHostable ? 2 : 0;
+}
+
 function getReservationPenalty(reservations: Reservation[]): number {
   return reservations.reduce((sum, reservation) => {
     switch (reservation.severity) {
@@ -82,18 +88,21 @@ function clampScore(value: number): number {
 
 export function calculateTrustScore(
   alternative: Pick<Alternative, 'country' | 'isOpenSource' | 'openSourceLevel' | 'tags'> & {
+    selfHostable?: boolean;
     reservations?: Reservation[];
   },
 ): CalculatedTrustScore {
   const jurisdiction = getJurisdictionScore(alternative.country);
   const openness = getOpennessScore(alternative);
   const privacySignals = getPrivacySignalScore(alternative.tags);
+  const sovereigntyBonus = getSovereigntyScore(alternative.selfHostable ?? false);
   const reservationPenalty = getReservationPenalty(alternative.reservations ?? []);
 
-  const rawScore = jurisdiction + openness + privacySignals - reservationPenalty;
+  const rawScore = jurisdiction + openness + privacySignals + sovereigntyBonus - reservationPenalty;
   const clampedScore = clampScore(rawScore);
 
-  const usCapApplied = alternative.country === 'us' && clampedScore > 4;
+  const selfHostable = alternative.selfHostable ?? false;
+  const usCapApplied = alternative.country === 'us' && !selfHostable && clampedScore > 4;
   const score = usCapApplied ? 4 : clampedScore;
 
   return {
@@ -102,6 +111,7 @@ export function calculateTrustScore(
       jurisdiction,
       openness,
       privacySignals,
+      sovereigntyBonus,
       reservationPenalty,
       usCapApplied,
     },
@@ -111,7 +121,7 @@ export function calculateTrustScore(
 export function getEffectiveTrustScore(
   alternative: Pick<
     Alternative,
-    'country' | 'isOpenSource' | 'openSourceLevel' | 'tags' | 'reservations' | 'trustScore'
+    'country' | 'isOpenSource' | 'openSourceLevel' | 'tags' | 'selfHostable' | 'reservations' | 'trustScore'
   >,
 ): number {
   if (alternative.trustScore != null) {
@@ -123,6 +133,7 @@ export function getEffectiveTrustScore(
     isOpenSource: alternative.isOpenSource,
     openSourceLevel: alternative.openSourceLevel,
     tags: alternative.tags,
+    selfHostable: alternative.selfHostable,
     reservations: alternative.reservations,
   }).score;
 }

@@ -47,7 +47,6 @@ export const trustScoresById: Record<string, number> = {
   'raspberry-pi-self-hosting': 9.2,
   scaleway: 7.6,
   'simple-analytics': 7.2,
-  startpage: 7.5,
   startmail: 8.5,
   thunderbird: 9.6,
   'tor-browser': 9.8,
@@ -2124,30 +2123,6 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-03-22',
       sourceUrl: 'https://www.reuters.com/world/uk/ai-start-up-stability-ai-ceo-mostaque-steps-down-information-reports-2024-03-22/',
-    },
-  ],
-  startpage: [
-    {
-      id: 'system1-majority-ownership',
-      text: 'Startpage states that System1 has majority ownership, and System1 is a US publicly traded ad-tech company.',
-      textDe: 'Startpage gibt an, dass System1 die Mehrheitsbeteiligung hält; System1 ist ein börsennotiertes US-Ad-Tech-Unternehmen.',
-      severity: 'major',
-      date: '2019-10-01',
-      sourceUrl: 'https://www.startpage.com/privacy-please/startpage-articles/startpage-relisted-on-privacytools',
-    },
-    {
-      id: 'sponsored-links-google-adsense',
-      text: 'Sponsored links are served via Google AdSense, so monetization partly depends on a US ad platform.',
-      textDe: 'Gesponserte Links laufen über Google AdSense; die Monetarisierung hängt damit teilweise von einer US-Werbeplattform ab.',
-      severity: 'moderate',
-      sourceUrl: 'https://www.startpage.com/en/privacy-policy/',
-    },
-    {
-      id: 'support-uses-zendesk-us',
-      text: 'Support requests are processed with Zendesk, a US-headquartered provider.',
-      textDe: 'Support-Anfragen werden mit Zendesk verarbeitet, einem Anbieter mit Hauptsitz in den USA.',
-      severity: 'moderate',
-      sourceUrl: 'https://www.startpage.com/en/support-privacy-policy/',
     },
   ],
   startmail: [

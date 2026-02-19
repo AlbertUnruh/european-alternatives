@@ -16,7 +16,7 @@ Alternatives are evaluated in two tiers based on headquarters jurisdiction. Each
 | **Open-source requirement** | None (but rewarded in scoring) | **Full open-source required** |
 | **Proprietary allowed?** | Yes | No |
 | **Partial open-source allowed?** | Yes | No |
-| **Trust score cap** | None (1-10) | US entries capped at 4 |
+| **Trust score cap** | None (1-10) | US entries capped at 4 (lifted if self-hostable) |
 | **Rationale** | European jurisdiction + GDPR provides baseline trust | Without European legal protections, only full source transparency can compensate |
 
 ### Why This Asymmetry Exists
@@ -26,6 +26,30 @@ This project promotes **European digital sovereignty**. European companies opera
 Non-European companies lack that baseline. A proprietary product under US jurisdiction offers no verifiable guarantees to European users. Full open-source status is the only compensating factor — it allows independent verification of privacy claims, community forks if the vendor acts against user interests, and self-hosting to keep data under European control.
 
 **This is why Netcup (DE, proprietary) is listed but a proprietary US service would not be.** European jurisdiction is not just a label — it is a legal shield.
+
+### Ownership Structure Clause
+
+The GDPR legal shield that justifies Tier 1 classification depends on the European entity being **outside the reach of non-European legal compulsion**. US laws such as FISA Section 702, the CLOUD Act, and Executive Order 12333 can compel US-domiciled parent companies to produce data held by their foreign subsidiaries. When a Tier 1 European company is majority-owned by a US entity, the jurisdictional protection may be structurally compromised.
+
+**Rule:** If a Tier 1 company is majority-owned (>50% voting control or beneficial ownership) by a non-European parent entity, the following applies:
+
+1. **Mandatory ownership transparency review** — The ownership chain must be documented and the degree of operational entanglement assessed.
+2. **Automatic `major` reservation** — A reservation of `major` severity is required, documenting the parent entity, jurisdiction, and the legal compulsion risk (FISA/CLOUD Act exposure).
+3. **Severity escalation based on entanglement** — The reservation severity and score penalty scale with operational entanglement:
+
+| Entanglement Level | Indicator | Reservation Severity |
+|---|---|---|
+| **Passive financial** | PE firm holds shares; European management, staff, and infrastructure unchanged | `major` (ownership documented) |
+| **Active operational** | Parent's officers hold legal roles in subsidiary; shared infrastructure or personnel | `major` (with additional penalty) |
+| **Data routing through parent** | User data is processed by or routed through the parent's jurisdiction | **Re-evaluate G1** — may constitute a shell structure |
+
+4. **G1 re-evaluation trigger** — If investigation reveals the European entity functions as a pass-through for a non-European parent (data routing, shared infrastructure, parent officers directing operations), the entry must be re-evaluated under G1 (Genuine headquarters). A legal entity that cannot independently resist compulsion from its parent is not a genuine European headquarters.
+
+**This clause does not automatically reclassify affected entries to Tier 2.** It ensures that ownership-related jurisdictional risks are documented, scored, and — in the worst cases — escalated to a gateway re-evaluation.
+
+**Examples:**
+- **Contabo (DE, KKR):** KKR (US PE) holds majority since 2022. Operationally German (GmbH, Munich HQ). → `major` reservation for passive financial ownership. Deep research required for full assessment.
+- **Startpage (NL, System1) — DENIED:** System1 (US ad-tech) has majority ownership. System1 CEO named as legal responsible party. Vanish AI routes data through US LLM providers. G1 re-evaluation triggered → **failed G1** (pass-through structure). See [DENIED_ALTERNATIVES.md](DENIED_ALTERNATIVES.md#startpage-search-engine).
 
 ---
 
@@ -76,19 +100,39 @@ Open-source transparency is the strongest signal of trustworthiness after jurisd
 
 ### Jurisdiction (0-4 points)
 
-| Jurisdiction | Points |
-|---|---|
-| European country (specific) | 4 |
-| Pan-European (`eu`) | 3 |
-| Other non-US, non-European | 3 |
-| United States | 1 |
+Jurisdiction scoring follows a trust hierarchy rooted in the project's threat model (FISA Section 702, CLOUD Act, EO 12333). EU member states under GDPR provide the strongest legal shield. European non-EU countries (CH, NO, GB, IS) have adequacy decisions but are not directly bound by GDPR. Sanctioned or authoritarian jurisdictions (RU, CN, etc.) are denied at the gateway level (G7) and never scored.
+
+| Jurisdiction | Points | Rationale |
+|---|---|---|
+| EU member state | 4 | Direct GDPR applicability, EU court jurisdiction |
+| European non-EU (CH, NO, GB, IS) | 3 | Adequacy decisions, strong privacy laws, but not directly GDPR-bound |
+| Pan-European (`eu`) | 3 | Cross-border entity, not tied to a single EU member state |
+| Other (non-European, non-US) | 2 | No European legal framework, but also no FISA/CLOUD Act exposure |
+| United States | 1 | FISA 702, CLOUD Act, EO 12333 — structural threat to European users' data |
+| Sanctioned/authoritarian | — | Denied at gateway (G7), not scored |
 
 ### Privacy Signals (0-2 points)
 
 | Signal Group | Points | Tags |
 |---|---|---|
 | Primary privacy | +1 (if any match) | `privacy`, `gdpr`, `encryption`, `zero-knowledge`, `no-logs` |
-| Secondary privacy | +1 (if any match) | `self-hosted`, `self-hosting`, `offline`, `federated`, `local` |
+| Secondary privacy | +1 (if any match) | `offline`, `federated`, `local` |
+
+### Sovereignty Bonus (0-2 points)
+
+Software that can be run entirely on infrastructure the user controls — whether a self-hosted server or a local device — provides **technical sovereignty** on top of any legal protections. Even if a European SaaS provider is compromised, self-hosted data stays on your infrastructure. This breaks the FISA compulsion chain: there is no third-party company to serve with a data request.
+
+| Condition | Points |
+|---|---|
+| `selfHostable: true` | +2 |
+| Not self-hostable (default) | 0 |
+
+The `selfHostable` field is `true` when the software can be fully operated on user-controlled infrastructure (own server, own device) without relying on any third-party server for core functionality. This includes:
+- **Server software with self-hosting support** — Nextcloud, Mastodon, Jitsi, Vaultwarden, etc.
+- **Local-first tools** — KeePassXC, LibreOffice, Ollama — where all data stays on the user's device.
+- **Self-hosting platforms** — Home Assistant, openHAB, Raspberry Pi ecosystem.
+
+It does **not** include SaaS-only services, client applications that depend on a remote server for core functionality, or VPN/browser software that inherently connects to external infrastructure.
 
 ### Reservation Penalties (deducted from score)
 
@@ -102,7 +146,11 @@ Reservations reduce the trust score based on severity. The values below are the 
 
 ### US Hard Cap
 
-US-based entries are capped at a maximum trust score of **4**, regardless of other positive factors. This reflects the jurisdictional disadvantage for European users.
+US-based entries are capped at a maximum trust score of **4**, reflecting the jurisdictional threat of FISA 702, the CLOUD Act, and EO 12333 to European users' data.
+
+**Exception — self-hostable entries:** The cap does **not** apply when `selfHostable: true`. Self-hosting on user-controlled infrastructure fully breaks the FISA compulsion chain — the US company has no data to produce under compulsion, because the user runs everything on their own (presumably European) infrastructure. Combined with full open-source (required for US entries by G6), the user can audit the code and verify no data exfiltration. The jurisdictional threat is structurally neutralized.
+
+This means a US-based, fully open-source, self-hostable alternative can score above 4 — the sovereignty bonus and openness score are not wasted.
 
 ---
 
@@ -154,13 +202,14 @@ Is the company genuinely headquartered in Europe?
 │       ├── YES → INCLUDED (scored 1-10, reservations if needed)
 │       │   ├── Full open-source    → +3 points
 │       │   ├── Partial open-source → +2 points
-│       │   └── Proprietary         → +1 point (still allowed)
+│       │   ├── Proprietary         → +1 point (still allowed)
+│       │   └── Self-hostable       → +2 sovereignty bonus
 │       └── NO  → DENIED (documented in DENIED_ALTERNATIVES.md)
 │
 └── NO (Tier 2: Non-European)
     └── Is it fully open-source (client + server, OSI license)?
         ├── YES → Passes all gateway criteria (G1-G5, G7-G8)?
-        │   ├── YES → INCLUDED (scored, US entries capped at 4)
+        │   ├── YES → INCLUDED (scored; US cap at 4, lifted if self-hostable)
         │   └── NO  → DENIED
         └── NO  → NOT ELIGIBLE (non-European + not fully open-source)
 ```
@@ -173,7 +222,7 @@ Is the company genuinely headquartered in Europe?
 |---|---|---|---|---|
 | **Nextcloud** | DE | Full | Included (score ~9.8) | European, fully open-source, privacy-focused |
 | **Netcup** | DE | None | Included (lower score) | European jurisdiction provides trust baseline; proprietary is penalized in score but allowed |
-| **Bitwarden** | US | Full | Included (capped at 4) | Non-European, but fully open-source compensates; capped score reflects jurisdictional limitation |
+| **Bitwarden** | US | Full | Included (self-hostable, cap lifted) | Non-European, but fully open-source + self-hostable breaks FISA compulsion chain; US cap does not apply |
 | **black.com** | AT | None | Included (with reservations) | European jurisdiction provides trust baseline; proprietary + founder SEC history documented as reservations, not denial |
 | **Hubitat** | US | None | Not eligible | Non-European AND proprietary — fails G6 |
 | **Cryptostorm** | CA | — | Denied | Fails G1: claimed Iceland but actually Vancouver, Canada. Also fails G8. |

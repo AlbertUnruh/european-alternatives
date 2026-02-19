@@ -91,6 +91,7 @@ function mergeCatalogue(): Alternative[] {
       isOpenSource,
       openSourceLevel,
       tags,
+      selfHostable: alternative.selfHostable,
       reservations,
     });
     const trustScore = trustScoresById[alternative.id];

@@ -72,9 +72,6 @@
     "euria": {
       "description": "Free, sovereign AI assistant by Swiss company Infomaniak, hosted entirely in Switzerland with renewable energy. Offers chat, voice input, image analysis, document processing, web search, and translation with an ephemeral mode that leaves no trace on servers."
     },
-    "startpage": {
-      "description": "Dutch privacy-first search engine that delivers Google search results without tracking, logging IP addresses, or storing personal data. Features an Anonymous View proxy for browsing search results with full anonymity, and has held the European Privacy Seal since 2011."
-    },
     "lumo": {
       "description": "Swiss AI assistant from Proton focused on private chat workflows. Lumo uses zero-access encrypted history, no-training defaults, and optional web search, while trust reviews should still account for open-source-scope debates and Proton-wide outage history."
     },

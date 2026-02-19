@@ -147,9 +147,6 @@
     "euria": {
       "description": "Kostenloser, souveräner KI-Assistent des Schweizer Unternehmens Infomaniak, vollständig in der Schweiz mit erneuerbarer Energie gehostet. Bietet Chat, Spracheingabe, Bildanalyse, Dokumentenverarbeitung, Websuche und Übersetzung mit einem flüchtigen Modus, der keinerlei Spuren auf den Servern hinterlässt."
     },
-    "startpage": {
-      "description": "Niederländische Suchmaschine mit Fokus auf Datenschutz, die Google-Suchergebnisse liefert, ohne zu tracken, IP-Adressen zu speichern oder persönliche Daten zu erfassen. Bietet einen Anonymous-View-Proxy zum anonymen Durchsuchen von Ergebnissen und trägt seit 2011 das Europäische Datenschutzsiegel."
-    },
     "lumo": {
       "description": "Schweizer KI-Assistent von Proton mit Fokus auf private Chat-Workflows. Lumo nutzt Zero-Access-verschlüsselte Verlaufsdaten, No-Training-Defaults und optionale Websuche, während Trust-Reviews weiterhin Debatten zum Open-Source-Umfang und die Proton-weite Outage-Historie berücksichtigen sollten."
     },

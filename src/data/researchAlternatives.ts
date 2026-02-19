@@ -46,6 +46,7 @@ export const researchAlternatives: Alternative[] = [
       "Dashlane"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://bitwarden.com",
     "description": "US-based but fully open-source password manager offering end-to-end encrypted storage for passwords, passkeys, credit cards, and sensitive notes across every platform. With a generous free tier, self-hosting support, and full third-party security audits, Bitwarden is the leading transparent alternative to proprietary password vaults. Note: Bitwarden is headquartered in the US but included here for its open-source nature and self-hosting capability.",
     "localizedDescriptions": {
@@ -109,6 +110,7 @@ export const researchAlternatives: Alternative[] = [
       "Microsoft Office"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://www.collaboraonline.com",
     "description": "Enterprise-ready online office suite based on LibreOffice technology, developed by Collabora Ltd in Cambridge. Integrates seamlessly with Nextcloud, ownCloud and other platforms for browser-based collaborative editing of documents, spreadsheets and presentations.",
     "localizedDescriptions": {
@@ -140,6 +142,7 @@ export const researchAlternatives: Alternative[] = [
       "Microsoft Office"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://cryptpad.org",
     "description": "End-to-end encrypted collaborative office suite built by XWiki SAS in Paris. Documents, spreadsheets, presentations, kanban boards and polls are all encrypted in the browser before reaching the server, but trust still depends on the chosen instance serving untampered client code and secure link-sharing practices.",
     "localizedDescriptions": {
@@ -198,6 +201,7 @@ export const researchAlternatives: Alternative[] = [
       "Facebook"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://diasporafoundation.org",
     "description": "Pioneering decentralized social network where users own their data. diaspora* distributes content across independently run pods with no central authority, offering aspects-based sharing for fine-grained privacy control.",
     "localizedDescriptions": {
@@ -258,6 +262,7 @@ export const researchAlternatives: Alternative[] = [
       "WhatsApp"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://element.io",
     "description": "Flagship client for the decentralized Matrix protocol, enabling federated real-time messaging, voice, and video across organizations. Element clients are licensed under Apache 2.0, while the main Matrix homeserver (Synapse) is AGPLv3 to enforce reciprocal contributions for hosted forks.",
     "localizedDescriptions": {
@@ -323,6 +328,7 @@ export const researchAlternatives: Alternative[] = [
       "LinkedIn"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://friendi.ca",
     "description": "Versatile federated social platform that bridges multiple networks. Friendica connects to Mastodon, Diaspora, Bluesky, and more from a single account, offering Facebook-style features like events, photo albums, and threaded discussions.",
     "localizedDescriptions": {
@@ -571,6 +577,7 @@ export const researchAlternatives: Alternative[] = [
       "Dashlane"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://keepassxc.org",
     "description": "Community-driven, fully offline password manager that stores credentials in an encrypted local database — no cloud, no account, no subscription. Cross-platform C++ rewrite of KeePass with modern UX, browser integration, SSH agent support, and TOTP, trusted by privacy advocates worldwide.",
     "localizedDescriptions": {
@@ -603,6 +610,7 @@ export const researchAlternatives: Alternative[] = [
       "Facebook Groups"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://join-lemmy.org",
     "description": "Federated link aggregator and discussion platform written in Rust. Lemmy lets communities self-host their own forums that seamlessly interoperate across the Fediverse, offering a corporate-free alternative to centralized social platforms.",
     "localizedDescriptions": {
@@ -633,6 +641,7 @@ export const researchAlternatives: Alternative[] = [
       "Google Workspace"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://www.libreoffice.org",
     "description": "Community-driven, full-featured office suite backed by The Document Foundation in Berlin. Offers Writer, Calc, Impress, Draw, Base and Math — all fully compatible with Microsoft formats — and is one of the most widely deployed open-source productivity suites worldwide.",
     "localizedDescriptions": {
@@ -750,6 +759,7 @@ export const researchAlternatives: Alternative[] = [
       "Facebook"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://joinmastodon.org",
     "description": "German-founded, AGPL-licensed federated social platform where independent servers interoperate via ActivityPub. Mastodon removes ad-driven ranking by default, while privacy and moderation practices depend on the instance you choose.",
     "localizedDescriptions": {
@@ -782,6 +792,7 @@ export const researchAlternatives: Alternative[] = [
       "Amplitude"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://matomo.org",
     "description": "The leading open-source alternative to Google Analytics, used on over 1.4 million websites in 190+ countries. Matomo offers full data ownership with self-hosting or EU-hosted cloud, comprehensive visitor analytics, heatmaps, and A/B testing — all under the GPL license.",
     "localizedDescriptions": {
@@ -912,6 +923,7 @@ export const researchAlternatives: Alternative[] = [
       "iCloud"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://nextcloud.com",
     "description": "Self-hosted, open-source cloud platform offering file sync, collaboration, and office editing — trusted by the German and French governments. Nextcloud uses AGPLv3 and supports end-to-end encryption through dedicated encrypted folders, while default server-side encryption remains admin-accessible.",
     "localizedDescriptions": {
@@ -976,6 +988,7 @@ export const researchAlternatives: Alternative[] = [
       "Anthropic API"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://ollama.com",
     "description": "US-based but fully open-source (MIT) local-first runtime for running large language models on your own hardware. Ollama can run fully offline and also provides optional cloud models and paid plans when you need bigger remote capacity. Note: Ollama is headquartered in the US but included here for its open-source nature and strong local execution path.",
     "localizedDescriptions": {
@@ -1008,6 +1021,7 @@ export const researchAlternatives: Alternative[] = [
       "Trello"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://www.openproject.org",
     "description": "The leading open-source project management software from Berlin, supporting classic waterfall, agile Scrum, and hybrid workflows. With Gantt charts, boards, time tracking, budgets, and BIM modules, OpenProject serves teams in governments, enterprises, and NGOs across Europe — all self-hostable under the GPL.",
     "localizedDescriptions": {
@@ -1127,6 +1141,7 @@ export const researchAlternatives: Alternative[] = [
       "Dashlane"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://www.passbolt.com",
     "description": "EU-based open-source password manager purpose-built for teams and DevOps workflows, with self-hosted and cloud options. Made in Luxembourg, Passbolt uses end-to-end encryption based on OpenPGP and offers a fully functional free Community Edition alongside paid business and enterprise tiers.",
     "localizedDescriptions": {
@@ -1192,6 +1207,7 @@ export const researchAlternatives: Alternative[] = [
       "Twitch"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://joinpeertube.org",
     "description": "Decentralized video hosting platform developed by French non-profit Framasoft. PeerTube federates video and live-streaming across independently run instances via ActivityPub, freeing creators from ads, tracking, and algorithmic manipulation.",
     "localizedDescriptions": {
@@ -1254,6 +1270,7 @@ export const researchAlternatives: Alternative[] = [
       "Facebook"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://pixelfed.org",
     "description": "Open-source, federated photo-sharing platform that puts creators first. Pixelfed offers an ad-free, algorithm-free Instagram experience with Stories, Collections, and full ActivityPub federation — all without selling your data.",
     "localizedDescriptions": {
@@ -1285,6 +1302,7 @@ export const researchAlternatives: Alternative[] = [
       "Amplitude"
     ],
     "pricing": "paid",
+    "selfHostable": true,
     "website": "https://plausible.io",
     "description": "Estonian privacy-first web analytics with a strong open-source Community Edition and optional hosted SaaS. Plausible is cookie-free, self-hostable, and offers CSV/Stats API export, while buyers should still account for open-core licensing boundaries and enterprise assurance gaps.",
     "localizedDescriptions": {
@@ -1348,6 +1366,7 @@ export const researchAlternatives: Alternative[] = [
       "eBay"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://prestashop.com",
     "description": "Leading European open-source e-commerce platform with a self-hosted architecture and broad module ecosystem. PrestaShop uses dual licensing: OSL-3.0 for core code and AFL-3.0 for native modules, while its commercial add-on marketplace layers proprietary business licensing on top.",
     "localizedDescriptions": {
@@ -1508,6 +1527,7 @@ export const researchAlternatives: Alternative[] = [
       "Shopify"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://saleor.io",
     "logo": "/logos/saleor.svg?v=20260212",
     "description": "Polish-built, GraphQL-first headless commerce platform designed for composable, API-driven storefronts. With 21,000+ GitHub stars and a BSD-3-Clause license, Saleor is ideal for developers who need full flexibility and modern stack integration.",
@@ -1568,6 +1588,7 @@ export const researchAlternatives: Alternative[] = [
       "Amazon"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://www.shopware.com",
     "description": "German open-source e-commerce platform built on Symfony and Vue.js. Shopware 6 Community Edition is MIT-licensed, while commercial plans add SaaS and enterprise features; contributors sign a CLA that grants shopware AG explicit rights to contributed code.",
     "localizedDescriptions": {
@@ -1690,6 +1711,7 @@ export const researchAlternatives: Alternative[] = [
       "Trello"
     ],
     "pricing": "freemium",
+    "selfHostable": true,
     "website": "https://taiga.io",
     "description": "Open-source agile project management platform from Madrid for Scrum and Kanban teams. Taiga uses a split licensing approach: backend under MPL 2.0 and frontend under AGPLv3.",
     "localizedDescriptions": {
@@ -1752,6 +1774,7 @@ export const researchAlternatives: Alternative[] = [
       "Monday.com"
     ],
     "pricing": "free",
+    "selfHostable": true,
     "website": "https://vikunja.io",
     "description": "Open-source, self-hostable task management app from Germany — a privacy-respecting alternative to Todoist, Trello, and ClickUp. Vikunja supports lists, Kanban boards, Gantt charts, CalDAV sync, reminders, and team collaboration, all under the AGPL license.",
     "localizedDescriptions": {

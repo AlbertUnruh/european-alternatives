@@ -78,6 +78,40 @@ Further concerns:
 
 ---
 
+## Startpage (Search Engine)
+
+**Previously listed, removed in:** Ownership Structure Clause application (2026-02-19)
+**Claimed origin:** The Hague, Netherlands (Surfboard Holding B.V.)
+**Effective control:** System1, a US publicly traded ad-tech company
+**Category:** Search Engine
+
+### Reason for Removal
+
+Startpage is a Dutch-registered entity (Surfboard Holding B.V.) but has been majority-owned by **System1** (US, publicly traded ad-tech) since 2019. Under the [Ownership Structure Clause](DECISION_MATRIX.md#ownership-structure-clause), this triggers a G1 re-evaluation because all three pass-through indicators are present:
+
+1. **Parent officers directing operations:** System1's CEO is named as the legal responsible party for Startpage, indicating the Dutch entity does not operate independently of its US parent.
+2. **Data routing through parent jurisdiction:** Startpage's "Vanish" AI feature explicitly routes user prompts through US-based LLM providers (OpenAI, Anthropic, Perplexity), creating a direct data flow into US jurisdiction.
+3. **Structural operational entanglement:** System1 is not a passive financial investor — it is an ad-tech company whose business model (advertising) is structurally intertwined with Startpage's monetization (Google AdSense sponsored links).
+
+A legal entity that cannot independently resist compulsion from its US parent is not a genuine European headquarters. Startpage **fails G1** under the Ownership Structure Clause.
+
+### Additional Concerns
+
+- **Proprietary and closed-source** — cannot be independently audited or self-hosted
+- **No SOC2/ISO 27001 certification** — only historical EuroPriSe seal (suspended since 2017)
+- **Privacy Guides delisted Startpage in 2019** over System1 ownership concerns, then relisted after Startpage provided clarifications — but the structural ownership concern remains
+- **SEC filings for System1** show workforce reductions and class-action settlements in the corporate group
+
+### Sources
+
+- [Startpage — "Relisted on PrivacyTools" (ownership disclosure)](https://www.startpage.com/privacy-please/startpage-articles/startpage-relisted-on-privacytools)
+- [Startpage — Privacy Policy (Google AdSense disclosure)](https://www.startpage.com/en/privacy-policy/)
+- [Startpage — Vanish Terms (LLM provider disclosure)](https://www.startpage.com/en/vanish-terms/)
+- [Startpage — Support Privacy Policy (Zendesk disclosure)](https://www.startpage.com/en/support-privacy-policy/)
+- [Deep research: 360° Vendor Trust & Ethics Audit — Startpage](tmp/deepresearches/startpage.md) (internal, 63/100 score)
+
+---
+
 ## Hubitat Elevation (Smart Home)
 
 **Previously listed, removed in:** Decision Matrix policy update (2026-02-18)

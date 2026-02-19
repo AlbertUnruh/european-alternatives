@@ -22,6 +22,7 @@ export interface Alternative {
   sourceCodeUrl?: string;
   actionLinks?: AlternativeActionLink[];
   pricing: 'free' | 'freemium' | 'paid';
+  selfHostable?: boolean;
   tags: string[];
   foundedYear?: number;
   headquartersCity?: string;
@@ -103,6 +104,7 @@ export interface TrustScoreBreakdown {
   jurisdiction: number;
   openness: number;
   privacySignals: number;
+  sovereigntyBonus: number;
   reservationPenalty: number;
   usCapApplied: boolean;
 }
