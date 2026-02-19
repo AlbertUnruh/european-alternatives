@@ -29,7 +29,7 @@ body:
     id: country
     attributes:
       label: Country
-      description: 'Two-letter code: "de", "fr", "nl", "eu", ...'
+      description: "Two-letter code: de, fr, nl, eu, ..."
       placeholder: de
   - type: input
     id: category
@@ -48,8 +48,8 @@ body:
     attributes:
       label: Is open source?
       options:
-        - "true"
-        - "false"
+        - yes
+        - no
   - type: dropdown
     id: pricing
     attributes:
