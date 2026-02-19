@@ -48,8 +48,8 @@ body:
     attributes:
       label: Is open source?
       options:
-        - yes
-        - no
+        - "yes"
+        - "no"
   - type: dropdown
     id: pricing
     attributes:
