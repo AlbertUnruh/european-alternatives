@@ -1,4 +1,5 @@
 import type { Alternative, CountryCode, Reservation } from '../types';
+import { PRIMARY_PRIVACY_TAGS, SECONDARY_PRIVACY_TAGS } from '../types';
 
 export interface CalculatedTrustScore {
   score: number;
@@ -19,19 +20,8 @@ const euMemberStates = new Set<CountryCode>([
 
 const europeanNonEU = new Set<CountryCode>(['ch', 'no', 'gb', 'is']);
 
-const privacyTagGroupPrimary = new Set([
-  'privacy',
-  'gdpr',
-  'encryption',
-  'zero-knowledge',
-  'no-logs',
-]);
-
-const privacyTagGroupSecondary = new Set([
-  'offline',
-  'federated',
-  'local',
-]);
+const privacyTagGroupPrimary = new Set<string>(PRIMARY_PRIVACY_TAGS);
+const privacyTagGroupSecondary = new Set<string>(SECONDARY_PRIVACY_TAGS);
 
 function getJurisdictionScore(country: CountryCode): number {
   if (euMemberStates.has(country)) return 4;

@@ -12,7 +12,7 @@ Alternatives are evaluated in two tiers based on headquarters jurisdiction. Each
 
 | | Tier 1: European | Tier 2: Non-European |
 |---|---|---|
-| **Jurisdictions** | EU member states, CH, NO, GB, IS | US, CA, or any other non-European country |
+| **Jurisdictions** | EU member states, CH, NO, GB, IS | Any jurisdiction not listed in Tier 1 |
 | **Open-source requirement** | None (but rewarded in scoring) | **Full open-source required** |
 | **Proprietary allowed?** | Yes | No |
 | **Partial open-source allowed?** | Yes | No |
@@ -86,6 +86,8 @@ Only when concerns are **both severe and unmitigable** does G8 trigger denial �
 
 Alternatives that pass all gateway criteria are scored on a 1-10 scale. The formula is deterministic and implemented in `src/utils/trustScore.ts`.
 
+> **Note on scale clamping:** The individual scoring components sum to a theoretical maximum of 11 (Jurisdiction 4 + Open-Source 3 + Privacy Signals 2 + Sovereignty Bonus 2). Reservation penalties can push the raw total below 1. The scoring algorithm clamps the result to the **[1, 10]** range via `clampScore()`. In practice: an alternative that maxes out every category earns a perfect 10 even though the unclamped sum exceeds it, an alternative that misses a minor criterion can still reach 10 if the Sovereignty Bonus compensates, and an alternative with heavy reservation penalties never drops below 1.
+
 ### Open-Source Level (0-3 points)
 
 Open-source transparency is the strongest signal of trustworthiness after jurisdiction.
@@ -117,6 +119,8 @@ Jurisdiction scoring follows a trust hierarchy rooted in the project's threat mo
 |---|---|---|
 | Primary privacy | +1 (if any match) | `privacy`, `gdpr`, `encryption`, `zero-knowledge`, `no-logs` |
 | Secondary privacy | +1 (if any match) | `offline`, `federated`, `local` |
+
+> **Strict allowlist:** Privacy tags are evaluated against the exact allowlists above (defined in `src/types/index.ts` as `PRIMARY_PRIVACY_TAGS` and `SECONDARY_PRIVACY_TAGS`). Only tags that appear in these lists contribute to the privacy-signal score. Descriptive tags like `e2ee`, `no-tracking`, `zero-access`, `local-first`, or `federation` carry semantic meaning for users but do not score on their own — entries using them should also include the corresponding scoring tag (e.g., `encryption`, `zero-knowledge`, `local`, `federated`) to receive credit.
 
 ### Sovereignty Bonus (0-2 points)
 
@@ -169,6 +173,40 @@ Not every concern warrants denial. The reservation system documents non-disquali
 | Founder has severe criminal history AND product is unverifiable AND no accountability | **Deny** (G8) |
 | Company is a shell hiding non-European ownership | **Deny** (G1) |
 | Revenue flows to sanctioned jurisdiction | **Deny** (G7) |
+
+### Data Portability (Reservation Trigger)
+
+Alternatives that store user data but do not offer standardized data export — such as JSON, CSV, or other open formats — receive a **minor** reservation noting the limitation. This is grounded in GDPR Art. 20 (Right to data portability), which requires data controllers to provide personal data in a structured, commonly used, and machine-readable format upon request.
+
+This trigger applies to any service that stores user data in the cloud or on vendor-controlled infrastructure. It does **not** apply to purely local/offline tools with no cloud storage component — if data never leaves the user's device, there is no portability concern.
+
+| Condition | Action |
+|---|---|
+| Service stores user data but offers no standardized export (JSON, CSV, open formats) | Add `minor` reservation citing data portability limitation |
+| Service stores user data and provides standardized export | No reservation needed |
+| Tool is purely local/offline with no cloud storage | Not applicable |
+
+### Hosting Transparency (Reservation Trigger)
+
+The [Ownership Structure Clause](#ownership-structure-clause) addresses CLOUD Act exposure through corporate ownership chains. This trigger addresses a second vector: **infrastructure dependency**. A 100% European entity that hosts its service on US-owned cloud infrastructure (AWS, GCP, Azure, etc.) may face CLOUD Act exposure through its infrastructure provider. The US government can compel a US cloud provider to produce data in its possession, custody, or control, regardless of where that data is physically stored.
+
+This does **not** disqualify a service. Hosting choices are operational decisions, and many European companies use US cloud providers for legitimate technical reasons. However, the jurisdictional exposure must be documented transparently.
+
+**Rule:** If a Tier 1 company hosts its primary service infrastructure on US-owned cloud platforms, a reservation is required unless one of the following mitigating conditions applies:
+
+1. **End-to-end encryption** — User data is encrypted client-side before reaching the server, and neither the service provider nor the infrastructure provider can access plaintext content. Compelled production yields only ciphertext.
+2. **Full self-hostability** — The software can be fully operated on user-controlled infrastructure (`selfHostable: true`). Users who require sovereignty can deploy on European infrastructure, breaking the compulsion chain entirely.
+
+If neither condition applies:
+
+| Condition | Reservation Severity | Rationale |
+|---|---|---|
+| Primary infrastructure on US-owned cloud, no E2E encryption, not self-hostable | `moderate` | CLOUD Act exposure via infrastructure provider; European jurisdiction partially undermined |
+| Primary infrastructure on US-owned cloud, partial mitigation (e.g., server-side encryption with provider-managed keys) | `minor` | Reduced but not eliminated exposure; provider-managed keys can be compelled alongside the data |
+
+**Scope limits:**
+- This trigger targets the **primary hosting infrastructure** where user data is stored and processed. Incidental US dependencies (a CDN edge node, a single third-party API call) do not trigger it.
+- This trigger applies to **Tier 1 entries only**. Tier 2 entries already require full open-source and face stricter scoring constraints.
 
 ### Reservation Fields
 
