@@ -1,3 +1,12 @@
+// Strict privacy tag definitions — single source of truth for trust scoring.
+// Only tags in these lists contribute to the privacy-signal component of the trust score.
+// Types are exported for the planned audit script (see issue #163 point 4).
+export const PRIMARY_PRIVACY_TAGS = ['privacy', 'gdpr', 'encryption', 'zero-knowledge', 'no-logs'] as const;
+export const SECONDARY_PRIVACY_TAGS = ['offline', 'federated', 'local'] as const;
+export type PrimaryPrivacyTag = typeof PRIMARY_PRIVACY_TAGS[number];
+export type SecondaryPrivacyTag = typeof SECONDARY_PRIVACY_TAGS[number];
+export type PrivacyTag = PrimaryPrivacyTag | SecondaryPrivacyTag;
+
 export interface AlternativeActionLink {
   label: string;
   url: string;
@@ -52,14 +61,21 @@ export interface Reservation {
   sourceUrl?: string;
 }
 
+// Tier 1: EU member states + European non-EU (CH, NO, GB, IS)
+// Tier 2: Any jurisdiction not in Tier 1 (see DECISION_MATRIX.md)
+// Extend this union when adding alternatives from new jurisdictions.
 export type CountryCode =
+  // Tier 1 — EU member states
   | 'at' | 'be' | 'bg' | 'hr' | 'cy' | 'cz' | 'dk' | 'ee'
   | 'fi' | 'fr' | 'de' | 'gr' | 'hu' | 'ie' | 'it' | 'lv'
   | 'lt' | 'lu' | 'mt' | 'nl' | 'pl' | 'pt' | 'ro' | 'sk'
   | 'si' | 'es' | 'se'
+  // Tier 1 — European non-EU
   | 'ch' | 'no' | 'gb' | 'is'
-  | 'ca'
-  | 'eu' | 'us';
+  // Tier 2 — Non-Tier-1 jurisdictions (extend as needed)
+  | 'ca' | 'us'
+  // Meta
+  | 'eu';
 
 export type CategoryId =
   | 'cloud-storage'

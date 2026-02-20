@@ -150,7 +150,7 @@ All country codes below are valid in the type system. Note that the browse page'
 
 **Other European:** CH, NO, GB, IS
 
-**Open-source exception:** US, CA (only for **fully open-source** entries — client and server code under an OSI-approved license; see [DECISION_MATRIX.md](DECISION_MATRIX.md))
+**Non-European (Tier 2):** Currently US, CA in the type system — but the policy allows any jurisdiction not listed in Tier 1, provided the entry is **fully open-source** (client and server code under an OSI-approved license; see [DECISION_MATRIX.md](DECISION_MATRIX.md)). To add an alternative from a new Tier 2 country, extend `CountryCode` in `src/types/index.ts` first.
 
 **Multi-country:** `eu` (for pan-European services)
 
@@ -427,7 +427,8 @@ The short version — when adding an alternative, please verify:
 - Services that are European in name only but route data through US infrastructure without transparency
 - Abandoned or discontinued projects
 - Products in pre-alpha without a usable offering
-- Services that require US-based dependencies to function (e.g., built entirely on AWS with no alternative)
+- Services that are thin wrappers around US platforms with no independent value (see [G4 in DECISION_MATRIX.md](DECISION_MATRIX.md))
+- Note: US-hosted infrastructure alone does **not** disqualify a service — it triggers a [reservation](DECISION_MATRIX.md#hosting-transparency-reservation-trigger), not exclusion
 - Non-European services that are not fully open-source (see [DECISION_MATRIX.md](DECISION_MATRIX.md) for rationale)
 - Services with serious trust, legal, or sanctions concerns (documented in [DENIED_ALTERNATIVES.md](DENIED_ALTERNATIVES.md))
 
