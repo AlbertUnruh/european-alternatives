@@ -14,6 +14,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-04-21',
       sourceUrl: 'https://www.adyen.com/knowledge-hub/mitigating-a-ddos-april-2025',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'dropin-analytics-enabled-by-default',
@@ -21,6 +22,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Analytics-Erhebung in Drop-in und Components ist standardmässig aktiviert und laut Adyen werden die erfassten Nutzungsdaten zwei Jahre gespeichert.',
       severity: 'moderate',
       sourceUrl: 'https://docs.adyen.com/online-payments/analytics-and-data-tracking/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'risk-data-collection-default-on',
@@ -28,6 +30,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Risk-Datenerhebung im Web-Checkout ist standardmässig aktiv, und Adyen empfiehlt zusätzlich die Erfassung von Shopper-Aktivität ausserhalb der Checkout-Seite zur Betrugserkennung.',
       severity: 'moderate',
       sourceUrl: 'https://docs.adyen.com/risk-management/fraud-data-collection',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'platform-wide-ml-data-usage',
@@ -35,6 +38,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Protect-Dokumentation von Adyen nennt, dass Machine-Learning-Modelle plattformweite bzw. globale Transaktionsdaten für Fraud-Entscheidungen nutzen.',
       severity: 'moderate',
       sourceUrl: 'https://help.adyen.com/en_US/knowledge/risk/protect/how-does-protect-work',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'no-public-bug-bounty-program',
@@ -42,6 +46,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Adyen betreibt Responsible Disclosure, gibt jedoch an, derzeit kein öffentliches Bug-Bounty-Programm anzubieten.',
       severity: 'moderate',
       sourceUrl: 'https://help.adyen.com/en_US/knowledge/security/product-security/how-do-i-disclose-a-security-issue',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'mpl-reserve-and-withholding-exposure',
@@ -49,6 +54,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB erlauben Adyen, MPL-Reserve-Level festzulegen bzw. anzupassen und Mittel aus Settlements anhand von Risiko- und Haftungsexposition zurückzuhalten.',
       severity: 'moderate',
       sourceUrl: 'https://www.adyen.com/en_GB/legal/adyen-terms-and-conditions',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'contract-change-and-termination-friction',
@@ -56,6 +62,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB erlauben einseitige Änderungen mit 30 Tagen Vorankündigung und verlangen für ordentliche Kündigung grundsätzlich zwei Monate Frist, was einen schnellen Vertragsausstieg erschweren kann.',
       severity: 'moderate',
       sourceUrl: 'https://www.adyen.com/en_GB/legal/adyen-terms-and-conditions',
+      penalty: { tier: 'contract', amount: 2 },
     },
   ],
   bitwarden: [
@@ -66,6 +73,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2026-01-20',
       sourceUrl: 'https://community.bitwarden.com/t/bitwarden-launches-enhanced-premium-plan/93006',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'sdk-license-incident-2024',
@@ -107,6 +115,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Datenschutzerklärung sagt, dass Prompts, Bilddateien und Outputs zur Verbesserung bzw. zum Training genutzt und ausserhalb des Erhebungslandes verarbeitet werden können.',
       severity: 'major',
       sourceUrl: 'https://bfl.ai/legal/privacy-policy',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'output-competition-restriction',
@@ -114,6 +123,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Bedingungen untersagen, generierten Output zum Trainieren, Distillieren oder Fine-Tuning konkurrierender KI-Modelle zu nutzen.',
       severity: 'moderate',
       sourceUrl: 'https://bfl.ai/legal/terms-of-service',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'unilateral-api-modification-and-blocking',
@@ -121,6 +131,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die API-Bedingungen erlauben einseitige Änderungen an Modellen/Spezifikationen und temporäre oder dauerhafte Sperren bei vermuteter Rate-Limit-Umgehung.',
       severity: 'moderate',
       sourceUrl: 'https://bfl.ai/legal/flux-api-service-terms',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'arbitration-and-class-waiver',
@@ -128,6 +139,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Website-Bedingungen enthalten eine Schiedsklausel und einen Verzicht auf Sammelklagen (mit begrenztem Opt-out-Fenster).',
       severity: 'moderate',
       sourceUrl: 'https://bfl.ai/legal/terms-of-service',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'security-disclosure-maturity-gap',
@@ -135,6 +147,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das zentrale FLUX-GitHub-Repository zeigt derzeit keine SECURITY.md-Policy und keine veröffentlichten Security-Advisories.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/black-forest-labs/flux/security',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'finetuning-api-deprecated-no-migration-path',
@@ -143,6 +156,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-10-31',
       sourceUrl: 'https://docs.bfl.ai/release-notes',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'recent-operational-incidents-2025-2026',
@@ -151,6 +165,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2026-01-12',
       sourceUrl: 'https://status.bfl.ml/history',
+      penalty: { tier: 'reliability', amount: 1 },
     },
   ],
   cryptpad: [
@@ -160,6 +175,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Sicherheit von CryptPad hängt davon ab, der gewählten Instanz zu vertrauen, dass sie denselben Client-Code wie upstream ausliefert.',
       severity: 'major',
       sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#trust-assumptions',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'metadata-not-fully-hidden',
@@ -167,6 +183,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die gewählte CryptPad-Instanz kann weiterhin Verbindungs-Metadaten wie IP-Adresse und User-Agent sehen.',
       severity: 'moderate',
       sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#trust-assumptions',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'shared-link-interception-risk',
@@ -174,6 +191,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Wenn ein Dokument-Link über unsichere Kanäle geteilt wird, kann eine Abfangung den Zugriff ermöglichen, sofern keine zusätzlichen Zugriffskontrollen gesetzt sind.',
       severity: 'moderate',
       sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#passwords-for-documents-and-folders',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'high-severity-2fa-bypass-2025',
@@ -182,6 +200,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-06-18',
       sourceUrl: 'https://github.com/cryptpad/cryptpad/security/advisories/GHSA-xq5x-wgcm-3p33',
+      penalty: { tier: 'security', amount: 4 },
     },
   ],
   deepl: [
@@ -207,6 +226,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'DeepL veröffentlicht einen Responsible-Disclosure-Kanal über security.txt, dort ist jedoch kein öffentliches, prämienbasiertes Bug-Bounty-Programm dokumentiert.',
       severity: 'minor',
       sourceUrl: 'https://www.deepl.com/.well-known/security.txt',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'wordpress-plugin-cve-ecosystem-risk',
@@ -214,6 +234,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Öffentliche CVE-Einträge zu Drittanbieter-WordPress-Plugins mit DeepL-API-Integration zeigen API-Key- und Request-Sicherheitsrisiken ausserhalb des DeepL-Core-Services.',
       severity: 'moderate',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2023-46620',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'wordpress-plugin-csrf-history',
@@ -221,6 +242,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Ein weiterer CVE im selben Plugin-Ökosystem zeigt CSRF-Klassenrisiken, daher bleiben Plugin-Lifecycle und Härtung in Kundenverantwortung.',
       severity: 'moderate',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2022-3691',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'seat-and-addon-pricing-complexity',
@@ -228,6 +250,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die DeepL-Pro-AGB definieren Single-User-Lizenzierung und Add-on-Strukturen, was mit wachsender Teamnutzung Preis- und Packaging-Komplexität erzeugen kann.',
       severity: 'moderate',
       sourceUrl: 'https://www.deepl.com/en/pro-license',
+      penalty: { tier: 'contract', amount: 2 },
     },
   ],
   ecosia: [
@@ -237,6 +260,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Suchanfragen werden mit externen Suchpartnern verarbeitet, einschließlich Übermittlung von Suchbegriffen und IP-Adresse vor der Ecosia-seitigen Anonymisierung.',
       severity: 'moderate',
       sourceUrl: 'https://www.ecosia.org/privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ai-search-us-llm-dependency',
@@ -244,6 +268,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'AI Search leitet Prompts und Metadaten an OpenAI-Infrastruktur weiter und schafft damit für diese Funktion eine Abhängigkeit von einem US-Anbieter.',
       severity: 'moderate',
       sourceUrl: 'https://support.ecosia.org/article/1006-ai-search',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ai-overviews-cookie-opt-out',
@@ -251,6 +276,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'AI Overviews lassen sich deaktivieren, die Einstellung wird jedoch per Cookie gespeichert und kann beim Löschen von Cookies zurückgesetzt werden.',
       severity: 'minor',
       sourceUrl: 'https://support.ecosia.org/article/994-ai-overviews',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'upstream-search-provider-outage-risk',
@@ -259,13 +285,14 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2024-05-23',
       sourceUrl: 'https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/',
+      penalty: { tier: 'reliability', amount: 1 },
     },
     {
       id: 'bing-search-backend-dependency',
       text: 'Ecosia relies on Microsoft Bing as its core search backend, creating a structural dependency on a US ad-tech provider for search results and availability.',
       severity: 'moderate',
       sourceUrl: 'https://info.ecosia.org/what',
-      penalty: { tier: 'contract', amount: 2 },
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   element: [
@@ -276,6 +303,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-09-02',
       sourceUrl: 'https://matrix.org/blog/2025/10/post-mortem/',
+      penalty: { tier: 'reliability', amount: 4 },
     },
     {
       id: 'matrix-org-postgres-corruption-2025',
@@ -284,6 +312,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-07-23',
       sourceUrl: 'https://matrix.org/blog/2025/07/postgres-corruption-postmortem/',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'matrix-org-unencrypted-content-scanning',
@@ -291,6 +320,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die matrix.org-Nutzungsbedingungen beschreiben proaktive Moderation inklusive Scanning und Filterung unverschlüsselter Medien/Inhalte.',
       severity: 'moderate',
       sourceUrl: 'https://matrix.org/legal/terms-and-conditions',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'matrix-org-log-retention-and-us-infra',
@@ -298,6 +328,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die matrix.org-Privacy-Dokumentation nennt Abhängigkeiten von AWS und Cloudflare und gibt an, dass manche Logs bis zu 180 Tage aufbewahrt werden können.',
       severity: 'moderate',
       sourceUrl: 'https://matrix.org/legal/privacy-notice',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'matrix-org-no-public-bug-bounty',
@@ -305,6 +336,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Disclosure-Policy der Matrix.org Foundation sagt, dass normalerweise keine Bug-Bounties angeboten werden.',
       severity: 'moderate',
       sourceUrl: 'https://matrix.org/security-disclosure-policy/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'synapse-dual-license-commercial-support-path',
@@ -312,6 +344,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Synapse ist dual lizenziert (AGPL oder kommerziell), und Enterprise-Support mit SLAs ist an bezahlte Subscriptions gebunden.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/element-hq/synapse',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'confirmed-major-breach',
@@ -328,7 +361,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       text: 'Euria\'s AI capabilities depend on Infomaniak-hosted open-source models whose training data provenance and improvement rights are not fully transparent, introducing trust friction.',
       severity: 'moderate',
       sourceUrl: 'https://www.infomaniak.com/en/hosting/ai-services/open-source-models',
-      penalty: { tier: 'contract', amount: 2 },
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   filen: [
@@ -338,6 +371,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Öffentliche Filen-Materialien beschreiben Security-Kontrollen und ISO27001-zertifizierte Colocation-Rechenzentren, zeigen aber kein vendor-spezifisches, unabhängiges SOC2/ISO-Attestpaket.',
       severity: 'major',
       sourceUrl: 'https://filen.io/about',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'third-country-processor-metadata-exposure',
@@ -371,6 +405,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB erlauben einseitige Änderungen der Nutzungsbedingungen sowie Preisanpassungen; wiederkehrende Abrechnung läuft bis zur Kündigung weiter.',
       severity: 'moderate',
       sourceUrl: 'https://filen.io/terms',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'inactivity-or-payment-delinquency-data-deletion',
@@ -378,6 +413,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB definieren Löschfenster bei Inaktivität und Zahlungsverzug für Free/Lifetime- und Paid-Pläne, wodurch strikte Backup-Disziplin nötig ist.',
       severity: 'moderate',
       sourceUrl: 'https://filen.io/terms',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'master-key-and-self-backup-responsibility',
@@ -385,6 +421,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Laut Privacy Policy müssen Nutzer eigene Backups vorhalten und können ohne exportierte Recovery-/Master-Keys nach Passwortverlust dauerhaft den Zugriff verlieren.',
       severity: 'moderate',
       sourceUrl: 'https://filen.io/privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   hetzner: [
@@ -404,6 +441,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-11-11',
       sourceUrl: 'https://status.hetzner.com/incident/372f87ce-7695-4f17-b008-cd3357844f15',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'strict-abuse-lock-and-termination-rights',
@@ -411,6 +449,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'AGB und DSA-Moderationsregeln erlauben Account- oder IP-Sperren sowie fristlose Kündigungen bei Abuse- oder Rechtsverstössen.',
       severity: 'moderate',
       sourceUrl: 'https://www.hetzner.com/legal/terms-and-conditions/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'customer-backup-duty-outside-provider',
@@ -418,6 +457,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Hetzner-AGB legen die Verantwortung für regelmässige Backups beim Kunden fest, einschliesslich Ablage ausserhalb der vom Anbieter bereitgestellten Server.',
       severity: 'moderate',
       sourceUrl: 'https://www.hetzner.com/legal/terms-and-conditions/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ask-ai-us-processing-chain',
@@ -436,7 +476,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2023-03-08',
       sourceUrl: 'https://github.com/home-assistant/core/security/advisories/GHSA-2j8f-h4mr-qr25',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'cloud-voice-uses-microsoft-azure-services',
@@ -452,6 +492,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Status-Offenlegungen von Nabu Casa zeigen für zentrale Komponenten Cloud-Abhängigkeiten von AWS-, Cloudflare- und DigitalOcean-Infrastruktur.',
       severity: 'moderate',
       sourceUrl: 'https://status.nabucasa.com/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'cloud-server-side-components-not-fully-open',
@@ -467,6 +508,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Home Assistant veröffentlicht eine Security-Disclosure-Policy, gibt aber explizit an, keine finanziellen Bug-Bounties anbieten zu können.',
       severity: 'minor',
       sourceUrl: 'https://www.home-assistant.io/security/',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   hostinger: [
@@ -484,6 +526,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Backups des Hostinger Website Builders sind plattformgebunden und nicht direkt herunterladbar; die Migration zu WordPress oder einem anderen CMS hat funktionale Einschränkungen und erfordert manuelle Nacharbeit, was das Lock-in-Risiko erhöht.',
       severity: 'major',
       sourceUrl: 'https://support.hostinger.com/en/articles/5981435-how-to-download-backups-at-hostinger',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'auto-renew-default-until-disabled',
@@ -491,6 +534,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Abonnements sind standardmässig auf automatische Verlängerung gesetzt, bis sie in den Kontoeinstellungen deaktiviert werden.',
       severity: 'moderate',
       sourceUrl: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'historical-security-incident-2019',
@@ -508,6 +552,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-05-01',
       sourceUrl: 'https://www.cybercrimeinfocenter.org/phishing-activity-in-hosting-networks-may-july-2023',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'ai-subprocessor-third-party-model-dependency',
@@ -515,7 +560,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Hostinger-DPA listet KI-bezogene Dritt-Unterauftragsverarbeiter, wodurch für KI-Funktionen eine externe Modellanbieter-Abhängigkeit entsteht.',
       severity: 'moderate',
       sourceUrl: 'https://www.hostinger.com/legal/dpa',
-      penalty: { tier: 'contract', amount: 2 },
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   'hugging-face': [
@@ -526,6 +571,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2024-05-31',
       sourceUrl: 'https://huggingface.co/blog/space-secrets-disclosure',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'pickle-scanning-not-foolproof',
@@ -533,6 +579,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Hugging Face dokumentiert, dass das Pickle-Scanning im Hub nicht 100 Prozent narrensicher ist und Safe/Unsafe-Importlisten nur nach Best-Effort gepflegt werden.',
       severity: 'major',
       sourceUrl: 'https://huggingface.co/docs/hub/en/security-pickle',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'malicious-models-reported-on-public-hub',
@@ -540,6 +587,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Unabhängige Threat-Research meldete maliziöse ML-Modelle auf Hugging Face und zeigt, dass öffentliche Modell-Hubs ein aktives Supply-Chain-Ziel bleiben.',
       severity: 'moderate',
       sourceUrl: 'https://www.reversinglabs.com/blog/rl-identifies-malware-ml-model-hosted-on-hugging-face',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'non-team-repos-us-storage-default',
@@ -547,6 +595,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Storage-Regions-Dokumentation nennt, dass Repositories für Nutzer ohne Team- oder Enterprise-Plan standardmässig immer in den USA gespeichert werden.',
       severity: 'major',
       sourceUrl: 'https://huggingface.co/docs/hub/en/storage-regions',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'us-subprocessor-and-transfer-exposure',
@@ -554,6 +603,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Privacy-Dokumentation nennt US-Serverstandorte und mehrere US-basierte Subprozessoren (unter anderem AWS, Stripe, Slack und GitHub).',
       severity: 'moderate',
       sourceUrl: 'https://huggingface.co/privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'terms-allow-aggregated-usage-learning',
@@ -569,6 +619,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Inference-Providers-Dokumentation sagt, dass externe Anbieter für eigene Sicherheitsmassnahmen verantwortlich sind, was zu variierender Third-Party-Assurance führt.',
       severity: 'moderate',
       sourceUrl: 'https://huggingface.co/docs/inference-providers/security',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'billing-threshold-multi-charge-pattern',
@@ -576,6 +627,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Billing-Dokumentation beschreibt schwellenbasierte Zwischenabbuchungen vor der Monatsrechnung, was Nutzer ohne Ausgaben-Monitoring überraschen kann.',
       severity: 'minor',
       sourceUrl: 'https://huggingface.co/docs/hub/en/billing#billing-thresholds--invoicing',
+      penalty: { tier: 'contract', amount: 1 },
     },
     {
       id: 'case-by-case-content-enforcement-lag-risk',
@@ -583,13 +635,14 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Content-Moderation erfolgt fallweise nach Meldungen, was auf einem hochvolumigen öffentlichen Hub zu Durchsetzungsverzögerungen führen kann.',
       severity: 'moderate',
       sourceUrl: 'https://huggingface.co/content-policy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'core-third-party-model-provider-dependency',
       text: 'Hugging Face Inference Providers route requests through third-party foundation-model hosts with heterogeneous security guarantees, creating a supply-chain trust dependency.',
       severity: 'moderate',
       sourceUrl: 'https://huggingface.co/terms-of-service',
-      penalty: { tier: 'contract', amount: 2 },
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   infomaniak: [
@@ -600,6 +653,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2025-09-22',
       sourceUrl: 'https://www.netzwoche.ch/news/2025-09-03/infomaniak-raet-seinen-kunden-ihr-passwort-zu-aendern',
+      penalty: { tier: 'security', amount: 1 },
     },
     {
       id: 'price-change-at-renewal-right',
@@ -607,6 +661,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Infomaniak-AGB sehen Preisanpassungen mit Wirkung zur Verlängerung vor und reduzieren damit die langfristige Kostenplanbarkeit für mehrjährige Planung.',
       severity: 'moderate',
       sourceUrl: 'https://www.infomaniak.com/en/legal/general-terms-and-conditions',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'ksuite-upgrade-only-no-downgrade',
@@ -614,6 +669,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Infomaniak dokumentiert, dass bestehende kSuite-Angebote hochgestuft, aber nicht heruntergestuft werden können, was nach dem Hochskalieren den Lock-in-Druck erhöht.',
       severity: 'minor',
       sourceUrl: 'https://www.infomaniak.com/en/support/faq/2197/modify-an-existing-ksuite-offer',
+      penalty: { tier: 'contract', amount: 1 },
     },
     {
       id: 'ksuite-bundle-separation-limits',
@@ -621,6 +677,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Infomaniak dokumentiert, dass gebündelte Produkte nach der Umstellung auf kSuite nicht immer getrennt werden können, was granulare Offboarding-Pfade einschränkt.',
       severity: 'minor',
       sourceUrl: 'https://www.infomaniak.com/en/support/faq/2494/convert-existing-products-to-ksuite-or-separate-them',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   ionos: [
@@ -630,6 +687,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die IONOS-AGB erlauben wiederkehrende Preisanpassungen mit Vorankündigung und Kündigungsrecht, was für Kunden dennoch ein langfristiges Verlängerungsrisiko schafft.',
       severity: 'moderate',
       sourceUrl: 'https://www.ionos.de/terms-gtc/terms/',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'plesk-license-price-shift-2025',
@@ -638,6 +696,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-03-25',
       sourceUrl: 'https://www.theregister.com/2025/10/02/ionos_vps_plesk_hike/',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'privacy-policy-ai-training-and-transfer',
@@ -654,6 +713,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'IONOS Cloud veröffentlicht einen Meldeprozess für Schwachstellen, betreibt derzeit jedoch kein offizielles öffentliches Bug-Bounty-Programm.',
       severity: 'minor',
       sourceUrl: 'https://docs.ionos.com/cloud/security-safeguards/report-security-event/vulnerabilities',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'export-before-cancellation-required',
@@ -661,13 +721,14 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die IONOS-Data-Act-Hinweise warnen, dass Daten nach Abschluss einer regulären Kündigung nicht mehr für den Export verfügbar sind.',
       severity: 'moderate',
       sourceUrl: 'https://docs.ionos.com/cloud/data-export/eu-data-act',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'pe-rollup-plus-renewal-pattern',
       text: 'IONOS exhibits private-equity/rollup ownership patterns (United Internet Group) that increase renewal and cost-predictability risk for long-term infrastructure commitments.',
       severity: 'moderate',
       sourceUrl: 'https://www.ionos-group.com/investor-relations/publications',
-      penalty: { tier: 'contract', amount: 2 },
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   kdrive: [
@@ -677,6 +738,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'kDrive dokumentiert Transport- und serverseitige Verschlüsselung, bietet für reguläre Dateispeicherung aber keine standardmässige Ende-zu-Ende- bzw. Zero-Knowledge-Verschlüsselung.',
       severity: 'moderate',
       sourceUrl: 'https://www.infomaniak.com/en/support/faq/2462/understanding-kdrive-data-security',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'definitive-deletion-after-nonpayment',
@@ -684,6 +746,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die kDrive-Sonderbedingungen nennen eine endgültige Löschung nach 14 Tagen Nichtzahlung; eine Wiederherstellung ist dann nicht mehr möglich.',
       severity: 'major',
       sourceUrl: 'https://welcome.infomaniak.com/api/web-components/1/cgu/latest?id=63&locale=en_GB',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'desktop-sync-disk-exhaustion-issue-2026',
@@ -692,6 +755,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2026-02-05',
       sourceUrl: 'https://github.com/Infomaniak/desktop-kDrive/issues/1476',
+      penalty: { tier: 'reliability', amount: 4 },
     },
     {
       id: 'mobile-app-telemetry-trackers',
@@ -699,6 +763,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Unabhängige Mobile-Analysen berichten Matomo- und Sentry-Tracker im Android-App-Build.',
       severity: 'moderate',
       sourceUrl: 'https://reports.exodus-privacy.eu.org/en/reports/com.infomaniak.drive/latest/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   keepassxc: [
@@ -709,6 +774,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-12-17',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2025-65203',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'local-memory-extraction-disputed-cves-2024',
@@ -717,6 +783,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-05-20',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2024-33900',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'downstream-packaging-feature-divergence',
@@ -725,6 +792,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2024-05-10',
       sourceUrl: 'https://github.com/keepassxreboot/keepassxc/issues/10725',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'trojanized-download-impersonation-risk',
@@ -733,6 +801,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-05-08',
       sourceUrl: 'https://labs.withsecure.com/publications/keepass-trojanised-in-advanced-malware-campaign',
+      penalty: { tier: 'security', amount: 2 },
     },
   ],
   librewolf: [
@@ -766,7 +835,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Arch Linux entfernte 2025 maliziöse AUR-Browserpakete, inklusive eines LibreWolf-bezogenen Pakets; das zeigt, dass inoffizielle Distributionskanäle erhebliche Supply-Chain-Risiken tragen können.',
       severity: 'major',
       sourceUrl: 'https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/7EZTJXLIAQLARQNTMEW2HBWZYE626IFJ/',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'volunteer-maintainer-continuity-risk',
@@ -774,6 +843,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Projekt-FAQ sagt, dass LibreWolf keine Spenden annimmt und freiwilligengetrieben bleibt; das kann langfristige Ressourcenplanung und formale Verantwortlichkeit begrenzen.',
       severity: 'moderate',
       sourceUrl: 'https://librewolf.net/docs/faq/#why-dont-you-accept-donations',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'privacy-policy-third-party-data-path-caveat',
@@ -781,6 +851,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'LibreWolf erklärt, keine Nutzerdaten zu sammeln, weist aber zugleich darauf hin, dass Datenflüsse zu Mozilla oder anderen Dritten nicht immer vollständig ausgeschlossen werden können.',
       severity: 'moderate',
       sourceUrl: 'https://librewolf.net/privacy-policy/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   'linux-kernel': [
@@ -791,6 +862,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2024-05-30',
       sourceUrl: 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'kernelorg-compromise-history-2011',
@@ -806,6 +878,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Upstream liefert schnell, aber das praktische Risiko bleibt an Downstream-Patch-Cadence sowie lokale Rollout- und Reboot-Disziplin gekoppelt.',
       severity: 'moderate',
       sourceUrl: 'https://www.kernel.org/releases.html',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'maintainer-coverage-variance',
@@ -813,6 +886,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der MAINTAINERS-Prozess enthält explizit die Zustände "Odd Fixes" und "Orphan", wodurch die Wartungstiefe je Subsystem variieren kann.',
       severity: 'minor',
       sourceUrl: 'https://www.kernel.org/doc/html/latest/process/maintainers.html',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   lumo: [
@@ -822,6 +896,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Unabhängige Open-Source-Bewertungen sehen Lumos "Open Source"-Framing kritisch, weil zentrale serverseitige Routing- und System-Prompt-Logik nicht öffentlich dokumentiert ist.',
       severity: 'major',
       sourceUrl: 'https://osai-index.eu/news/lumo-proton-least-open/',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'swiss-jurisdiction-vs-eu-messaging',
@@ -829,6 +904,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Lumo wird mit "European jurisdiction" beworben, aber Compliance-Prüfungen sollten die Schweiz (nicht EU/EWR) als eigenes Rechtsregime bewerten.',
       severity: 'moderate',
       sourceUrl: 'https://proton.me/support/lumo-privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'third-party-llm-supply-chain',
@@ -845,6 +921,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-01-30',
       sourceUrl: 'https://status.proton.me/api/v2/incidents.json',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'status-page-delay-note',
@@ -852,6 +929,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Proton-Statusseite weist darauf hin, dass Updates nicht in Echtzeit erfolgen; während Störungen können Statusmeldungen verzögert sein.',
       severity: 'minor',
       sourceUrl: 'https://status.proton.me',
+      penalty: { tier: 'reliability', amount: 1 },
     },
     {
       id: 'source-available-marketed-as-open-source',
@@ -868,6 +946,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Kern von Magic Earth ist proprietär; die /e/OS-Dokumentation bestätigt, dass der Quellcode nicht öffentlich verfügbar ist und damit keine unabhängige Full-Code-Prüfung möglich ist.',
       severity: 'major',
       sourceUrl: 'https://doc.e.foundation/maps',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'play-store-data-safety-location-id-sharing',
@@ -875,6 +954,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Google-Play-Datensicherheitsangaben weisen darauf hin, dass Standortdaten sowie Geräte- oder sonstige IDs mit Dritten geteilt werden können.',
       severity: 'major',
       sourceUrl: 'https://play.google.com/store/apps/details?id=com.generalmagic.magicearth',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'play-store-data-cant-be-deleted-flag',
@@ -898,6 +978,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Terms dokumentieren automatisch verlängernde Abos, die über Drittanbieter-App-Stores verwaltet werden; das kann Kündigungs- und Billing-Reibung erzeugen.',
       severity: 'moderate',
       sourceUrl: 'https://www.magicearth.com/terms-and-conditions',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'play-store-rating-volatility-2026',
@@ -916,7 +997,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der mailbox.org-Support schrieb im öffentlichen Forum, dass eingehendes DMARC für Spam-Scoring genutzt, aber nicht zu 100 % strikt erzwungen wird; dadurch bleibt ein Rest-Risiko für Spoofing bestehen.',
       severity: 'major',
       sourceUrl: 'https://userforum-en.mailbox.org/topic/anti-spoofing-for-custom-domains-spf-dkim-dmarc',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'mailbox-guard-auto-logout-gap-2026',
@@ -924,7 +1005,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Support bestätigte ein Security-Problem, bei dem mailbox Guard unter bestimmten Einstellungen nach dem Webclient-Logout weiter verfügbar bleiben konnte, bis ein Fix vorbereitet wurde.',
       severity: 'moderate',
       sourceUrl: 'https://userforum-en.mailbox.org/topic/4401-automatic-logout-mailbox-guard',
-      penalty: { tier: 'governance', amount: 2 },
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'business-admin-2fa-coverage-needs-verification',
@@ -941,6 +1022,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Kündigungsrichtlinie nennt, dass Prepaid-Konten 30 Tage nach Guthabenablauf gelöscht werden können und Daten nach weiteren 30 Tagen entfernt werden können.',
       severity: 'moderate',
       sourceUrl: 'https://mailbox.org/en/t-cs-cancellation-policy/',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'major-datacenter-power-outage-2022',
@@ -968,6 +1050,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mailfence gibt an, dass der Dienst nicht Open Source ist; dadurch ist die unabhängige Full-Stack-Auditierbarkeit des Produktivdienstes eingeschränkt.',
       severity: 'moderate',
       sourceUrl: 'https://kb.mailfence.com/kb/is-mailfence-open-source/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'web-client-high-level-mitm-out-of-scope',
@@ -975,6 +1058,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das Mailfence-Threat-Model nennt High-Level-Man-in-the-Middle-Szenarien und die Auslieferung bösartigen JavaScripts als nicht abgedeckt.',
       severity: 'major',
       sourceUrl: 'https://mailfence.com/en/threat-model.jsp',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'mail-metadata-processing-is-inherent',
@@ -982,6 +1066,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Mailfence-Datenschutzerklärung nennt die Verarbeitung von E-Mail-Metadaten (z. B. Absender-/Empfänger-Adressen, Betreffzeilen, Zeitstempel und Message-IDs) als Teil des regulären Dienstbetriebs.',
       severity: 'moderate',
       sourceUrl: 'https://mailfence.com/en/privacy.jsp',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'free-account-inactivity-deletion',
@@ -989,6 +1074,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Nutzungsbedingungen nennen, dass kostenlose Konten bei längerer Inaktivität gesperrt und später gelöscht werden können; ohne Backup-Disziplin entsteht Datenverlustrisiko.',
       severity: 'major',
       sourceUrl: 'https://mailfence.com/en/terms.jsp',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'service-change-and-liability-limit-clauses',
@@ -996,6 +1082,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Nutzungsbedingungen enthalten weitreichende Klauseln zu Dienständerungen und Haftungsbegrenzung, was die vertragliche Planbarkeit für kritische Nutzung verringern kann.',
       severity: 'moderate',
       sourceUrl: 'https://mailfence.com/en/terms.jsp',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'nicol-ai-processing-and-training-clarity-gap',
@@ -1003,6 +1090,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mailfence verlinkt den Nicol.ai-Assistant, jedoch waren Datenverarbeitung und Modell-Training-Garantien für diesen Assistant in den geprüften Primärquellen nicht klar verifizierbar.',
       severity: 'moderate',
       sourceUrl: 'https://chat.mailfence.com/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ddos-related-service-degradation-history',
@@ -1011,6 +1099,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-04-10',
       sourceUrl: 'https://www.mfstatus.com/history',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'us-patent-litigation-2025',
@@ -1019,6 +1108,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-01-03',
       sourceUrl: 'https://dockets.justia.com/docket/texas/txedce/2:2025cv00003/230173',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   mastodon: [
@@ -1028,6 +1118,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Datenkontrolle hängt vom gewählten Instanzbetreiber ab, und durch Föderation können Beiträge und Metadaten auf weitere Server repliziert werden.',
       severity: 'moderate',
       sourceUrl: 'https://docs.joinmastodon.org/user/network/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'dm-not-end-to-end-encrypted',
@@ -1035,6 +1126,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Private Erwähnungen sind nicht Ende-zu-Ende-verschlüsselt und können von Admins beteiligter Server eingesehen werden.',
       severity: 'moderate',
       sourceUrl: 'https://docs.joinmastodon.org/user/posting/#private',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'mastodon-social-export-incident-2023',
@@ -1043,7 +1135,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2023-03-16',
       sourceUrl: 'https://status.mastodon.social/incidents/8k4kq6nh3r18',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'terms-license-arbitration-controversy-2025',
@@ -1052,6 +1144,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-06-17',
       sourceUrl: 'https://github.com/mastodon/mastodon/issues/35086',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'mastodon-no-bug-bounty-program',
@@ -1059,6 +1152,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mastodon dokumentiert Responsible Disclosure, bietet laut eigener Doku aber kein Bug-Bounty-Programm an.',
       severity: 'minor',
       sourceUrl: 'https://docs.joinmastodon.org/dev/disclosure/',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   mistral: [
@@ -1076,6 +1170,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mistral gibt an, EU-Anbieter zu priorisieren, kann in Ausnahmefällen jedoch auch Nicht-EU-Anbieter nutzen, wodurch ein verbleibendes grenzüberschreitendes Transfer-Risiko besteht.',
       severity: 'major',
       sourceUrl: 'https://legal.mistral.ai/terms/privacy-policy',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'microsoft-investment-2024',
@@ -1084,6 +1179,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-02-26',
       sourceUrl: 'https://www.reuters.com/world/europe/french-ai-startup-mistral-signs-distribution-deal-with-microsoft-2024-02-26/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'mixed-license-and-proprietary-flagships',
@@ -1091,6 +1187,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mistral veröffentlicht einige Modelle unter permissiven Lizenzen, während andere Modelle oder Tiers eingeschränkt oder proprietär bleiben.',
       severity: 'moderate',
       sourceUrl: 'https://docs.mistral.ai/getting-started/models/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'multimodal-safety-red-team-2025',
@@ -1099,6 +1196,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-11-13',
       sourceUrl: 'https://www.enkryptai.com/resources/mistral-multimodal-safety-report',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'repeated-service-incidents-2026',
@@ -1106,6 +1204,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Öffentliches Uptime-Tracking zeigt wiederholte Störungen, darunter Major-Disruptions Anfang 2026.',
       severity: 'moderate',
       sourceUrl: 'https://statusgator.com/services/mistral-ai',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'g42-uae-partnership-2025',
@@ -1114,6 +1213,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-06-02',
       sourceUrl: 'https://www.intelligenttechchannels.com/2025/06/02/uae-based-g42-and-french-mistral-ai-partner-to-build-next-generation-ai-platforms-and-infrastructure/',
+      penalty: { tier: 'governance', amount: 4 },
     },
   ],
   mollie: [
@@ -1147,6 +1247,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Mollie-Bedingungen erlauben in Fällen von fraud/abusive conduct die Berechnung und Verrechnung einer Offboarding Fee.',
       severity: 'moderate',
       sourceUrl: 'https://www.mollie.com/legal/user-agreement',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'status-history-shows-major-incidents',
@@ -1154,6 +1255,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die öffentliche Status-Historie enthält jüngere Major-Incidents und ist damit für mission-kritische Auszahlungs- und Checkout-Planung relevant.',
       severity: 'moderate',
       sourceUrl: 'https://status.mollie.com/',
+      penalty: { tier: 'reliability', amount: 2 },
     },
   ],
   'mullvad-vpn': [
@@ -1163,6 +1265,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mullvad unterliegt schwedischem Recht, unter dem auch bei einer No-Logs-Architektur gerichtlich angeordnete Zwangsmassnahmen möglich bleiben.',
       severity: 'moderate',
       sourceUrl: 'https://mullvad.net/en/help/swedish-legislation',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'payment-provider-metadata-processing',
@@ -1170,6 +1273,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Karten- und PayPal-Zahlungen laufen über externe Zahlungsanbieter, die eigene Transaktionsdaten ausserhalb der Mullvad-Kontrolle speichern.',
       severity: 'moderate',
       sourceUrl: 'https://mullvad.net/en/help/no-logging-data-policy/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'port-forwarding-removed-2023',
@@ -1178,6 +1282,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2023-05-29',
       sourceUrl: 'https://mullvad.net/en/blog/removing-the-support-for-forwarded-ports',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'openvpn-removed-2026',
@@ -1186,6 +1291,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2026-01-15',
       sourceUrl: 'https://mullvad.net/en/blog/removing-openvpn-from-the-mullvad-vpn-app',
+      penalty: { tier: 'contract', amount: 2 },
     },
   ],
   nextcloud: [
@@ -1195,6 +1301,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Ende-zu-Ende-Verschlüsselung ist ordnerbasiert und optional; die Standard-Serververschlüsselung bleibt für Admins zugänglich.',
       severity: 'moderate',
       sourceUrl: 'https://nextcloud.com/endtoend/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'lookup-server-privacy-incident-2025',
@@ -1203,7 +1310,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-03-07',
       sourceUrl: 'https://github.com/nextcloud/server/issues/51335',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'federation-ssrf-threat-model',
@@ -1211,6 +1318,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Föderation und externer Storage sind nicht darauf ausgelegt, SSRF standardmässig vollständig zu verhindern; Netzwerksegmentierung und strikte Outbound-Regeln sind daher empfohlen.',
       severity: 'moderate',
       sourceUrl: 'https://docs.nextcloud.com/server/31/admin_manual/installation/harden_server.html#ensure-that-your-nextcloud-instance-is-installed-in-a-dmz',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'assistant-external-ai-provider-risk',
@@ -1218,6 +1326,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'KI-Funktionen sind optional, aber bei aktivierten AI-as-a-Service-Anbietern können Prompts an Drittanbieter-APIs weitergeleitet werden (zum Beispiel OpenAI oder Replicate).',
       severity: 'moderate',
       sourceUrl: 'https://docs.nextcloud.com/server/31/admin_manual/ai/ai_as_a_service.html',
+      penalty: { tier: 'security', amount: 2 },
     },
   ],
   'nextcloud-docs': [
@@ -1236,6 +1345,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Für Federation- und External-Storage-Pfade ist SSRF nicht standardmässig vollständig verhindert; DMZ-Platzierung und strikte Outbound-Regeln sind daher erforderlich.',
       severity: 'moderate',
       sourceUrl: 'https://docs.nextcloud.com/server/31/admin_manual/installation/harden_server.html#ensure-that-your-nextcloud-instance-is-installed-in-a-dmz',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'docs-optional-external-ai-routing',
@@ -1243,6 +1353,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'KI-Funktionen sind optional, aber aktivierte AI-as-a-Service-Anbieter können Prompts an Drittanbieter-APIs ausserhalb der eigentlichen Self-Hosting-Grenze weiterleiten.',
       severity: 'moderate',
       sourceUrl: 'https://docs.nextcloud.com/server/31/admin_manual/ai/ai_as_a_service.html',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'docs-collabora-dependency-ops-risk',
@@ -1250,6 +1361,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Nextcloud Docs hängt von separaten Office-Integrationskomponenten (Collabora-Pfad) ab, was zusätzliche Dienste und Patch-Flächen mit mehr Betriebsaufwand erzeugt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/nextcloud/richdocuments',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'docs-third-party-app-audit-limit',
@@ -1257,6 +1369,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Nextcloud dokumentiert, dass Third-Party-Apps Risiken erhöhen können und nicht alle vollständig durch den Anbieter auditiert werden; Instanz-seitige App-Governance bleibt entscheidend.',
       severity: 'moderate',
       sourceUrl: 'https://nextcloud.com/privacy/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   nordvpn: [
@@ -1284,6 +1397,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'NordVPN veröffentlicht den Linux-Client unter GPL-3.0, aber Backend und Server-Infrastruktur sind nicht als Open Source öffentlich prüfbar.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/NordSecurity/nordvpn-linux',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'android-app-third-party-trackers',
@@ -1309,6 +1423,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'CVE-2024-28224 dokumentierte eine DNS-Rebinding-Schwachstelle, durch die die lokale API bei unzureichend eingeschränkten Deployments aus Remote-Kontexten missbraucht werden konnte.',
       severity: 'major',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2024-28224',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'probllama-rce-cve-2024-37032',
@@ -1316,6 +1431,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'CVE-2024-37032 (Probllama) beschrieb ein Remote-Code-Execution-Risiko in verwundbaren Versionen vor dem Patch.',
       severity: 'major',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2024-37032',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'auth-bypass-cve-2025-63389',
@@ -1323,6 +1439,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'CVE-2025-63389 beschrieb eine Authentifizierungs-Bypass-Bedingung, die in betroffenen Builds unautorisierten Zugriff erlaubte.',
       severity: 'major',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2025-63389',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'gguf-parser-dos-cve-2025-66960',
@@ -1330,6 +1447,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'CVE-2025-66960 dokumentierte einen Fehler im GGUF-Metadaten-Parsing, der Denial-of-Service-Zustände auslösen kann.',
       severity: 'moderate',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2025-66960',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'no-published-github-security-advisories',
@@ -1337,6 +1455,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der öffentliche Bereich für GitHub Security Advisories listet derzeit keine veröffentlichten Advisories, was die zentrale Nachvollziehbarkeit gefixter Versionen für Audits reduziert.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/ollama/ollama/security',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'internet-exposed-instance-risk',
@@ -1344,6 +1463,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Internetweite Scans haben wiederholt exponierte Ollama-Server gefunden und zeigen ein relevantes Betriebsrisiko bei ungenügend gehärteten lokalen Deployments.',
       severity: 'moderate',
       sourceUrl: 'https://censys.com/blog/ollama-drama-investigating-the-prevalence-of-ollama-open-instances-with-censys',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'optional-cloud-account-dependency',
@@ -1351,12 +1471,13 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Cloud-Modelle erfordern kontobasierte Remote-Nutzung und fügen damit gegenüber rein offline lokalem Betrieb eine Dienstabhängigkeit hinzu.',
       severity: 'moderate',
       sourceUrl: 'https://docs.ollama.com/cloud',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'recurrent-high-severity-vulnerability-pattern',
       text: 'Ollama accumulated multiple high-severity CVEs across network, authentication, and parser paths between 2024 and 2025 (CVE-2024-28224, CVE-2024-37032, CVE-2025-63389, CVE-2025-66960), indicating elevated ongoing security surface risk.',
       severity: 'major',
-      sourceUrl: 'https://nvd.nist.gov/vuln/search/results?query=ollama&results_type=overview&search_type=all',
+      sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2024-28224',
       penalty: { tier: 'security', amount: 4 },
     },
   ],
@@ -1367,6 +1488,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Olvid verweist auf ANSSI-CSPN-Zertifizierungen, die in den verlinkten Nachweisen jedoch auf ältere mobile App-Versionen von 2020/2021 bezogen sind und nicht auf aktuelle Produktiv-Releases.',
       severity: 'moderate',
       sourceUrl: 'https://www.olvid.io/technology/en',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'independent-side-channel-finding-2025',
@@ -1375,6 +1497,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-10-16',
       sourceUrl: 'https://zisc.ethz.ch/event/olvid-the-good-the-bad-and-the-ugly/',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'aws-hosting-jurisdiction-dependency',
@@ -1390,6 +1513,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das öffentliche Olvid-AWS-Server-Repository weist darauf hin, dass bezahlte Komponenten aus der Quellcode-Veröffentlichung entfernt werden, was die Full-Stack-Reproduzierbarkeit einschränkt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/olvid-io/olvid-aws-server',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'direct-subscription-email-cancellation',
@@ -1397,6 +1521,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Direkte Olvid-Abonnements erfordern eine Kündigung per E-Mail mit einmonatiger Frist und erzeugen damit mehr vertragliche Reibung als One-Click-In-App-Kündigungen.',
       severity: 'minor',
       sourceUrl: 'https://olvid.io/terms/en/',
+      penalty: { tier: 'contract', amount: 1 },
     },
   ],
   openstreetmap: [
@@ -1406,6 +1531,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die OSMF-Nutzungsbedingungen stellen Dienste auf "as is/as available"-Basis bereit und schliessen Garantien für Sicherheit sowie unterbrechungsfreie Verfügbarkeit explizit aus.',
       severity: 'major',
       sourceUrl: 'https://osmfoundation.org/wiki/Terms_of_Use',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'community-tile-service-capacity-and-blocking-risk',
@@ -1413,6 +1539,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Community-Tile-Dienst ist spendenfinanziert und kapazitätsbegrenzt; bei intensiver oder nicht konformer Nutzung kann laut Policy ohne Vorankündigung gesperrt werden.',
       severity: 'major',
       sourceUrl: 'https://operations.osmfoundation.org/policies/tiles/',
+      penalty: { tier: 'contract', amount: 4 },
     },
     {
       id: 'public-nominatim-not-for-heavy-production-geocoding',
@@ -1420,6 +1547,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die öffentliche Nominatim-Policy setzt strenge Limits (zum Beispiel maximal 1 Anfrage pro Sekunde) und weist darauf hin, dass der Zugriff ohne Vorankündigung entzogen werden kann.',
       severity: 'moderate',
       sourceUrl: 'https://operations.osmfoundation.org/policies/nominatim/',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'global-cdn-cross-border-processing',
@@ -1427,6 +1555,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die OSMF gibt an, personenbezogene Daten in Grossbritannien und den Niederlanden mit EU-Backups zu speichern, während die Tile-Auslieferung von einem globalen CDN-/Cache-Netzwerk abhängt.',
       severity: 'moderate',
       sourceUrl: 'https://osmfoundation.org/wiki/Privacy_Policy',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'funding-volatility-highlighted-2025',
@@ -1435,6 +1564,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-09-13',
       sourceUrl: 'https://osmfoundation.org/wiki/Annual_General_Meetings/2025/Treasurer%27s_report',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'network-outage-december-2024',
@@ -1443,6 +1573,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-12-15',
       sourceUrl: 'https://operations.osmfoundation.org/2025/02/15/post-mortem.html',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'no-public-bug-bounty-program',
@@ -1450,6 +1581,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Security-Policy von openstreetmap-website begrüsst Schwachstellenmeldungen, gibt aber an, dass kein Bug-Bounty-Programm angeboten wird.',
       severity: 'minor',
       sourceUrl: 'https://github.com/openstreetmap/openstreetmap-website/security/policy',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   'organic-maps': [
@@ -1460,6 +1592,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2021-04-24',
       sourceUrl: 'https://organicmaps.app/privacy/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'fdroid-tetherednet-map-download-service',
@@ -1467,6 +1600,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die F-Droid-Metadaten markieren Organic Maps mit dem TetheredNet-Anti-Feature, weil Karten-Downloads von cdn*.organicmaps.app abhängen.',
       severity: 'moderate',
       sourceUrl: 'https://gitlab.com/fdroid/fdroiddata/-/raw/master/metadata/app.organicmaps.yml',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'no-security-policy-detected-on-github',
@@ -1474,6 +1608,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Security-Seite des Repositories meldet "No security policy detected", was die formale Klarheit des Disclosure-Prozesses für Security-Reporter reduziert.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/organicmaps/organicmaps/security/policy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'kayak-affiliate-links-added-2025',
@@ -1482,6 +1617,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-01-26',
       sourceUrl: 'https://organicmaps.app/news/2025-01-26/january-2025-01-26-release/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'governance-conflict-and-community-fork-2025',
@@ -1499,6 +1635,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-04-25',
       sourceUrl: 'https://openletter.earth/open-letter-to-organic-maps-shareholders-a0bf770c',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'binary-map-data-separate-license-constraints',
@@ -1506,6 +1643,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die DATA_LICENSE nennt, dass binäre Kartendaten (.mwm/.bin) getrennt vom Quellcode lizenziert sind und explizite Attributions- sowie Anti-White-Label-Bedingungen enthalten.',
       severity: 'moderate',
       sourceUrl: 'https://raw.githubusercontent.com/organicmaps/organicmaps/master/DATA_LICENSE.txt',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   osmand: [
@@ -1516,6 +1654,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2020-03-26',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2020-10993',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'osmand-no-security-policy-detected-on-github',
@@ -1523,6 +1662,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Security-Seite des Repositories meldet "No security policy detected", was die Klarheit des Disclosure-Prozesses für Security-Reporter reduziert.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/osmandapp/OsmAnd/security/policy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'osmand-no-published-security-advisories',
@@ -1530,6 +1670,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die öffentliche GitHub-Advisories-Seite zeigt derzeit keine veröffentlichten Security Advisories, was die zentrale Nachvollziehbarkeit gefixter Versionen einschränkt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/osmandapp/OsmAnd/security/advisories',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'uuid-sent-with-map-download-requests',
@@ -1553,6 +1694,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'F-Droid markiert OsmAnd mit den Anti-Features NonFreeAssets, NonFreeNet und Tracking, inklusive Übertragung einer eindeutigen Installations-ID bei Karten-Downloads.',
       severity: 'moderate',
       sourceUrl: 'https://f-droid.org/packages/net.osmand.plus/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'cloud-sync-reliability-regressions-2026',
@@ -1569,6 +1711,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Nutzungsbedingungen legen fest, dass zusätzliche Bezahlservices nicht erstattbar sind und "AS IS" bereitgestellt werden; zudem besteht keine Verpflichtung zu Support, Updates oder Bugfix-Unterstützung.',
       severity: 'moderate',
       sourceUrl: 'https://osmand.net/help-online/terms-of-use/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   ovhcloud: [
@@ -1588,6 +1731,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-10-30',
       sourceUrl: 'https://blog.cloudflare.com/cloudflare-perspective-of-the-october-30-2024-ovhcloud-outage/',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'cispe-register-renewal-visibility-gap',
@@ -1596,6 +1740,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-02-01',
       sourceUrl: 'https://www.codeofconduct.cloud/public-register/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'immediate-termination-can-block-data-retrieval',
@@ -1603,6 +1748,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die OVHcloud-AGB erlauben eine sofortige Kündigung (zum Beispiel bei behördlicher Anfrage); in solchen Fällen kann die Datenabholung verweigert werden.',
       severity: 'moderate',
       sourceUrl: 'https://us.ovhcloud.com/legal/terms-of-service/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'post-termination-retrieval-window-and-purge',
@@ -1610,6 +1756,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Zugriff zur Datenabholung nach Vertragsende ist zeitlich begrenzt, und Kundendaten werden laut Dokumentation innerhalb von 15 Tagen nach Kündigung oder Nichtverlängerung gelöscht.',
       severity: 'moderate',
       sourceUrl: 'https://us.ovhcloud.com/sites/default/files/external_files/ovhcloud-us-soc3-report-2025.pdf',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'usage-data-aggregation-third-party-sharing',
@@ -1617,6 +1764,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die OVHcloud-AGB nennen, dass Nutzungsdaten für Statistikzwecke aggregiert oder anonymisiert und mit Dritten geteilt werden können.',
       severity: 'minor',
       sourceUrl: 'https://us.ovhcloud.com/legal/terms-of-service/',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   pcloud: [
@@ -1626,6 +1774,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'pCloud gibt an, dass die client-seitige pCloud Encryption optional ist; Standardkonten nutzen ohne den zusätzlichen Crypto-Tarif Transport- und serverseitige Verschlüsselung.',
       severity: 'moderate',
       sourceUrl: 'https://www.pcloud.com/help/general-help-center/how-are-my-files-secured-if-im-not-subscribed-to-pcloud-encryption',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'ccs-2024-malicious-server-crypto-findings',
@@ -1634,6 +1783,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2024-11-14',
       sourceUrl: 'https://eprint.iacr.org/2024/1616',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'coordinated-disclosure-nonresponse-2024',
@@ -1642,6 +1792,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2024-10-10',
       sourceUrl: 'https://brokencloudstorage.info/',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'data-residency-can-be-us',
@@ -1649,6 +1800,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'pCloud dokumentiert EU- und US-Datenregionen; Souveränität und grenzüberschreitende Exposition hängen damit von Regionenwahl und Account-Setup ab.',
       severity: 'moderate',
       sourceUrl: 'https://pcdn-www.pcloud.com/help/general-help-center/what-data-regions-are-available-to-store-my-data',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'auto-renew-and-termination-refund-friction',
@@ -1656,6 +1808,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB beschreiben automatische Verlängerung für Paid-Pläne und weitreichende Kündigungsrechte nach Ermessen, inklusive Klauseln ohne Gebührenrückerstattung bei gekündigten Accounts.',
       severity: 'moderate',
       sourceUrl: 'https://www.pcloud.com/terms_and_conditions',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'mixed-user-sentiment-support-account-issues',
@@ -1664,6 +1817,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2026-02-12',
       sourceUrl: 'https://www.trustpilot.com/review/pcloud.com',
+      penalty: { tier: 'contract', amount: 1 },
     },
   ],
   peertube: [
@@ -1673,6 +1827,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Wenn P2P aktiviert ist, werden IP-Adressen von Zuschauern im Tracker sichtbar und können von technisch versierten Beobachtern korreliert werden.',
       severity: 'major',
       sourceUrl: 'https://docs.joinpeertube.org/admin/privacy-guide#peertube-p2p--privacy',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'activitypub-inbox-cve-wave-2025',
@@ -1681,6 +1836,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-04-15',
       sourceUrl: 'https://github.com/Chocobozzz/PeerTube/releases/tag/v7.1.1',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'small-core-team-bus-factor',
@@ -1689,6 +1845,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-04-10',
       sourceUrl: 'https://framablog.org/2025/04/10/2025-peertube-roadmap/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'instance-operator-privacy-variance',
@@ -1696,6 +1853,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Privacy- und Compliance-Ergebnisse sind instanzabhängig, weil Admins Föderation-, P2P- und Redundanz-Einstellungen steuern.',
       severity: 'moderate',
       sourceUrl: 'https://docs.joinpeertube.org/admin/privacy-guide',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'account-import-not-full-migration',
@@ -1703,6 +1861,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Account-Import/Export verbessert die Portabilität, aber PeerTube dokumentiert dies als Import-Tool und nicht als vollständigen Migrations-Workflow.',
       severity: 'minor',
       sourceUrl: 'https://docs.joinpeertube.org/use/setup-account',
+      penalty: { tier: 'contract', amount: 1 },
     },
   ],
   pixelfed: [
@@ -1712,6 +1871,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Föderierte Auslieferung kann Follower-only- und Direktnachrichten-Metadaten auf entfernte Server kopieren, und die offizielle Privacy Policy warnt davor, dass andere Server Zugriffsbeschränkungen nicht zuverlässig durchsetzen.',
       severity: 'moderate',
       sourceUrl: 'https://pixelfed.social/site/privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'private-post-exposure-cve-2025-30741',
@@ -1720,7 +1880,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2025-03-25',
       sourceUrl: 'https://www.cve.org/CVERecord?id=CVE-2025-30741',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'critical-authorization-bypass-cve-2024-25108',
@@ -1737,6 +1897,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Privacy Policy der Flagship-Instanz nennt weiterhin den 12. Juni 2018 als letzte Aktualisierung, was ein Aktualitätsrisiko gegenüber heutigem Föderations- und Feature-Verhalten erzeugt.',
       severity: 'moderate',
       sourceUrl: 'https://pixelfed.social/site/privacy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'terms-unilateral-change-and-canada-jurisdiction',
@@ -1744,6 +1905,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Terms von pixelfed.social erlauben einseitige Änderungen ohne Vorankündigung und legen kanadisches Recht als anwendbares Recht fest, was für EU-Organisationen ein Vertragsrisiko sein kann.',
       severity: 'moderate',
       sourceUrl: 'https://pixelfed.social/site/terms',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'email-only-security-reporting-channel',
@@ -1751,6 +1913,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Security-Reporting ist als reiner E-Mail-Kanal dokumentiert und veröffentlicht keine SLA- oder Bounty-Zusagen, was die Transparenz für Enterprise-Assurance begrenzt.',
       severity: 'minor',
       sourceUrl: 'https://raw.githubusercontent.com/pixelfed/pixelfed/dev/SECURITY.md',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   plausible: [
@@ -1760,13 +1923,15 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Plausible veröffentlicht detaillierte Security-Practices und verweist auf Infrastruktur-Zertifizierungen, präsentiert jedoch keine öffentlich verifizierbare SOC-2- oder ISO-27001-Attestierung auf Anbieter-Ebene.',
       severity: 'major',
       sourceUrl: 'https://plausible.io/security',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'no-public-bug-bounty-program',
       text: 'Plausible documents responsible disclosure but explicitly states that no public bug bounty program is in place.',
       textDe: 'Plausible dokumentiert Responsible Disclosure, nennt jedoch explizit, dass kein öffentliches Bug-Bounty-Programm besteht.',
       severity: 'moderate',
-      sourceUrl: 'https://github.com/plausible/analytics/blob/master/SECURITY.md',
+      sourceUrl: 'https://raw.githubusercontent.com/plausible/analytics/master/SECURITY.md',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'security-updates-only-latest-major-minor',
@@ -1798,6 +1963,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Terms beschreiben nach aufeinanderfolgenden Overage-Monaten eine verpflichtende Upgrade-Entscheidung, was Budget-Planbarkeit und Vertragsausstieg erschweren kann.',
       severity: 'moderate',
       sourceUrl: 'https://plausible.io/terms',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'recent-api-healthcheck-incidents',
@@ -1805,12 +1971,13 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die öffentliche Status-Historie dokumentiert jüngere API-Healthcheck-Incidents, darunter einen Vorfall mit Verweis auf einen Infrastruktur-Provider-Fehler.',
       severity: 'minor',
       sourceUrl: 'https://status.plausible.io/',
+      penalty: { tier: 'reliability', amount: 1 },
     },
     {
       id: 'source-available-open-core-scope',
       text: 'Plausible uses an open-core model where the community edition has reduced scope compared to the commercial offering.',
       severity: 'moderate',
-      sourceUrl: 'https://plausible.io/blog/plausible-community-edition',
+      sourceUrl: 'https://plausible.io/blog/community-edition',
       penalty: { tier: 'governance', amount: 2 },
     },
   ],
@@ -1821,6 +1988,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Posteo bietet bei normaler Mailbox-Nutzung keine Ende-zu-Ende-Verschlüsselung standardmässig; für echte E2EE müssen Nutzer OpenPGP- oder S/MIME-Workflows selbst konfigurieren.',
       severity: 'major',
       sourceUrl: 'https://www.techradar.com/reviews/posteo',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'custom-domain-not-supported',
@@ -1828,6 +1996,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Posteo unterstützt keine eigenen Domains, was bei einem Wechsel von @posteo-Adressen den Identitäts-Lock-in erhöhen kann.',
       severity: 'moderate',
       sourceUrl: 'https://www.techradar.com/reviews/posteo',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'ddos-attack-series-may-2022',
@@ -1836,6 +2005,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2022-05-17',
       sourceUrl: 'https://www.golem.de/news/posteo-maildienst-kaempft-mit-ddos-attacken-2205-165354.html',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'lawful-ip-logging-on-court-order',
@@ -1843,7 +2013,8 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Deutsche Gerichtsentscheidungen können Anbieter wie Posteo bei gültigen Anordnungen zum Mitschreiben und Herausgeben von IP-Daten für Zielkonten verpflichten.',
       severity: 'moderate',
       date: '2019-01-16',
-      sourceUrl: 'https://www.golem.de/news/ip-stripping-e-mail-anbieter-muss-auf-verlangen-ip-adressen-mitloggen-1901-139043.html',
+      sourceUrl: 'https://web.archive.org/web/20190129143700/https://www.golem.de/news/ip-stripping-e-mail-anbieter-muss-auf-verlangen-ip-adressen-mitloggen-1901-139043.html',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'high-rate-of-invalid-authority-requests',
@@ -1852,6 +2023,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2025-04-14',
       sourceUrl: 'https://www.golem.de/news/transparenzbericht-posteo-weist-61-prozent-der-behoerdenanfragen-zurueck-2504-195561.html',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   prestashop: [
@@ -1862,6 +2034,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2022-07-22',
       sourceUrl: 'https://build.prestashop-project.org/news/2022/major-security-vulnerability-on-prestashop-websites/',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'module-supply-chain-critical-cve-volume',
@@ -1869,6 +2042,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Advisory-Feed von Friends-Of-Presta dokumentiert wiederkehrende High- und Critical-Schwachstellen in Drittanbieter-Modulen und bestätigt damit ein strukturelles Modul-Supply-Chain-Risiko.',
       severity: 'major',
       sourceUrl: 'https://security.friendsofpresta.org/',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'no-native-iso27001-soc2-assurance',
@@ -1876,6 +2050,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'PrestaShop erklärt, dass Compliance mit Standards wie ISO 27001 nicht nativ bereitgestellt wird und in der Verantwortung jedes Shop-Betreibers liegt.',
       severity: 'moderate',
       sourceUrl: 'https://help-center.prestashop.com/hc/en-us/articles/20622190212498-PrestaShop-certifications',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'cloudsync-automatic-activation-and-data-sharing',
@@ -1883,6 +2058,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Account-/Service-AGB beschreiben CloudSync-Datenerhebung/-Weitergabe für Analytics und behalten sich eine automatische CloudSync-Aktivierung bei Modul-Updates bzw. Weiternutzung vor.',
       severity: 'major',
       sourceUrl: 'https://prestashop.com/prestashop-account-terms-conditions/',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'bug-bounty-currently-paused',
@@ -1890,6 +2066,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Bug-Bounty-Seite des Projekts nennt, dass das Sicherheits-Bounty-Programm derzeit pausiert ist.',
       severity: 'moderate',
       sourceUrl: 'https://www.prestashop-project.org/security/bug-bounty/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ownership-transition-to-cyber-folks-pending-close',
@@ -1897,7 +2074,8 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Fortidia kündigte eine Vorabvereinbarung zum Verkauf von PrestaShop an eine von cyber_Folks kontrollierte Gesellschaft in Polen an; damit bleibt die Eigentümerschaft innerhalb der EU, bis zum Closing bleibt jedoch ein Transitionsrisiko.',
       severity: 'minor',
       date: '2025-12-11',
-      sourceUrl: 'https://www.fortidia.com/fortidia-announces-the-sale-of-prestashop-to-cyber_folks-to-accelerate-growth-in-the-core-logistics-business',
+      sourceUrl: 'https://www.fortidia.com/wp-content/uploads/2025/12/Fortidia-Announces-the-Sale-of-PrestaShop-PR.pdf',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'subscription-renewal-no-refund-clause',
@@ -1905,6 +2083,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Account-/Service-AGB legen fest, dass begonnene Abonnementzeiträume fällig sind und nicht erstattet werden können.',
       severity: 'moderate',
       sourceUrl: 'https://prestashop.com/prestashop-account-terms-conditions/',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'distribution-api-url-tracking-default',
@@ -1912,6 +2091,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Data-Transparency-Seite des Projekts nennt, dass Distribution-API-Telemetrie Shop-URL und Version enthalten kann; das Deaktivieren des URL-Trackings erfordert explizite Konfiguration.',
       severity: 'moderate',
       sourceUrl: 'https://www.prestashop-project.org/data-transparency/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   'proton-drive': [
@@ -1921,6 +2101,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Client-Anwendungen sind quelloffen, der Backend-Servercode bleibt jedoch weitgehend proprietär.',
       severity: 'minor',
       sourceUrl: 'https://proton.me/community/open-source',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   'proton-mail': [
@@ -1931,6 +2112,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2021-09-01',
       sourceUrl: 'https://proton.me/blog/climate-activist-arrest',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'account-restriction-abuse-controls',
@@ -1938,6 +2120,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Proton dokumentiert, dass Abuse-Kontrollen den Konto-Zugriff während einer Prüfung vorübergehend einschränken oder deaktivieren können.',
       severity: 'moderate',
       sourceUrl: 'https://proton.me/support/account-disabled',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'ios-repo-not-externally-buildable',
@@ -1945,6 +2128,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das öffentliche Proton-Mail-iOS-Repository gibt an, dass die App derzeit nicht direkt aus GitHub gebaut werden kann, weil ein Teil der SDK-Distribution intern bleibt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/ProtonMail/ios-mail/blob/main/README.md',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'auto-renewal-then-current-pricing',
@@ -1952,6 +2136,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB erlauben automatische Verlängerung zum dann gültigen Preis; Preisveränderungen bei Verlängerung müssen daher aktiv überwacht werden.',
       severity: 'minor',
       sourceUrl: 'https://proton.me/legal/terms',
+      penalty: { tier: 'contract', amount: 1 },
     },
   ],
   'proton-pass': [
@@ -1961,6 +2146,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Client-Anwendungen sind quelloffen, der Backend-Servercode bleibt jedoch weitgehend proprietär.',
       severity: 'minor',
       sourceUrl: 'https://proton.me/community/open-source',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   'proton-vpn': [
@@ -1971,6 +2157,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2026-01-13',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2022-50917',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'windows-installer-path-cve-2024-37391',
@@ -1979,6 +2166,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-07-22',
       sourceUrl: 'https://nvd.nist.gov/vuln/detail/CVE-2024-37391',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'vpn-auto-renew-then-current-pricing',
@@ -1986,6 +2174,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB erlauben automatische Verlängerung zum dann gültigen Preis; rabattierte Einstiegspreise können ohne aktive Vertragskontrolle in höhere Renewal-Preise übergehen.',
       severity: 'moderate',
       sourceUrl: 'https://proton.me/legal/terms',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'legacy-openvpn-config-deactivation-2026',
@@ -1994,6 +2183,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2026-01-14',
       sourceUrl: 'https://protonvpn.com/blog/old-ovpn-configs',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'vpn-login-disruption-incident-2025',
@@ -2002,6 +2192,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2025-01-09',
       sourceUrl: 'https://www.heise.de/en/news/Apparent-technical-fault-at-mail-and-VPN-provider-Proton-10234682.html',
+      penalty: { tier: 'reliability', amount: 1 },
     },
   ],
   qwant: [
@@ -2011,7 +2202,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Qwant gibt an, dass Suchanfragen, Geräte-/Browser-Daten und IP-bezogene Daten für Such- und Werbeauslieferung an Microsoft übermittelt werden, inklusive Fällen mit Übertragung der vollen IP-Adresse.',
       severity: 'major',
       sourceUrl: 'https://about.qwant.com/en/legal/confidentialite/',
-      penalty: { tier: 'contract', amount: 4 },
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'cnil-legal-basis-finding-2023',
@@ -2029,6 +2220,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-05-23',
       sourceUrl: 'https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'qwantmaps-repository-archived-2024',
@@ -2037,6 +2229,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-06-03',
       sourceUrl: 'https://github.com/Qwant/qwantmaps',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'qwantresearch-organization-archived-2025',
@@ -2045,6 +2238,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-11-19',
       sourceUrl: 'https://github.com/QwantResearch',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   'raspberry-pi-self-hosting': [
@@ -2053,7 +2247,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       text: 'Raspberry Pi Connect can relay encrypted sessions through TURN servers in California when peer-to-peer fails, so remote access traffic may traverse US infrastructure.',
       textDe: 'Raspberry Pi Connect kann Sitzungen bei fehlendem Peer-to-Peer über TURN-Server in Kalifornien relayen; Remote-Zugriff kann damit über US-Infrastruktur laufen.',
       severity: 'moderate',
-      sourceUrl: 'https://www.raspberrypi.com/documentation/services/connect.html',
+      sourceUrl: 'https://www.raspberrypi.com/documentation/remote-access/services/connect.html',
       penalty: { tier: 'governance', amount: 2 },
     },
     {
@@ -2070,6 +2264,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Security-Disclosure-Policy von Raspberry Pi nennt explizit, dass kein öffentliches Bug-Bounty-Programm angeboten wird.',
       severity: 'minor',
       sourceUrl: 'https://www.raspberrypi.com/contact/security/',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'kernel-cve-backport-lag-reports-2024',
@@ -2095,6 +2290,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2021-01-25',
       sourceUrl: 'https://github.com/RPi-Distro/raspberrypi-sys-mods/commit/655cad5aee6457b94fc2336b1ff3c1104ccb4351',
+      penalty: { tier: 'governance', amount: 1 },
     },
   ],
   scaleway: [
@@ -2113,6 +2309,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Öffentliche Review-Aggregation zeigt anhaltende Beschwerden zu Support-Reaktionszeit und Incident-Handling-Qualität.',
       severity: 'moderate',
       sourceUrl: 'https://www.trustpilot.com/review/scaleway.com',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'recurring-platform-incidents-statuspage',
@@ -2121,6 +2318,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2025-11-24',
       sourceUrl: 'https://status.scaleway.com/',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'stolen-ssd-transport-incident-2021',
@@ -2145,6 +2343,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Billing-FAQ nennt, dass Ressourcen nach einer Sperrung wegen unbezahlter Rechnungen gelöscht werden können, wenn innerhalb weiterer zehn Tage keine Zahlung erfolgt.',
       severity: 'moderate',
       sourceUrl: 'https://www.scaleway.com/en/docs/billing/faq/',
+      penalty: { tier: 'contract', amount: 2 },
     },
   ],
   shopware: [
@@ -2154,6 +2353,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Beitragende unterzeichnen eine CLA, die shopware AG weitreichende Rechte am beigetragenen Code einräumt.',
       severity: 'minor',
       sourceUrl: 'https://github.com/shopware5/shopware/blob/5.3/CLA.md',
+      penalty: { tier: 'contract', amount: 1 },
     },
   ],
   'simple-analytics': [
@@ -2215,6 +2415,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Aktive Urheberrechtsklagen sind in mehreren Jurisdiktionen noch nicht abgeschlossen.',
       severity: 'major',
       sourceUrl: 'https://www.prnewswire.com/news-releases/class-action-filed-against-stability-ai-midjourney-and-deviantart-for-dmca-violations-right-of-publicity-violations-unlawful-competition-breach-of-tos-301721869.html',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'community-license-not-osi',
@@ -2222,6 +2423,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Community-Lizenz enthält Nutzungseinschränkungen und ist damit nicht vollständig mit Open-Source-Lizenzen gleichzusetzen.',
       severity: 'moderate',
       sourceUrl: 'https://stability.ai/community-license-agreement',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'governance-instability-history',
@@ -2230,6 +2432,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-03-22',
       sourceUrl: 'https://www.reuters.com/world/uk/ai-start-up-stability-ai-ceo-mostaque-steps-down-information-reports-2024-03-22/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   startmail: [
@@ -2239,6 +2442,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Im Whitepaper beschreibt StartMail unabhängige Audits, veröffentlicht jedoch keinen öffentlich einsehbaren Third-Party-Auditbericht zur externen Prüfung.',
       severity: 'moderate',
       sourceUrl: 'https://www.startmail.com/whitepaper',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'session-access-not-zero-knowledge',
@@ -2246,6 +2450,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Datenschutzerklärung nennt, dass reguläre E-Mails während der Anmeldung in der Sitzung unverschlüsselt verfügbar sind; das ist kein striktes Zero-Knowledge-Modell.',
       severity: 'major',
       sourceUrl: 'https://www.startmail.com/privacy',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'us-third-party-processing-for-payments-and-abuse',
@@ -2262,6 +2467,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2020-09-28',
       sourceUrl: 'https://www.startmail.com/terms-of-service',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'trial-requires-payment-method',
@@ -2269,6 +2475,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die StartMail-Preis-FAQ nennt, dass für die Trial-Anmeldung Zahlungsdaten (Kreditkarte oder PayPal) zur Missbrauchsprävention erforderlich sind.',
       severity: 'moderate',
       sourceUrl: 'https://www.startmail.com/pricing',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'no-refund-after-cancellation',
@@ -2276,6 +2483,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB legen fest, dass bei Kündigung vor Periodenende keine Rückzahlung von Abogebühren erfolgt.',
       severity: 'moderate',
       sourceUrl: 'https://www.startmail.com/terms-of-service',
+      penalty: { tier: 'contract', amount: 2 },
     },
   ],
   threema: [
@@ -2284,6 +2492,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       text: 'Threema is open source, but self-compiled apps are license-constrained and cannot create new IDs without purchased-app/license validation.',
       textDe: 'Threema ist Open Source, aber selbst kompilierte Apps sind lizenzgebunden und können ohne Kauf-App/Lizenzprüfung keine neuen IDs erstellen.',
       severity: 'moderate',
+      penalty: { tier: 'contract', amount: 2 },
       sourceUrl: 'https://threema.com/en/why-threema/open-source',
     },
     {
@@ -2292,6 +2501,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das Android-Source-Repository wird bewusst nur mit einem Commit pro öffentlichem Non-Beta-Release aktualisiert, was die laufende Entwicklungs-Transparenz begrenzt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/threema-ch/threema-android',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'threema-web-maintenance-mode',
@@ -2299,6 +2509,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Threema Web befindet sich im Maintenance-Modus; während Desktop 2.0 priorisiert wird, sind keine grösseren neuen Features oder nicht-kritischen Bugfixes vorgesehen.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/threema-ch/threema-web',
+      penalty: { tier: 'reliability', amount: 2 },
     },
     {
       id: 'chat-export-not-importable',
@@ -2306,6 +2517,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Der Chat-Export ist als verschlüsselte ZIP verfügbar, aber exportierte Chats können nicht wieder in Threema importiert werden.',
       severity: 'moderate',
       sourceUrl: 'https://threema.com/en/faq/chatexport',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'protocol-attack-series-2023',
@@ -2314,6 +2526,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2023-08-09',
       sourceUrl: 'https://www.usenix.org/conference/usenixsecurity23/presentation/paterson',
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'third-party-push-service-dependency',
@@ -2321,6 +2534,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Push-Zustellung kann von Drittanbieter-Mobilökosystemen (FCM/APNS/HMS) abhängen und erzeugt damit externe Infrastrukturabhängigkeit.',
       severity: 'minor',
       sourceUrl: 'https://threema.com/en/faq/privacy-push',
+      penalty: { tier: 'governance', amount: 1 },
     },
     {
       id: 'private-equity-ownership-turnover-2026',
@@ -2329,6 +2543,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2026-01-12',
       sourceUrl: 'https://threema.com/en/faq/ownership',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   thunderbird: [
@@ -2338,6 +2553,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Thunderbird-Telemetrie ist standardmässig aktiv und erfordert für strengere Privacy-Baselines ein manuelles Opt-out.',
       severity: 'moderate',
       sourceUrl: 'https://support.mozilla.org/en-US/kb/thunderbird-telemetry',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'thunderbird-pro-early-stage-assurance',
@@ -2345,6 +2561,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Thunderbird-Pro-Dienste sind weiterhin frühphasig; Assurance-Artefakte verbessern sich, bleiben aber im Vergleich zu reifen Hosting-Anbietern begrenzt.',
       severity: 'moderate',
       sourceUrl: 'https://blog.thunderbird.net/2025/11/thunderbird-pro-november-2025-update/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'fake-download-impersonation-risk',
@@ -2352,6 +2569,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Threat-Reports dokumentierten gefälschte Firefox/Thunderbird-Update-Seiten zur Malware-Verteilung; vertrauenswürdige Download-Kanäle bleiben deshalb kritisch.',
       severity: 'moderate',
       sourceUrl: 'https://www.bleepingcomputer.com/news/security/typosquat-campaign-mimics-27-brands-to-push-windows-android-malware/',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'mozilla-restructuring-capacity-risk',
@@ -2359,6 +2577,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Mozilla-weite Restrukturierungen und Entlassungen im Jahr 2024 führten zu einem Ökosystem-Risiko bei Liefer- und Supportkapazität.',
       severity: 'minor',
       sourceUrl: 'https://techcrunch.com/2024/11/05/mozilla-foundation-lays-off-30-staff-drops-advocacy-division/',
+      penalty: { tier: 'reliability', amount: 1 },
     },
   ],
   'tor-browser': [
@@ -2369,7 +2588,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2022-10-04',
       sourceUrl: 'https://securelist.com/onionpoison-infected-tor-browser-installer-youtube/107627/',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'download-signature-verification-required',
@@ -2377,6 +2596,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Tor-Project-Dokumentation verlangt die Signaturprüfung heruntergeladener Pakete; ohne Verifikation steigt das Risiko für Fake-Installer und Supply-Chain-Angriffe deutlich.',
       severity: 'moderate',
       sourceUrl: 'https://support.torproject.org/tbb/how-to-verify-signature/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'firefox-esr-zero-day-inheritance-window',
@@ -2385,6 +2605,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2024-10-09',
       sourceUrl: 'https://blog.torproject.org/new-release-tor-browser-1357/',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'tor-network-dos-performance-degradation',
@@ -2403,13 +2624,15 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das Microsoft-365-App-Certification-Profil für Tresorit führt ISO 27001 als vorhanden, während SOC-1/2/3-Attestierungen als nicht verfügbar gelistet sind.',
       severity: 'moderate',
       sourceUrl: 'https://appsource.microsoft.com/en-us/product/office/wa200005095',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'default-data-residency-not-switzerland',
       text: 'Tresorit support documentation states that default customer data storage is in Ireland and relies on Microsoft Azure infrastructure.',
       textDe: 'Die Tresorit-Dokumentation nennt Irland als Standard-Speicherort für Kundendaten und verweist auf Microsoft-Azure-Infrastruktur.',
       severity: 'moderate',
-      sourceUrl: 'https://support.tresorit.com/hc/en-us/articles/360010198579-Data-storage',
+      sourceUrl: 'https://tresorit.com/features/data-residency-options',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'subprocessor-cross-border-transfer-scope',
@@ -2417,6 +2640,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Nutzungsbedingungen erlauben Verarbeitung durch Subprozessoren im EWR, in den USA und in weiteren Ländern, inklusive regionsübergreifender Service-Data-Transfers.',
       severity: 'major',
       sourceUrl: 'https://tresorit.com/legal/terms-of-use',
+      penalty: { tier: 'governance', amount: 4 },
     },
     {
       id: 'metadata-visibility-in-malicious-server-model',
@@ -2424,6 +2648,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Veröffentlichte Kryptographie-Forschung zu Malicious-Server-Cloud-Modellen beschreibt, dass bestimmte Metadaten- und Struktur-Signale selbst bei E2EE-Speicherdiensten ableitbar bleiben können.',
       severity: 'moderate',
       sourceUrl: 'https://eprint.iacr.org/2024/1616',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'sales-call-recording-and-bot-processing',
@@ -2431,6 +2656,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Datenschutzerklärung nennt Aufzeichnung und Transkription von Sales-Calls sowie botgestützte Verarbeitung für Coaching- und Demo-Szenarien.',
       severity: 'moderate',
       sourceUrl: 'https://tresorit.com/legal/privacy-policy',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'auto-renewal-trial-conversion-and-paid-export-window',
@@ -2438,6 +2664,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die AGB enthalten automatische Verlängerung, Trial-zu-Paid-Umwandlung sowie Export-Fenster nach Vertragsende, die zusätzliche Zahlungen erfordern können.',
       severity: 'moderate',
       sourceUrl: 'https://tresorit.com/legal/terms-of-use',
+      penalty: { tier: 'contract', amount: 2 },
     },
     {
       id: 'low-trustpilot-rating-2026',
@@ -2446,6 +2673,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'moderate',
       date: '2026-02-11',
       sourceUrl: 'https://www.trustpilot.com/review/tresorit.com',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   tuta: [
@@ -2455,6 +2683,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Tuta bietet kein IMAP an und setzt statt standardisiertem Mailbox-Zugriff auf eigene Clients.',
       severity: 'moderate',
       sourceUrl: 'https://tuta.com/support#what-email-protocols-does-tuta-support',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'targeted-legal-interception-risk',
@@ -2471,6 +2700,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Tuta veröffentlicht den Client-Code als Open Source, während serverseitiger Code nicht Teil dieses öffentlichen Umfangs ist.',
       severity: 'moderate',
       sourceUrl: 'https://tuta.com/open-source',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
   'ungoogled-chromium': [
@@ -2480,7 +2710,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das Projekt weist explizit darauf hin, dass Contributor-Binaries nicht offiziell und in der Regel nicht reproduzierbar sind, weshalb die Authentizität der Binaries nicht garantiert werden kann.',
       severity: 'major',
       sourceUrl: 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'stale-binary-tracks-on-some-platforms',
@@ -2489,7 +2719,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'major',
       date: '2026-02-12',
       sourceUrl: 'https://ungoogled-software.github.io/ungoogled-chromium-binaries/',
-      penalty: { tier: 'governance', amount: 4 },
+      penalty: { tier: 'security', amount: 4 },
     },
     {
       id: 'no-published-security-policy-or-advisories',
@@ -2505,6 +2735,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die FAQ sagt, dass es derzeit keine eingebaute Funktion für automatische Extension-Updates gibt.',
       severity: 'moderate',
       sourceUrl: 'https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#will-extensions-auto-update',
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'no-built-in-browser-auto-update',
@@ -2512,7 +2743,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Eine Maintainer-Diskussion zeigt, dass ungoogled-chromium keine eingebaute Browser-Auto-Update-Funktion besitzt.',
       severity: 'moderate',
       sourceUrl: 'https://github.com/ungoogled-software/ungoogled-chromium/discussions/2740',
-      penalty: { tier: 'governance', amount: 2 },
+      penalty: { tier: 'security', amount: 2 },
     },
     {
       id: 'crlset-revocation-gap-discussed',
@@ -2521,14 +2752,14 @@ export const reservationsById: Record<string, Reservation[]> = {
       severity: 'minor',
       date: '2024-02-16',
       sourceUrl: 'https://github.com/ungoogled-software/ungoogled-chromium/issues/2719',
-      penalty: { tier: 'governance', amount: 1 },
+      penalty: { tier: 'security', amount: 1 },
     },
     {
       id: 'safe-browsing-disabled-and-extension-update-gap',
       text: 'Safe Browsing is disabled by design and extension auto-updates are removed, requiring users to manually manage phishing protection and extension security updates.',
       severity: 'moderate',
       sourceUrl: 'https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq',
-      penalty: { tier: 'governance', amount: 2 },
+      penalty: { tier: 'security', amount: 2 },
     },
   ],
   vikunja: [
@@ -2547,6 +2778,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Die Security-Seite verweist auf Hetzner-Hosting-Kontrollen und ISO/IEC 27001 des Infrastrukturanbieters, veröffentlicht aber keine vendor-level SOC-2- oder ISO-Attestierungen für Vikunja selbst.',
       severity: 'moderate',
       sourceUrl: 'https://vikunja.io/security/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'sole-proprietor-operations-concentration',
@@ -2554,6 +2786,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Das Impressum nennt Konrad Langenberg Software als verantwortliche Stelle für vikunja.io und vikunja.cloud und zeigt damit eine operativ konzentrierte Einzelunternehmensstruktur.',
       severity: 'moderate',
       sourceUrl: 'https://vikunja.io/imprint/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'export-restore-migration-friction-community',
@@ -2561,6 +2794,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Community-Support-Threads zeigen wiederkehrende Verwirrung und Migrations-Reibung zwischen nutzerseitigem Export und vollständigen CLI-Dump/Restore-Workflows.',
       severity: 'moderate',
       sourceUrl: 'https://community.vikunja.io/t/unable-to-restore-after-dump-and-export-also-not-working/2263/5',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'dump-command-path-permission-edgecases',
@@ -2568,6 +2802,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Self-Hosted-Betreiber berichten über Dump-Command-Edgecases bei Pfaden und Berechtigungen in Container-Setups, was Backup-Prozesse erschweren kann.',
       severity: 'minor',
       sourceUrl: 'https://community.vikunja.io/t/dump-command-generating-permission-denied/3495',
+      penalty: { tier: 'reliability', amount: 1 },
     },
   ],
   vivaldi: [
@@ -2594,7 +2829,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Sync war im Dezember 2024 mehrere Tage nicht verfügbar, während Backend-Datenbankkapazität ausgebaut und Last neu verteilt wurde.',
       severity: 'moderate',
       date: '2024-12-06',
-      sourceUrl: 'https://www.pcworld.com/article/2552078/vivaldis-sync-outage-stretches-into-a-fifth-day.html',
+      sourceUrl: 'https://web.archive.org/web/20241225180437/https://www.pcworld.com/article/2552078/vivaldis-sync-outage-stretches-into-a-fifth-day.html',
       penalty: { tier: 'reliability', amount: 2 },
     },
     {
@@ -2603,6 +2838,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Vivaldi wird nicht unter einer einheitlichen Open-Source-Lizenz verteilt; die UI-Schicht bleibt proprietär und begrenzt damit kontinuierliche externe Audits.',
       severity: 'moderate',
       sourceUrl: 'https://help.vivaldi.com/desktop/privacy/is-vivaldi-open-source/',
+      penalty: { tier: 'governance', amount: 2 },
     },
     {
       id: 'search-suggestions-and-safe-browsing-third-party-flows',
@@ -2610,6 +2846,7 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Suchvorschläge senden eingegebene Suchbegriffe an die ausgewählte Suchmaschine, und Google Safe Browsing ist auf Desktop und Android standardmässig integriert.',
       severity: 'moderate',
       sourceUrl: 'https://vivaldi.com/privacy/browser/',
+      penalty: { tier: 'governance', amount: 2 },
     },
   ],
 };
