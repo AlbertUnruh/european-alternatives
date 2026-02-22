@@ -73,9 +73,8 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'fair-cancellation-terms', text: 'Free service with no subscription lock-in', textDe: 'Kostenloser Dienst ohne Abo-Bindung', dimension: 'contract', amount: 1, sourceUrl: 'https://www.ecosia.org/privacy' },
   ],
   'element': [
-    { id: 'e2e-encryption-default', text: 'End-to-end encryption enabled by default in private rooms via Megolm/Olm', textDe: 'Ende-zu-Ende-Verschlüsselung standardmässig in privaten Räumen via Megolm/Olm', dimension: 'security', amount: 2, sourceUrl: 'https://element.io/enterprise/security' },
-    { id: 'iso-27001-certified', text: 'ISO/IEC 27001:2022 certified', textDe: 'ISO/IEC 27001:2022-zertifiziert', dimension: 'security', amount: 2, sourceUrl: 'https://element.io/blog/element-achieves-iso-27001-certification/' },
-    { id: 'responsible-disclosure-process', text: 'Published security disclosure policy with 90-day fix target', textDe: 'Veröffentlichte Sicherheitsmeldepolitik mit 90-Tage-Fix-Ziel', dimension: 'security', amount: 1, sourceUrl: 'https://element.io/security' },
+    { id: 'iso-27001-certified', text: 'ISO/IEC 27001:2022 certified', textDe: 'ISO/IEC 27001:2022-zertifiziert', dimension: 'security', amount: 2, sourceUrl: 'https://www.iafcertsearch.org/certified-entity/0QRs7nEYtvfutjbm95kB47RO' },
+    { id: 'responsible-disclosure-process', text: 'Published security disclosure policy with 90-day fix target', textDe: 'Veröffentlichte Sicherheitsmeldepolitik mit 90-Tage-Fix-Ziel', dimension: 'security', amount: 1, sourceUrl: 'https://element.io/security/security-disclosure-policy/' },
     { id: 'transparent-ownership', text: 'Clear legal entity registered at UK Companies House', textDe: 'Klare Rechtsform im UK Companies House registriert', dimension: 'governance', amount: 1, sourceUrl: 'https://element.io/about' },
     { id: 'gdpr-dpa-documented', text: 'GDPR/DPA documented with EU/EEA/UK processing scope', textDe: 'DSGVO/AVV dokumentiert mit EU-/EWR-/UK-Verarbeitungsumfang', dimension: 'governance', amount: 1, sourceUrl: 'https://element.io/privacy' },
     { id: 'public-status-page', text: 'Public status page for Element services', textDe: 'Öffentliche Statusseite für Element-Dienste', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.element.io' },
@@ -123,8 +122,8 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'active-release-cadence', text: 'Active monthly release cadence', textDe: 'Aktiver monatlicher Release-Zyklus', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.home-assistant.io/faq/release/' },
     { id: 'self-hostable', text: 'Local-first and fully self-hostable core', textDe: 'Local-First-Ansatz und vollständig selbst hostbarer Kern', dimension: 'contract', amount: 2, sourceUrl: 'https://www.home-assistant.io' },
     { id: 'open-standards-no-lock-in', text: 'Open-source core with low structural lock-in', textDe: 'Open-Source-Kern mit geringem strukturellem Lock-in', dimension: 'contract', amount: 1, sourceUrl: 'https://github.com/home-assistant/core' },
-    { id: 'data-export-available', text: 'Documented backup and export paths for cloud and local data', textDe: 'Dokumentierte Backup- und Exportpfade für Cloud- und lokale Daten', dimension: 'contract', amount: 1, sourceUrl: 'https://support.nabucasa.com/hc/en-us/articles/17749521790045-How-can-I-download-my-Cloud-Backups' },
-    { id: 'fair-cancellation-terms', text: 'Documented cancellation and account deletion process', textDe: 'Dokumentierter Kündigungs- und Kontolöschungsprozess', dimension: 'contract', amount: 1, sourceUrl: 'https://support.nabucasa.com/hc/en-us/articles/26056126365853-How-do-I-cancel-my-subscription' },
+    { id: 'data-export-available', text: 'Documented backup and export paths for cloud and local data', textDe: 'Dokumentierte Backup- und Exportpfade für Cloud- und lokale Daten', dimension: 'contract', amount: 1, sourceUrl: 'https://support.nabucasa.com/hc/en-us/articles/26294370569245-Downloading-a-backup-from-Home-Assistant-Cloud' },
+    { id: 'fair-cancellation-terms', text: 'Documented cancellation and account deletion process', textDe: 'Dokumentierter Kündigungs- und Kontolöschungsprozess', dimension: 'contract', amount: 1, sourceUrl: 'https://support.nabucasa.com/hc/en-us/articles/26167476727581-Cancelling-the-subscription-and-deleting-the-account' },
   ],
 
   'hostinger': [
@@ -135,7 +134,6 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'public-transparency-report', text: 'DSA transparency report and third-party code of conduct published', textDe: 'DSA-Transparenzbericht und Verhaltenskodex für Dritte veröffentlicht', dimension: 'governance', amount: 1, sourceUrl: 'https://www.hostinger.com/legal/dsa-transparency-report' },
     { id: 'gdpr-dpa-documented', text: 'GDPR DPA with SCC/UK-IDTA mechanisms publicly available', textDe: 'DSGVO-AVV mit SCC-/UK-IDTA-Mechanismen öffentlich verfügbar', dimension: 'governance', amount: 1, sourceUrl: 'https://www.hostinger.com/legal/dpa' },
     { id: 'public-status-page', text: 'Public Statuspage for incident and uptime tracking', textDe: 'Öffentliche Statusseite für Vorfall- und Verfügbarkeitsüberwachung', dimension: 'reliability', amount: 1, sourceUrl: 'https://statuspage.hostinger.com/' },
-    { id: 'active-release-cadence', text: 'Active SDK and tooling release cadence across GitHub repositories', textDe: 'Aktiver SDK- und Tooling-Release-Zyklus über GitHub-Repositories', dimension: 'reliability', amount: 1, sourceUrl: 'https://github.com/niceit/hostinger-api-client-typescript' },
     { id: 'data-export-available', text: 'Downloadable file and database backups for standard hosting plans', textDe: 'Herunterladbare Datei- und Datenbank-Backups für Standard-Hosting-Pläne', dimension: 'contract', amount: 1, sourceUrl: 'https://support.hostinger.com/en/articles/5981435-how-to-download-backups-at-hostinger' },
     { id: 'eu-data-residency', text: 'EU contracting entity in Cyprus with EMEA subprocessor designations', textDe: 'EU-Vertragsgesellschaft in Zypern mit EMEA-Unterauftragsverarbeiter-Bezeichnungen', dimension: 'contract', amount: 1, sourceUrl: 'https://www.hostinger.com/legal/dpa' },
   ],
@@ -162,7 +160,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'eu-data-residency', text: 'Swiss-hosted infrastructure with explicit data residency commitments', textDe: 'In der Schweiz gehostete Infrastruktur mit expliziten Datenresidenz-Zusagen', dimension: 'contract', amount: 1, sourceUrl: 'https://www.infomaniak.com/en/legal/general-terms-and-conditions' },
   ],
   'ionos': [
-    { id: 'iso-27001-certified', text: 'ISO 27001 on BSI IT-Grundschutz basis with registry-verifiable certification', textDe: 'ISO 27001 auf BSI-IT-Grundschutz-Basis mit registerprüfbarer Zertifizierung', dimension: 'security', amount: 2, sourceUrl: 'https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Zertifizierung-und-Anerkennung/ISO-IEC-27001-Zertifizierung-auf-Basis-von-IT-Grundschutz/Zertifizierte-Unternehmen/Zertifizierte-Unternehmen_node.html' },
+    { id: 'iso-27001-certified', text: 'ISO 27001 on BSI IT-Grundschutz basis with registry-verifiable certification', textDe: 'ISO 27001 auf BSI-IT-Grundschutz-Basis mit registerprüfbarer Zertifizierung', dimension: 'security', amount: 2, sourceUrl: 'https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Zertifizierung-und-Anerkennung/Listen/Zertifikate-ISO-27001-auf-Basis-von-IT-Grundschutz/zertifikate-iso-27001-auf-basis-von-it-grundschutz_node.html' },
     { id: 'responsible-disclosure-process', text: 'Public vulnerability register with patch-deploy timestamps and reporting process', textDe: 'Öffentliches Schwachstellenregister mit Patch-Zeitstempeln und Meldeprozess', dimension: 'security', amount: 1, sourceUrl: 'https://docs.ionos.com/cloud/security-safeguards/report-security-event/vulnerabilities' },
     { id: 'transparent-ownership', text: 'Public-company reporting with clear legal structure reduces ownership opacity', textDe: 'Börsennotierte Berichterstattung mit klarer Rechtsstruktur reduziert Eigentümerintransparenz', dimension: 'governance', amount: 1, sourceUrl: 'https://www.ionos-group.com/investor-relations/publications' },
     { id: 'public-transparency-report', text: 'Public investor relations publications and financial reporting', textDe: 'Öffentliche Investor-Relations-Publikationen und Finanzberichterstattung', dimension: 'governance', amount: 1, sourceUrl: 'https://www.ionos-group.com/investor-relations/publications' },
@@ -183,11 +181,11 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'data-export-available', text: 'File download and sync client enable data export', textDe: 'Dateidownload und Sync-Client ermöglichen Datenexport', dimension: 'contract', amount: 1, sourceUrl: 'https://www.infomaniak.com/en/support/faq/2462/understanding-kdrive-data-security' },
   ],
   'keepassxc': [
-    { id: 'independent-security-audit', text: 'ANSSI CSPN certification for v2.7.9', textDe: 'ANSSI-CSPN-Zertifizierung für v2.7.9', dimension: 'security', amount: 2, sourceUrl: 'https://keepassxc.org/blog/2025-11-17-keepassxc-279-cspn-certified/' },
+    { id: 'independent-security-audit', text: 'ANSSI CSPN certification for v2.7.9', textDe: 'ANSSI-CSPN-Zertifizierung für v2.7.9', dimension: 'security', amount: 2, sourceUrl: 'https://keepassxc.org/audits/' },
     { id: 'responsible-disclosure-process', text: 'Documented security policy with dedicated reporting process', textDe: 'Dokumentierte Sicherheitsrichtlinie mit dediziertem Meldeprozess', dimension: 'security', amount: 1, sourceUrl: 'https://github.com/keepassxreboot/keepassxc/security/policy' },
     { id: 'zero-knowledge-architecture', text: 'Local-only encrypted KDBX database with no server-side access', textDe: 'Rein lokale verschlüsselte KDBX-Datenbank ohne serverseitigen Zugriff', dimension: 'security', amount: 2, sourceUrl: 'https://keepassxc.org/docs/' },
-    { id: 'signed-releases', text: 'Cryptographically signed releases with documented verification process', textDe: 'Kryptografisch signierte Releases mit dokumentiertem Verifizierungsprozess', dimension: 'governance', amount: 1, sourceUrl: 'https://github.com/keepassxreboot/keepassxc/blob/develop/docs/topics/verifying-signatures.adoc' },
-    { id: 'active-release-cadence', text: 'Mature maintenance pattern with regular versioned releases', textDe: 'Ausgereiftes Wartungsmuster mit regelmässigen versionierten Releases', dimension: 'reliability', amount: 1, sourceUrl: 'https://keepassxc.org/blog/2025-11-17-keepassxc-279-cspn-certified/' },
+    { id: 'signed-releases', text: 'Cryptographically signed releases with documented verification process', textDe: 'Kryptografisch signierte Releases mit dokumentiertem Verifizierungsprozess', dimension: 'governance', amount: 1, sourceUrl: 'https://keepassxc.org/verifying-signatures' },
+    { id: 'active-release-cadence', text: 'Mature maintenance pattern with regular versioned releases', textDe: 'Ausgereiftes Wartungsmuster mit regelmässigen versionierten Releases', dimension: 'reliability', amount: 1, sourceUrl: 'https://github.com/keepassxreboot/keepassxc/releases' },
     { id: 'self-hostable', text: 'Fully local desktop application with no cloud dependency', textDe: 'Vollständig lokale Desktop-Anwendung ohne Cloud-Abhängigkeit', dimension: 'contract', amount: 2, sourceUrl: 'https://keepassxc.org/' },
     { id: 'open-standards-no-lock-in', text: 'KDBX open format with broad ecosystem interoperability', textDe: 'Offenes KDBX-Format mit breiter Ökosystem-Interoperabilität', dimension: 'contract', amount: 1, sourceUrl: 'https://keepassxc.org/' },
     { id: 'data-export-available', text: 'Local database files fully portable across platforms', textDe: 'Lokale Datenbankdateien plattformübergreifend vollständig portabel', dimension: 'contract', amount: 1, sourceUrl: 'https://keepassxc.org/' },
@@ -229,10 +227,10 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'eu-data-residency', text: 'Netherlands-headquartered EU legal entity', textDe: 'EU-Rechtsform mit Hauptsitz in den Niederlanden', dimension: 'contract', amount: 1, sourceUrl: 'https://www.magicearth.com/terms-and-conditions' },
   ],
   'mailbox-org': [
-    { id: 'independent-security-audit', text: 'BSI IT-Sicherheitskennzeichen (IT-SIK-01011) certification', textDe: 'BSI-IT-Sicherheitskennzeichen (IT-SIK-01011) Zertifizierung', dimension: 'security', amount: 2, sourceUrl: 'https://www.bsi.bund.de/SiteGlobals/Functions/Zertifikat/DE/ITSIK/ITSIK_Formular.html?nn=1335442&cl2Categories_ITSIK=01011' },
+    { id: 'independent-security-audit', text: 'BSI IT-Sicherheitskennzeichen (IT-SIK-01011) certification', textDe: 'BSI-IT-Sicherheitskennzeichen (IT-SIK-01011) Zertifizierung', dimension: 'security', amount: 2, sourceUrl: 'https://www.bsi.bund.de/SharedDocs/IT-Sicherheitskennzeichen/DE/2022/sik-01011.html' },
     { id: 'responsible-disclosure-process', text: 'Published security.txt with coordinated disclosure process', textDe: 'Veröffentlichte security.txt mit koordiniertem Meldeprozess', dimension: 'security', amount: 1, sourceUrl: 'https://mailbox.org/.well-known/security.txt' },
     { id: 'transparent-ownership', text: 'Clear legal operator disclosures (Heinlein Hosting GmbH) in German jurisdiction', textDe: 'Klare Betreiberoffenlegung (Heinlein Hosting GmbH) in deutscher Rechtsordnung', dimension: 'governance', amount: 1, sourceUrl: 'https://mailbox.org/en/company/#legal-info' },
-    { id: 'public-transparency-report', text: 'Published transparency report for 2025', textDe: 'Veröffentlichter Transparenzbericht für 2025', dimension: 'governance', amount: 1, sourceUrl: 'https://mailbox.org/en/post/transparency-report-2025/' },
+    { id: 'public-transparency-report', text: 'Published transparency report for 2025', textDe: 'Veröffentlichter Transparenzbericht für 2025', dimension: 'governance', amount: 1, sourceUrl: 'https://mailbox.org/en/news/transparency-report-2025/' },
     { id: 'gdpr-dpa-documented', text: 'Comprehensive data protection and privacy policy for German jurisdiction', textDe: 'Umfassende Datenschutzrichtlinie für deutsche Rechtsordnung', dimension: 'governance', amount: 1, sourceUrl: 'https://mailbox.org/en/data-protection-privacy-policy' },
     { id: 'documented-incident-response', text: 'Public postmortem-style outage communication for incidents', textDe: 'Öffentliche Postmortem-Ausfallkommunikation bei Vorfällen', dimension: 'reliability', amount: 1, sourceUrl: 'https://mailbox.org/en/news/power-outage-data-centre-led-downtime-mailboxorg/' },
     { id: 'open-standards-no-lock-in', text: 'Open email protocols (IMAP/SMTP/CalDAV/CardDAV) prevent lock-in', textDe: 'Offene E-Mail-Protokolle (IMAP/SMTP/CalDAV/CardDAV) verhindern Lock-in', dimension: 'contract', amount: 1, sourceUrl: 'https://mailbox.org/en/' },
@@ -268,7 +266,6 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
 
   // ── Mistral AI ──────────────────────────────────────────────────────
   'mistral': [
-    { id: 'responsible-disclosure-process', text: 'Security contact and trust center with disclosure process', textDe: 'Sicherheitskontakt und Trust Center mit Meldeprozess', dimension: 'security', amount: 1, sourceUrl: 'https://mistral.ai/trust/' },
     { id: 'partial-open-source', text: 'Partially open-source: some models Apache 2.0, flagships proprietary', textDe: 'Teilweise quelloffen: einige Modelle Apache 2.0, Flaggschiff-Modelle proprietär', dimension: 'governance', amount: 1, sourceUrl: 'https://docs.mistral.ai/getting-started/models/' },
     { id: 'transparent-ownership', text: 'Clear French legal identity and publicly visible investor structure', textDe: 'Klare französische Rechtsform und öffentlich sichtbare Investorenstruktur', dimension: 'governance', amount: 1, sourceUrl: 'https://mistral.ai' },
     { id: 'gdpr-dpa-documented', text: 'GDPR/DPA compliance documented with breach-notification obligations', textDe: 'DSGVO-/AVV-Konformität dokumentiert mit Meldepflichten bei Datenschutzverletzungen', dimension: 'governance', amount: 1, sourceUrl: 'https://legal.mistral.ai/terms/privacy-policy' },
@@ -350,7 +347,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'partial-open-source', text: 'Mobile clients and AWS server core open-sourced under AGPL', textDe: 'Mobile Clients und AWS-Server-Kern unter AGPL quelloffen', dimension: 'governance', amount: 1, sourceUrl: 'https://github.com/olvid-io/olvid-android' },
     { id: 'transparent-ownership', text: 'Clear French SAS legal entity with published privacy and terms', textDe: 'Klare französische SAS-Rechtsform mit veröffentlichtem Datenschutz und AGB', dimension: 'governance', amount: 1, sourceUrl: 'https://olvid.io/terms/en/' },
     { id: 'gdpr-dpa-documented', text: 'GDPR compliance documented in privacy policy', textDe: 'DSGVO-Konformität in Datenschutzrichtlinie dokumentiert', dimension: 'governance', amount: 1, sourceUrl: 'https://www.olvid.io/privacy/en/' },
-    { id: 'active-release-cadence', text: 'Active product cadence visible in release information', textDe: 'Aktive Produktfrequenz in Release-Informationen sichtbar', dimension: 'reliability', amount: 1, sourceUrl: 'https://olvid.io/faq-admin/en/#question-install' },
+    { id: 'active-release-cadence', text: 'Active product cadence visible in release information', textDe: 'Aktive Produktfrequenz in Release-Informationen sichtbar', dimension: 'reliability', amount: 1, sourceUrl: 'https://github.com/olvid-io/olvid-android/releases' },
     { id: 'data-export-available', text: 'Exportable encrypted backup workflow for migration/continuity', textDe: 'Exportierbarer verschlüsselter Backup-Workflow für Migration/Kontinuität', dimension: 'contract', amount: 1, sourceUrl: 'https://olvid.io/terms/en/' },
   ],
 
@@ -426,7 +423,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'gdpr-dpa-documented', text: 'GDPR/DPA compliance documented with EU data residency positioning', textDe: 'DSGVO-/AVV-Konformität dokumentiert mit EU-Datenresidenz-Positionierung', dimension: 'governance', amount: 1, sourceUrl: 'https://plausible.io/dpa' },
     { id: 'public-status-page', text: 'Public service status page with incident history', textDe: 'Öffentliche Service-Statusseite mit Vorfallhistorie', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.plausible.io/' },
     { id: 'active-release-cadence', text: 'Active maintenance with updates multiple times per week', textDe: 'Aktive Pflege mit Updates mehrmals pro Woche', dimension: 'reliability', amount: 1, sourceUrl: 'https://plausible.io/security' },
-    { id: 'self-hostable', text: 'Self-hostable Community Edition available', textDe: 'Selbst hostbare Community Edition verfügbar', dimension: 'contract', amount: 2, sourceUrl: 'https://plausible.io/blog/plausible-community-edition' },
+    { id: 'self-hostable', text: 'Self-hostable Community Edition available', textDe: 'Selbst hostbare Community Edition verfügbar', dimension: 'contract', amount: 2, sourceUrl: 'https://github.com/plausible/community-edition' },
     { id: 'data-export-available', text: 'Data export via CSV and Stats API', textDe: 'Datenexport über CSV und Stats-API', dimension: 'contract', amount: 1, sourceUrl: 'https://plausible.io/security' },
     { id: 'eu-data-residency', text: 'EU data residency with Hetzner (Germany) infrastructure', textDe: 'EU-Datenresidenz mit Hetzner-Infrastruktur (Deutschland)', dimension: 'contract', amount: 1, sourceUrl: 'https://plausible.io/security' },
     { id: 'fair-cancellation-terms', text: 'Simple no-questions-asked cancellation documented', textDe: 'Einfache Kündigung ohne Rückfragen dokumentiert', dimension: 'contract', amount: 1, sourceUrl: 'https://plausible.io/terms' },
@@ -435,7 +432,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'recurring-security-audits', text: 'BSI TR-03108 transport security certification (BSI-K-TR-0745-2025)', textDe: 'BSI-TR-03108-Transportsicherheitszertifizierung (BSI-K-TR-0745-2025)', dimension: 'security', amount: 3, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
     { id: 'data-minimization-verified', text: 'Privacy-first service posture with minimal data collection and no advertising partners', textDe: 'Privacy-First-Dienst mit minimaler Datenerhebung und ohne Werbepartner', dimension: 'security', amount: 2, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
     { id: 'transparent-ownership', text: 'Long-running independent Berlin operator (Posteo e.K.)', textDe: 'Langjähriger unabhängiger Berliner Betreiber (Posteo e.K.)', dimension: 'governance', amount: 1, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
-    { id: 'public-transparency-report', text: 'Publishes recurring transparency reports on authority requests', textDe: 'Veröffentlicht regelmässige Transparenzberichte zu Behördenanfragen', dimension: 'governance', amount: 1, sourceUrl: 'https://www.golem.de/news/transparenzbericht-posteo-weist-61-prozent-der-behoerdenanfragen-zurueck-2504-195561.html' },
+    { id: 'public-transparency-report', text: 'Publishes recurring transparency reports on authority requests', textDe: 'Veröffentlicht regelmässige Transparenzberichte zu Behördenanfragen', dimension: 'governance', amount: 1, sourceUrl: 'https://posteo.de/en/site/transparency_report' },
     { id: 'gdpr-dpa-documented', text: 'German jurisdiction with documented data storage exclusively in Germany', textDe: 'Deutsche Rechtsordnung mit dokumentierter Datenspeicherung ausschliesslich in Deutschland', dimension: 'governance', amount: 1, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
     { id: 'partial-open-source', text: 'Publishes security-relevant components (Krypto-Mailspeicher Dovecot plugin)', textDe: 'Veröffentlicht sicherheitsrelevante Komponenten (Krypto-Mailspeicher-Dovecot-Plugin)', dimension: 'governance', amount: 1, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
     { id: 'active-release-cadence', text: 'Ongoing product updates (spam folder 2023, storage doubling 2026)', textDe: 'Fortlaufende Produktupdates (Spam-Ordner 2023, Speicherverdoppelung 2026)', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.techradar.com/reviews/posteo' },
@@ -451,7 +448,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'open-standards-no-lock-in', text: 'Self-hosted architecture with code/DB under operator control', textDe: 'Self-Hosted-Architektur mit Code/DB unter Betreiberkontrolle', dimension: 'contract', amount: 1, sourceUrl: 'https://github.com/PrestaShop/PrestaShop' },
   ],
   'proton-mail': [
-    { id: 'iso-27001-certified', text: 'ISO 27001 certification obtained May 2024', textDe: 'ISO-27001-Zertifizierung erhalten Mai 2024', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/blog/iso-27001' },
+    { id: 'iso-27001-certified', text: 'ISO 27001 certification obtained May 2024', textDe: 'ISO-27001-Zertifizierung erhalten Mai 2024', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/blog/iso-27001-certification' },
     { id: 'soc2-type2-attested', text: 'SOC 2 Type II audit completed (auditor: Schellman)', textDe: 'SOC-2-Typ-II-Audit abgeschlossen (Auditor: Schellman)', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/security/response-center' },
     { id: 'e2e-encryption-default', text: 'End-to-end encryption by default for Proton-to-Proton email', textDe: 'Ende-zu-Ende-Verschlüsselung standardmässig für Proton-zu-Proton-E-Mail', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/security/response-center' },
     { id: 'zero-knowledge-architecture', text: 'Zero-access encryption — Proton cannot read encrypted content', textDe: 'Zero-Access-Verschlüsselung — Proton kann verschlüsselte Inhalte nicht lesen', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/security/response-center' },
@@ -466,8 +463,8 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'open-standards-no-lock-in', text: 'Bridge provides local IMAP/SMTP for standard client compatibility', textDe: 'Bridge bietet lokales IMAP/SMTP für Standard-Client-Kompatibilität', dimension: 'contract', amount: 1, sourceUrl: 'https://proton.me/support/imap-smtp-and-pop3-setup' },
   ],
   'proton-vpn': [
-    { id: 'iso-27001-certified', text: 'ISO 27001 certification for Proton AG', textDe: 'ISO-27001-Zertifizierung für Proton AG', dimension: 'security', amount: 2, sourceUrl: 'https://protonvpn.com/trust-center' },
-    { id: 'soc2-type2-attested', text: 'SOC 2 Type II audit completed (auditor: Schellman)', textDe: 'SOC-2-Typ-II-Audit abgeschlossen (Auditor: Schellman)', dimension: 'security', amount: 2, sourceUrl: 'https://protonvpn.com/trust-center' },
+    { id: 'iso-27001-certified', text: 'ISO 27001 certification for Proton AG', textDe: 'ISO-27001-Zertifizierung für Proton AG', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/business/trust' },
+    { id: 'soc2-type2-attested', text: 'SOC 2 Type II audit completed (auditor: Schellman)', textDe: 'SOC-2-Typ-II-Audit abgeschlossen (Auditor: Schellman)', dimension: 'security', amount: 2, sourceUrl: 'https://proton.me/blog/soc-2' },
     { id: 'recurring-security-audits', text: 'Recurring annual no-logs audits by Securitum (2022-2025 series)', textDe: 'Wiederkehrende jährliche No-Logs-Audits durch Securitum (Serie 2022-2025)', dimension: 'security', amount: 3, sourceUrl: 'https://protonvpn.com/blog/no-logs-audit/' },
     { id: 'independent-security-audit', text: 'Independent client security audit by SEC Consult', textDe: 'Unabhängiges Client-Sicherheitsaudit durch SEC Consult', dimension: 'security', amount: 2, sourceUrl: 'https://protonvpn.com/features/no-logs-policy' },
     { id: 'partial-open-source', text: 'Open-source clients (GPL-3.0) across all major platforms', textDe: 'Open-Source-Clients (GPL-3.0) auf allen grossen Plattformen', dimension: 'governance', amount: 1, sourceUrl: 'https://github.com/ProtonVPN' },
@@ -557,7 +554,7 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'iso-27001-certified', text: 'ISO/IEC 27001 certified via Microsoft 365 App Certification', textDe: 'ISO/IEC-27001-zertifiziert über Microsoft 365 App-Zertifizierung', dimension: 'security', amount: 2, sourceUrl: 'https://appsource.microsoft.com/en-us/product/office/wa200005095' },
     { id: 'e2e-encryption-default', text: 'End-to-end encryption for all stored files', textDe: 'Ende-zu-Ende-Verschlüsselung für alle gespeicherten Dateien', dimension: 'security', amount: 2, sourceUrl: 'https://tresorit.com/legal/terms-of-use' },
     { id: 'zero-knowledge-architecture', text: 'Client-side encryption with zero-knowledge file content model', textDe: 'Clientseitige Verschlüsselung mit Zero-Knowledge-Dateiinhaltsmodell', dimension: 'security', amount: 2, sourceUrl: 'https://tresorit.com/legal/terms-of-use' },
-    { id: 'transparent-ownership', text: 'Swiss Post majority ownership with clear governance structure', textDe: 'Schweizerische Post als Mehrheitseigentümerin mit klarer Governance-Struktur', dimension: 'governance', amount: 1, sourceUrl: 'https://group.swisspost.ch/en/media/press-releases/2021/swiss-post-acquires-majority-stake-in-tresorit' },
+    { id: 'transparent-ownership', text: 'Swiss Post majority ownership with clear governance structure', textDe: 'Schweizerische Post als Mehrheitseigentümerin mit klarer Governance-Struktur', dimension: 'governance', amount: 1, sourceUrl: 'https://techcrunch.com/2021/07/08/swiss-post-acquires-e2e-encrypted-cloud-services-provider-tresorit/' },
     { id: 'public-status-page', text: 'Public service status page with incident history', textDe: 'Öffentliche Service-Statusseite mit Vorfallhistorie', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.tresorit.com/history' },
     { id: 'data-export-available', text: 'Customer retains ownership of files with export rights', textDe: 'Kunde behält Eigentum an Dateien mit Exportrechten', dimension: 'contract', amount: 1, sourceUrl: 'https://tresorit.com/legal/terms-of-use' },
   ],
@@ -587,10 +584,10 @@ export const positiveSignalsById: Record<string, PositiveSignal[]> = {
   'vivaldi': [
     { id: 'responsible-disclosure-process', text: 'Documented security disclosure channel', textDe: 'Dokumentierter Sicherheitsmeldekanal', dimension: 'security', amount: 1, sourceUrl: 'https://vivaldi.com/privacy/browser/' },
     { id: 'partial-open-source', text: 'Chromium engine source available, UI layer proprietary', textDe: 'Chromium-Engine-Quellcode verfügbar, UI-Schicht proprietär', dimension: 'governance', amount: 1, sourceUrl: 'https://help.vivaldi.com/desktop/privacy/is-vivaldi-open-source/' },
-    { id: 'transparent-ownership', text: 'Clear legal/operator identity and business model disclosure', textDe: 'Klare Betreiberidentität und Geschäftsmodell-Offenlegung', dimension: 'governance', amount: 1, sourceUrl: 'https://help.vivaldi.com/services/account/is-vivaldi-free/' },
-    { id: 'active-release-cadence', text: 'Active release cadence with fast Chromium CVE backports', textDe: 'Aktiver Release-Zyklus mit schnellen Chromium-CVE-Backports', dimension: 'reliability', amount: 1, sourceUrl: 'https://vivaldi.com/blog/desktop/minor-update-8-four-security-fixes-updated-translations-and-a-fix-for-netflix-playback/' },
+    { id: 'transparent-ownership', text: 'Clear legal/operator identity and business model disclosure', textDe: 'Klare Betreiberidentität und Geschäftsmodell-Offenlegung', dimension: 'governance', amount: 1, sourceUrl: 'https://vivaldi.com/company/' },
+    { id: 'active-release-cadence', text: 'Active release cadence with fast Chromium CVE backports', textDe: 'Aktiver Release-Zyklus mit schnellen Chromium-CVE-Backports', dimension: 'reliability', amount: 1, sourceUrl: 'https://vivaldi.com/blog/desktop/minor-update-two-7-8/' },
     { id: 'data-export-available', text: 'Browser data import/export in standard formats', textDe: 'Browserdaten-Import/-Export in Standardformaten', dimension: 'contract', amount: 1, sourceUrl: 'https://help.vivaldi.com/desktop/tools/import-and-export-browser-data/' },
-    { id: 'fair-cancellation-terms', text: 'Browser is free with no subscription lock-in', textDe: 'Browser ist kostenlos ohne Abo-Lock-in', dimension: 'contract', amount: 1, sourceUrl: 'https://help.vivaldi.com/services/account/is-vivaldi-free/' },
+    { id: 'fair-cancellation-terms', text: 'Browser is free with no subscription lock-in', textDe: 'Browser ist kostenlos ohne Abo-Lock-in', dimension: 'contract', amount: 1, sourceUrl: 'https://vivaldi.com/download/' },
   ],
 
 };
@@ -620,14 +617,14 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   // ── Amazon Alexa ───────────────────────────────────────────────────────
   'amazon-alexa': [
     { id: 'responsible-disclosure-process', text: 'Documented vulnerability-reporting channels', textDe: 'Dokumentierte Schwachstellen-Meldekanäle', dimension: 'security', amount: 1, sourceUrl: 'https://aws.amazon.com/security/vulnerability-reporting/' },
-    { id: 'transparent-ownership', text: 'Clear public-company legal ownership and accountability', textDe: 'Klare börsennotierte Eigentümerschaft und Verantwortlichkeit', dimension: 'governance', amount: 1, sourceUrl: 'https://www.amazon.com' },
+    { id: 'transparent-ownership', text: 'Clear public-company legal ownership and accountability', textDe: 'Klare börsennotierte Eigentümerschaft und Verantwortlichkeit', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724' },
   ],
 
   // ── Amazon Shop ────────────────────────────────────────────────────────
   'amazon-shop': [
     { id: 'responsible-disclosure-process', text: 'Formal vulnerability-reporting channel', textDe: 'Formeller Schwachstellen-Meldekanal', dimension: 'security', amount: 1, sourceUrl: 'https://aws.amazon.com/security/vulnerability-reporting/' },
     { id: 'public-bug-bounty', text: 'Broad bug-bounty footprint via HackerOne', textDe: 'Breites Bug-Bounty-Programm über HackerOne', dimension: 'security', amount: 1, sourceUrl: 'https://www.hackerone.com/bug-bounty-programs' },
-    { id: 'transparent-ownership', text: 'Clear public-company ownership and governance', textDe: 'Klare börsennotierte Eigentümerschaft und Governance', dimension: 'governance', amount: 1, sourceUrl: 'https://www.amazon.com' },
+    { id: 'transparent-ownership', text: 'Clear public-company ownership and governance', textDe: 'Klare börsennotierte Eigentümerschaft und Governance', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724' },
     { id: 'public-transparency-report', text: 'Documented EU DSA transparency reporting', textDe: 'Dokumentierte EU-DSA-Transparenzberichterstattung', dimension: 'governance', amount: 1, sourceUrl: 'https://digital-strategy.ec.europa.eu/en/policies/list-designated-vlops-and-vloses' },
   ],
 
@@ -644,9 +641,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
 
   // ── Anthropic ──────────────────────────────────────────────────────────
   'anthropic': [
-    { id: 'responsible-disclosure-process', text: 'Public vulnerability-reporting channels via HackerOne', textDe: 'Öffentliche Schwachstellen-Meldekanäle über HackerOne', dimension: 'security', amount: 1, sourceUrl: 'https://www.hackerone.com/anthropic' },
-    { id: 'public-bug-bounty', text: 'Active bug bounty program', textDe: 'Aktives Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://www.hackerone.com/anthropic' },
-    { id: 'gdpr-dpa-documented', text: 'Formal DPA and explicit enterprise data-processing commitments', textDe: 'Formeller AVV und explizite Enterprise-Datenverarbeitungszusagen', dimension: 'governance', amount: 1, sourceUrl: 'https://www.anthropic.com/legal/data-processing-agreement' },
+    { id: 'gdpr-dpa-documented', text: 'Formal DPA and explicit enterprise data-processing commitments', textDe: 'Formeller AVV und explizite Enterprise-Datenverarbeitungszusagen', dimension: 'governance', amount: 1, sourceUrl: 'https://www.anthropic.com/legal/data-processing-addendum' },
     { id: 'public-status-page', text: 'Public status reporting', textDe: 'Öffentliche Statusberichterstattung', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.anthropic.com/' },
   ],
 
@@ -656,7 +651,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'public-bug-bounty', text: 'Mature Apple Security Bounty program', textDe: 'Ausgereiftes Apple Security Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://security.apple.com/bounty/' },
     { id: 'responsible-disclosure-process', text: 'Ongoing Apple security-release cadence and advisory flow', textDe: 'Fortlaufende Apple-Sicherheits-Release-Frequenz und Advisory-Fluss', dimension: 'security', amount: 1, sourceUrl: 'https://support.apple.com/en-us/100100' },
     { id: 'transparent-ownership', text: 'Clear public-company governance structure', textDe: 'Klare börsennotierte Governance-Struktur', dimension: 'governance', amount: 1, sourceUrl: 'https://www.apple.com' },
-    { id: 'gdpr-dpa-documented', text: 'Published GDPR compliance documentation', textDe: 'Veröffentlichte DSGVO-Compliance-Dokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.apple.com/legal/more-resources/gdpr-compliance/' },
+    { id: 'gdpr-dpa-documented', text: 'Published GDPR compliance documentation', textDe: 'Veröffentlichte DSGVO-Compliance-Dokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.apple.com/legal/enterprise/datatransfer/' },
     { id: 'active-release-cadence', text: 'Active platform updates and broad device support', textDe: 'Aktive Plattform-Updates und breite Geräteunterstützung', dimension: 'reliability', amount: 1, sourceUrl: 'https://support.apple.com/en-us/100100' },
   ],
 
@@ -689,7 +684,6 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   'asana': [
     { id: 'soc2-type2-attested', text: 'SOC/ISO compliance posture documented via Trust Center', textDe: 'SOC-/ISO-Compliance-Positionierung im Trust Center dokumentiert', dimension: 'security', amount: 2, sourceUrl: 'https://trust.asana.com/' },
     { id: 'public-bug-bounty', text: 'Active Bugcrowd bug bounty program', textDe: 'Aktives Bugcrowd-Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://bugcrowd.com/asana' },
-    { id: 'transparent-ownership', text: 'Public-company disclosures and clear legal documentation', textDe: 'Börsennotierte Offenlegungen und klare Rechtsdokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/Archives/edgar/data/1477720/000119312525112359/d806157ddef14a.htm' },
     { id: 'public-status-page', text: 'Public status page with incident tracking', textDe: 'Öffentliche Statusseite mit Vorfallverfolgung', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.asana.com/' },
     { id: 'active-release-cadence', text: 'Active release and developer ecosystem', textDe: 'Aktiver Release-Zyklus und Entwicklerökosystem', dimension: 'reliability', amount: 1, sourceUrl: 'https://github.com/Asana/node-asana/releases' },
     { id: 'sla-published', text: 'Enterprise SLA framing', textDe: 'Enterprise-SLA-Rahmen', dimension: 'reliability', amount: 1, sourceUrl: 'https://trust.asana.com/' },
@@ -707,7 +701,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'soc2-type2-attested', text: 'Broad SOC 2 Type II attestation surface via AWS Artifact', textDe: 'Breite SOC-2-Typ-II-Attestierung über AWS Artifact', dimension: 'security', amount: 2, sourceUrl: 'https://aws.amazon.com/compliance/soc-faqs/' },
     { id: 'iso-27001-certified', text: 'ISO 27001 certification across services', textDe: 'ISO-27001-Zertifizierung über alle Dienste', dimension: 'security', amount: 2, sourceUrl: 'https://aws.amazon.com/compliance/services-in-scope/' },
     { id: 'responsible-disclosure-process', text: 'Mature security bulletin cadence with rapid mitigations', textDe: 'Ausgereifte Security-Bulletin-Frequenz mit schnellen Mitigationen', dimension: 'security', amount: 1, sourceUrl: 'https://aws.amazon.com/security/security-bulletins/AWS-2025-016/' },
-    { id: 'transparent-ownership', text: 'Transparent public-company governance and legal documentation', textDe: 'Transparente börsennotierte Governance und Rechtsdokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.amazon.com' },
+    { id: 'transparent-ownership', text: 'Transparent public-company governance and legal documentation', textDe: 'Transparente börsennotierte Governance und Rechtsdokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724' },
     { id: 'public-status-page', text: 'Public AWS Health Dashboard with incident summaries', textDe: 'Öffentliches AWS Health Dashboard mit Vorfallzusammenfassungen', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.aws.amazon.com/' },
     { id: 'multi-region-infrastructure', text: 'Multi-region global infrastructure', textDe: 'Multi-Region-Globalinfrastruktur', dimension: 'reliability', amount: 1, sourceUrl: 'https://aws.amazon.com/about-aws/global-infrastructure/' },
     { id: 'sla-published', text: 'Published SLAs for individual services', textDe: 'Veröffentlichte SLAs für einzelne Dienste', dimension: 'reliability', amount: 1, sourceUrl: 'https://aws.amazon.com/machine-learning/language-services/sla/' },
@@ -718,7 +712,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   'aws-translate': [
     { id: 'soc2-type2-attested', text: 'Listed in SOC/ISO compliance scope references', textDe: 'In SOC-/ISO-Compliance-Umfangsreferenzen aufgeführt', dimension: 'security', amount: 2, sourceUrl: 'https://aws.amazon.com/compliance/services-in-scope/' },
     { id: 'iso-27001-certified', text: 'ISO 27001 certified scope includes Translate', textDe: 'ISO-27001-zertifizierter Umfang umfasst Translate', dimension: 'security', amount: 2, sourceUrl: 'https://aws.amazon.com/compliance/services-in-scope/' },
-    { id: 'transparent-ownership', text: 'Clear public-company ownership and strong operating capacity', textDe: 'Klare börsennotierte Eigentümerschaft und starke Betriebskapazität', dimension: 'governance', amount: 1, sourceUrl: 'https://www.amazon.com' },
+    { id: 'transparent-ownership', text: 'Clear public-company ownership and strong operating capacity', textDe: 'Klare börsennotierte Eigentümerschaft und starke Betriebskapazität', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724' },
     { id: 'sla-published', text: 'Formal SLA framework for machine learning language services', textDe: 'Formelles SLA-Rahmenwerk für Machine-Learning-Sprachdienste', dimension: 'reliability', amount: 1, sourceUrl: 'https://aws.amazon.com/machine-learning/language-services/sla/' },
     { id: 'public-status-page', text: 'Mature public incident communication channels', textDe: 'Ausgereifte öffentliche Vorfallkommunikationskanäle', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.aws.amazon.com/' },
   ],
@@ -731,11 +725,9 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
 
   // ── Block (Square) ─────────────────────────────────────────────────────
   'block': [
-    { id: 'responsible-disclosure-process', text: 'Mature open-source security and disclosure channels', textDe: 'Ausgereifte Open-Source-Sicherheits- und Meldekanäle', dimension: 'security', amount: 1, sourceUrl: 'https://status.block.xyz/' },
-    { id: 'transparent-ownership', text: 'Public-company SEC disclosure regime', textDe: 'Börsennotiertes SEC-Offenlegungsregime', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1512673/000151267325000013/xyz-20241231.htm' },
+    { id: 'transparent-ownership', text: 'Public-company SEC disclosure regime', textDe: 'Börsennotiertes SEC-Offenlegungsregime', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/Archives/edgar/data/1512673/0001628280-24-006354/sq-20231231.htm' },
     { id: 'partial-open-source', text: 'Open-source developer platform and tooling', textDe: 'Open-Source-Entwicklerplattform und -Tooling', dimension: 'governance', amount: 1, sourceUrl: 'https://developer.squareup.com/' },
     { id: 'documented-incident-response', text: 'Public incident-postmortem practice', textDe: 'Öffentliche Vorfall-Postmortem-Praxis', dimension: 'reliability', amount: 1, sourceUrl: 'https://developer.squareup.com/blog/an-analysis-of-the-square-and-cash-app-outage/' },
-    { id: 'public-status-page', text: 'Public status pages for Square and Cash App', textDe: 'Öffentliche Statusseiten für Square und Cash App', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.block.xyz/' },
   ],
 
   // ── Cloudflare ─────────────────────────────────────────────────────────
@@ -779,9 +771,8 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
 
   // ── eBay ───────────────────────────────────────────────────────────────
   'ebay': [
-    { id: 'public-bug-bounty', text: 'Active responsible disclosure and bug bounty program', textDe: 'Aktives Responsible-Disclosure- und Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://www.ebay.com/securitycenter/researcher' },
-    { id: 'responsible-disclosure-process', text: 'SEC-disclosed cybersecurity governance and incident-response framework', textDe: 'SEC-offengelegte Cybersicherheits-Governance und Incident-Response-Rahmen', dimension: 'security', amount: 1, sourceUrl: 'https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1065088/000106508825000010/ebay-20241231.htm' },
-    { id: 'transparent-ownership', text: 'Public-company governance and SEC disclosures', textDe: 'Börsennotierte Governance und SEC-Offenlegungen', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1065088/000106508825000010/ebay-20241231.htm' },
+    { id: 'responsible-disclosure-process', text: 'SEC-disclosed cybersecurity governance and incident-response framework', textDe: 'SEC-offengelegte Cybersicherheits-Governance und Incident-Response-Rahmen', dimension: 'security', amount: 1, sourceUrl: 'https://investors.ebayinc.com/files/doc_financials/2024/q4/eBay-10-K-2024.pdf' },
+    { id: 'transparent-ownership', text: 'Public-company governance and SEC disclosures', textDe: 'Börsennotierte Governance und SEC-Offenlegungen', dimension: 'governance', amount: 1, sourceUrl: 'https://investors.ebayinc.com/files/doc_financials/2024/q4/eBay-10-K-2024.pdf' },
     { id: 'public-transparency-report', text: 'Published EU DSA transparency report', textDe: 'Veröffentlichter EU-DSA-Transparenzbericht', dimension: 'governance', amount: 1, sourceUrl: 'https://static.ebayinc.com/static/assets/Uploads/Documents/eBay-2024-DSA-Transparency-Report-qualitative.pdf' },
     { id: 'public-status-page', text: 'Public system and API status transparency', textDe: 'Öffentliche System- und API-Status-Transparenz', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.ebay.com/sts' },
     { id: 'data-export-available', text: 'Data access and export paths exist', textDe: 'Datenzugangs- und Exportpfade vorhanden', dimension: 'contract', amount: 1, sourceUrl: 'https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260' },
@@ -789,11 +780,10 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
 
   // ── ExpressVPN ─────────────────────────────────────────────────────────
   'expressvpn': [
-    { id: 'recurring-security-audits', text: 'Recurring third-party audits (KPMG ISAE 3000, Cure53 Lightway review)', textDe: 'Wiederkehrende Drittanbieter-Audits (KPMG ISAE 3000, Cure53 Lightway-Review)', dimension: 'security', amount: 3, sourceUrl: 'https://www.expressvpn.com/blog/trustedserver-no-logs-audit' },
-    { id: 'independent-security-audit', text: 'Independent Cure53 security review of Lightway protocol', textDe: 'Unabhängiges Cure53-Sicherheitsreview des Lightway-Protokolls', dimension: 'security', amount: 2, sourceUrl: 'https://cure53.de/pentest-report_lightway-rust.pdf' },
-    { id: 'responsible-disclosure-process', text: 'Public disclosure process and remediation communication', textDe: 'Öffentlicher Meldeprozess und Behebungskommunikation', dimension: 'security', amount: 1, sourceUrl: 'https://www.expressvpn.com/blog/fixes-for-dns-and-rdp-leaks/' },
+    { id: 'recurring-security-audits', text: 'Recurring third-party audits (KPMG ISAE 3000, Cure53 Lightway review)', textDe: 'Wiederkehrende Drittanbieter-Audits (KPMG ISAE 3000, Cure53 Lightway-Review)', dimension: 'security', amount: 3, sourceUrl: 'https://www.expressvpn.com/blog/kpmg-privacy-policy-cure53-trustedserver-audit/' },
+    { id: 'independent-security-audit', text: 'Independent Cure53 security review of Lightway protocol', textDe: 'Unabhängiges Cure53-Sicherheitsreview des Lightway-Protokolls', dimension: 'security', amount: 2, sourceUrl: 'https://cure53.de/pentest-report_expressvpn-lightway_2024.pdf' },
+    { id: 'responsible-disclosure-process', text: 'Public disclosure process and remediation communication', textDe: 'Öffentlicher Meldeprozess und Behebungskommunikation', dimension: 'security', amount: 1, sourceUrl: 'https://www.expressvpn.com/bug-bounty' },
     { id: 'partial-open-source', text: 'Lightway protocol core is open-source', textDe: 'Lightway-Protokollkern ist quelloffen', dimension: 'governance', amount: 1, sourceUrl: 'https://github.com/expressvpn/lightway' },
-    { id: 'active-release-cadence', text: 'Active maintenance and public remediation communication', textDe: 'Aktive Pflege und öffentliche Behebungskommunikation', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.expressvpn.com/blog/fixes-for-dns-and-rdp-leaks/' },
   ],
 
   // ── Meta (Facebook) ────────────────────────────────────────────────────
@@ -849,8 +839,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'public-status-page', text: 'Public status dashboard with incident history', textDe: 'Öffentliches Status-Dashboard mit Vorfallhistorie', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.cloud.google.com/' },
     { id: 'sla-published', text: 'Published SLAs for GCP services', textDe: 'Veröffentlichte SLAs für GCP-Dienste', dimension: 'reliability', amount: 1, sourceUrl: 'https://cloud.google.com/terms/sla' },
     { id: 'multi-region-infrastructure', text: 'Global multi-region infrastructure with data location controls', textDe: 'Globale Multi-Region-Infrastruktur mit Datenlokalisierungskontrollen', dimension: 'reliability', amount: 1, sourceUrl: 'https://cloud.google.com/about/locations' },
-    { id: 'data-export-available', text: 'Data export and migration tooling documented', textDe: 'Datenexport- und Migrationswerkzeuge dokumentiert', dimension: 'contract', amount: 1, sourceUrl: 'https://cloud.google.com/blog/products/infrastructure-modernization/eliminating-data-transfer-fees-when-migrating-off-google-cloud' },
-    { id: 'eu-data-residency', text: 'EU data region options available for eligible services', textDe: 'EU-Datenregion-Optionen für berechtigte Dienste verfügbar', dimension: 'contract', amount: 1, sourceUrl: 'https://cloud.google.com/security/compliance/c5' },
+    { id: 'data-export-available', text: 'Data export and migration tooling documented', textDe: 'Datenexport- und Migrationswerkzeuge dokumentiert', dimension: 'contract', amount: 1, sourceUrl: 'https://cloud.google.com/storage-transfer/docs/overview' },
   ],
 
   'google-docs': [
@@ -924,7 +913,6 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'transparent-ownership', text: 'Clear public-company governance under Apple Inc', textDe: 'Klare börsennotierte Governance unter Apple Inc.', dimension: 'governance', amount: 1, sourceUrl: 'https://support.apple.com/en-us/guide/certifications/apc34d2c0468b/web' },
     { id: 'public-transparency-report', text: 'Apple publishes regular transparency reports', textDe: 'Apple veröffentlicht regelmässige Transparenzberichte', dimension: 'governance', amount: 1, sourceUrl: 'https://www.apple.com/legal/transparency/' },
     { id: 'active-release-cadence', text: 'Regular platform security release cadence', textDe: 'Regelmässige Plattform-Sicherheits-Release-Frequenz', dimension: 'reliability', amount: 1, sourceUrl: 'https://support.apple.com/en-us/100100' },
-    { id: 'public-status-page', text: 'Apple system status page available', textDe: 'Apple-Systemstatusseite verfügbar', dimension: 'reliability', amount: 1, sourceUrl: 'https://support.apple.com/en-us/systemstatus' },
   ],
 
   'jira': [
@@ -951,8 +939,6 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
     { id: 'public-transparency-report', text: 'Microsoft publishes regular transparency reports', textDe: 'Microsoft veröffentlicht regelmässige Transparenzberichte', dimension: 'governance', amount: 1, sourceUrl: 'https://www.microsoft.com/en-us/corporate-responsibility/law-enforcement-requests-report' },
     { id: 'public-status-page', text: 'Service Health dashboard for M365 tenants', textDe: 'Service Health Dashboard für M365-Mandanten', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.office365.com/' },
     { id: 'sla-published', text: 'Published SLAs for Microsoft 365 services', textDe: 'Veröffentlichte SLAs für Microsoft 365-Dienste', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services' },
-    { id: 'data-export-available', text: 'Practical export mechanisms for core workloads', textDe: 'Praktische Exportmechanismen für Kernarbeitslasten', dimension: 'contract', amount: 1, sourceUrl: 'https://learn.microsoft.com/en-us/compliance/regulatory/offering-data-residency' },
-    { id: 'eu-data-residency', text: 'EU Data Boundary for Microsoft Cloud available', textDe: 'EU Data Boundary für Microsoft Cloud verfügbar', dimension: 'contract', amount: 1, sourceUrl: 'https://techcommunity.microsoft.com/blog/eu-databoundaryblog/completing-the-eu-data-boundary-for-the-microsoft-cloud/4360343' },
   ],
 
   'microsoft-authenticator': [
@@ -969,20 +955,19 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   ],
 
   'mixpanel': [
-    { id: 'soc2-type2-attested', text: 'SOC 2 Type II attestation published', textDe: 'SOC-2-Typ-II-Attestierung veröffentlicht', dimension: 'security', amount: 2, sourceUrl: 'https://mixpanel.com/legal/security/' },
     { id: 'public-bug-bounty', text: 'Active HackerOne bug bounty program', textDe: 'Aktives HackerOne-Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://hackerone.com/mixpanel' },
     { id: 'transparent-ownership', text: 'Clear legal entity and published policy surface', textDe: 'Klare Rechtsform und veröffentlichte Richtlinien', dimension: 'governance', amount: 1, sourceUrl: 'https://mixpanel.com/legal/terms-of-use/' },
     { id: 'public-transparency-report', text: 'Published transparency reporting', textDe: 'Veröffentlichte Transparenzberichterstattung', dimension: 'governance', amount: 1, sourceUrl: 'https://mixpanel.com/legal/transparency-report/' },
     { id: 'public-status-page', text: 'Public status page available', textDe: 'Öffentliche Statusseite verfügbar', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.mixpanel.com/' },
     { id: 'active-release-cadence', text: 'Active SDK release cadence', textDe: 'Aktiver SDK-Release-Zyklus', dimension: 'reliability', amount: 1, sourceUrl: 'https://github.com/mixpanel/mixpanel-js/releases' },
     { id: 'data-export-available', text: 'Raw event export API and practical export methods', textDe: 'Raw-Event-Export-API und praktische Exportmethoden', dimension: 'contract', amount: 1, sourceUrl: 'https://docs.mixpanel.com/docs/export-methods#raw-event-export-api' },
-    { id: 'eu-data-residency', text: 'EU data residency option available', textDe: 'EU-Datenresidenz-Option verfügbar', dimension: 'contract', amount: 1, sourceUrl: 'https://docs.mixpanel.com/docs/privacy/data-residency' },
+    { id: 'eu-data-residency', text: 'EU data residency option available', textDe: 'EU-Datenresidenz-Option verfügbar', dimension: 'contract', amount: 1, sourceUrl: 'https://docs.mixpanel.com/docs/privacy/eu-residency' },
   ],
 
   'monday-com': [
     { id: 'iso-27001-certified', text: 'ISO 27001 certification signals in Trust Center', textDe: 'ISO-27001-Zertifizierungssignale im Trust Center', dimension: 'security', amount: 2, sourceUrl: 'https://monday.com/trustcenter' },
     { id: 'soc2-type2-attested', text: 'SOC 2 Type II attestation signals in Trust Center', textDe: 'SOC-2-Typ-II-Attestierungssignale im Trust Center', dimension: 'security', amount: 2, sourceUrl: 'https://monday.com/trustcenter' },
-    { id: 'transparent-ownership', text: 'Public-company disclosure via NASDAQ', textDe: 'Börsennotierte Offenlegung über NASDAQ', dimension: 'governance', amount: 1, sourceUrl: 'https://www.sec.gov/ix?doc=/Archives/edgar/data/1845338/000184533825000036/mndy-20241231.htm' },
+    { id: 'transparent-ownership', text: 'Public-company disclosure via NASDAQ', textDe: 'Börsennotierte Offenlegung über NASDAQ', dimension: 'governance', amount: 1, sourceUrl: 'https://www.nasdaq.com/market-activity/stocks/mndy' },
     { id: 'public-status-page', text: 'Public status page with incident history', textDe: 'Öffentliche Statusseite mit Vorfallhistorie', dimension: 'reliability', amount: 1, sourceUrl: 'https://status.monday.com/history' },
     { id: 'active-release-cadence', text: 'Active product and developer maintenance', textDe: 'Aktive Produkt- und Entwicklerpflege', dimension: 'reliability', amount: 1, sourceUrl: 'https://monday.com/trustcenter' },
     { id: 'data-export-available', text: 'Documented export paths for customer data', textDe: 'Dokumentierte Exportpfade für Kundendaten', dimension: 'contract', amount: 1, sourceUrl: 'https://monday.com/l/legal/tos/' },
@@ -1013,7 +998,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   ],
 
   'paypal': [
-    { id: 'transparent-ownership', text: 'Public-company disclosures and legal-policy framework', textDe: 'Börsennotierte Offenlegungen und Rechtsrahmen', dimension: 'governance', amount: 1, sourceUrl: 'https://www.paypal.com/us/trust' },
+    { id: 'transparent-ownership', text: 'Public-company disclosures and legal-policy framework', textDe: 'Börsennotierte Offenlegungen und Rechtsrahmen', dimension: 'governance', amount: 1, sourceUrl: 'https://investor.paypal-corp.com/' },
     { id: 'public-status-page', text: 'Public status program with component-level incident notices', textDe: 'Öffentliches Status-Programm mit komponentenspezifischen Vorfallhinweisen', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.paypal-status.com/feed/rss' },
     { id: 'data-export-available', text: 'Reporting and export options available', textDe: 'Reporting- und Exportoptionen verfügbar', dimension: 'contract', amount: 1, sourceUrl: 'https://www.paypal.com/us/legalhub/paypal/useragreement-full' },
   ],
@@ -1033,7 +1018,7 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
 
   'shopify': [
     { id: 'soc2-type2-attested', text: 'SOC 2 Type II / SOC 3 attestation available', textDe: 'SOC-2-Typ-II-/SOC-3-Attestierung verfügbar', dimension: 'security', amount: 2, sourceUrl: 'https://help.shopify.com/en/manual/privacy-and-security/compliance-reports' },
-    { id: 'public-bug-bounty', text: 'Mature bug bounty program', textDe: 'Ausgereiftes Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://www.shopify.com/bugbounty/blog/inside-shopifys-bug-bounty-program' },
+    { id: 'public-bug-bounty', text: 'Mature bug bounty program', textDe: 'Ausgereiftes Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://www.shopify.com/bugbounty' },
     { id: 'transparent-ownership', text: 'Clear legal and privacy documentation', textDe: 'Klare Rechts- und Datenschutzdokumentation', dimension: 'governance', amount: 1, sourceUrl: 'https://www.shopify.com/legal/terms' },
     { id: 'active-release-cadence', text: 'Large-scale production maturity and ongoing updates', textDe: 'Grosse Produktionsreife und fortlaufende Updates', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.shopify.com/security' },
     { id: 'data-export-available', text: 'Documented export pathways for store data', textDe: 'Dokumentierte Exportpfade für Shop-Daten', dimension: 'contract', amount: 1, sourceUrl: 'https://www.shopify.com/legal/terms' },
@@ -1080,13 +1065,11 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   ],
 
   'x-corp': [
-    { id: 'responsible-disclosure-process', text: 'Active vulnerability-reporting pathway', textDe: 'Aktiver Schwachstellen-Meldepfad', dimension: 'security', amount: 1, sourceUrl: 'https://privacy.x.com/en/blog/an-issue-affecting-some-anonymous-accounts' },
     { id: 'transparent-ownership', text: 'Legal entity and platform ownership publicly identifiable', textDe: 'Rechtsform und Plattform-Eigentümerschaft öffentlich identifizierbar', dimension: 'governance', amount: 1, sourceUrl: 'https://x.com/en/tos' },
   ],
 
   'yahoo': [
     { id: 'responsible-disclosure-process', text: 'Published coordinated vulnerability disclosure program', textDe: 'Veröffentlichtes koordiniertes Schwachstellen-Meldeprogramm', dimension: 'security', amount: 1, sourceUrl: 'https://legal.yahoo.com/xw/en/yahoo/coordinated-vulnerability-disclosure-program-policy/index.html' },
-    { id: 'transparent-ownership', text: 'Ownership publicly disclosed via Apollo and Verizon', textDe: 'Eigentümerschaft öffentlich offengelegt über Apollo und Verizon', dimension: 'governance', amount: 1, sourceUrl: 'https://www.verizon.com/about/news/verizon-completes-sale-media-business' },
     { id: 'open-standards-no-lock-in', text: 'Standards-based email access paths (IMAP/SMTP)', textDe: 'Standardbasierte E-Mail-Zugangspfade (IMAP/SMTP)', dimension: 'contract', amount: 1, sourceUrl: 'https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html' },
   ],
 
@@ -1098,11 +1081,11 @@ export const usVendorPositiveSignalsById: Record<string, PositiveSignal[]> = {
   ],
 
   'zoom': [
-    { id: 'iso-27001-certified', text: 'ISO 27001 and additional certifications via Trust Center', textDe: 'ISO 27001 und weitere Zertifizierungen über Trust Center', dimension: 'security', amount: 2, sourceUrl: 'https://www.zoom.com/en/trust/compliance/' },
-    { id: 'soc2-type2-attested', text: 'SOC 2 Type II attestation available', textDe: 'SOC-2-Typ-II-Attestierung verfügbar', dimension: 'security', amount: 2, sourceUrl: 'https://www.zoom.com/en/trust/compliance/' },
+    { id: 'iso-27001-certified', text: 'ISO 27001 and additional certifications via Trust Center', textDe: 'ISO 27001 und weitere Zertifizierungen über Trust Center', dimension: 'security', amount: 2, sourceUrl: 'https://www.zoom.com/en/trust/legal-compliance/iso-27001/' },
+    { id: 'soc2-type2-attested', text: 'SOC 2 Type II attestation available', textDe: 'SOC-2-Typ-II-Attestierung verfügbar', dimension: 'security', amount: 2, sourceUrl: 'https://www.zoom.com/en/trust/legal-compliance/soc2/' },
     { id: 'public-bug-bounty', text: 'Active HackerOne bug bounty program', textDe: 'Aktives HackerOne-Bug-Bounty-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://hackerone.com/zoom' },
     { id: 'responsible-disclosure-process', text: 'Public security bulletin program', textDe: 'Öffentliches Security-Bulletin-Programm', dimension: 'security', amount: 1, sourceUrl: 'https://www.zoom.com/en/trust/security-bulletin/' },
-    { id: 'transparent-ownership', text: 'Public-company governance structure', textDe: 'Börsennotierte Governance-Struktur', dimension: 'governance', amount: 1, sourceUrl: 'https://www.zoom.com/en/trust/compliance/' },
+    { id: 'transparent-ownership', text: 'Public-company governance structure', textDe: 'Börsennotierte Governance-Struktur', dimension: 'governance', amount: 1, sourceUrl: 'https://www.zoom.com/en/about/' },
     { id: 'active-release-cadence', text: 'Strong release cadence and regular update stream', textDe: 'Starke Release-Frequenz und regelmässiger Update-Strom', dimension: 'reliability', amount: 1, sourceUrl: 'https://www.zoom.com/en/trust/security-bulletin/' },
     { id: 'eu-data-residency', text: 'Data residency options require admin configuration', textDe: 'Datenresidenz-Optionen erfordern Admin-Konfiguration', dimension: 'contract', amount: 1, sourceUrl: 'https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0067422' },
   ],

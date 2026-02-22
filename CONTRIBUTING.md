@@ -71,7 +71,7 @@ Gather the following about the alternative:
 | `pricing`          | Yes      | `"free"`, `"freemium"`, or `"paid"`                      |
 | `tags`             | Yes      | `["privacy", "self-hosted", "GDPR"]` — relevant keywords |
 | `logo`             | No       | `"/logos/nextcloud.svg"` — path to logo file             |
-| `sourceCodeUrl`    | No       | `"https://codeberg.org/nextcloud/server"`                |
+| `sourceCodeUrl`    | No       | `"https://github.com/nextcloud/server"`                |
 | `foundedYear`      | No       | `2016`                                                   |
 | `headquartersCity` | No       | `"Stuttgart"`                                            |
 | `license`          | No       | `"AGPL-3.0"`                                             |
@@ -96,7 +96,7 @@ Open `src/data/manualAlternatives.ts` and add your entry to the `alternatives` a
   category: 'cloud-storage',
   replacesUS: ['Google Drive', 'Dropbox', 'OneDrive'],
   isOpenSource: true,
-  sourceCodeUrl: 'https://codeberg.org/nextcloud/server',
+  sourceCodeUrl: 'https://github.com/nextcloud/server',
   pricing: 'free',
   tags: ['self-hosted', 'file-sync', 'collaboration', 'GDPR', 'privacy'],
   foundedYear: 2016,
@@ -238,7 +238,6 @@ reservations: [
     textDe: 'Datenpanne im Maerz 2023 mit 50.000 betroffenen Konten.',
     severity: 'major',
     date: '2023-03-15',
-    sourceUrl: 'https://example.com/breach-disclosure',
   },
 ],
 ```
