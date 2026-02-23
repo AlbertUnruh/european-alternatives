@@ -30,7 +30,6 @@ Beyond the false European claim, Cryptostorm has severe trust concerns:
 - [Privacy Guides discussion on Cryptostorm](https://discuss.privacyguides.net/t/why-is-vpn-providers-like-cryptostorm-or-ovpn-not-recommended/13061)
 - [ProPrivacy — CryptoStorm VPN Review](https://proprivacy.com/vpn/review/cryptostorm)
 - [Cloudwards — Cryptostorm Review](https://www.cloudwards.net/cryptostorm-review/)
-- [CoolTechZone — Cryptostorm VPN Review](https://cooltechzone.com/cryptostorm)
 - [TechRadar — CryptoStorm VPN Review](https://www.techradar.com/reviews/cryptostorm)
 - [PrivacySharks — CryptoStorm VPN Review](https://www.privacysharks.com/vpn-reviews/cryptostorm-vpn/)
 
@@ -72,7 +71,6 @@ Further concerns:
 - [FOSS Force — Lyon adopts OnlyOffice: From Russia With Love](https://fossforce.com/2025/07/lyon-france-adopts-onlyoffice-from-russia-with-love/)
 - [VK acquires 25% of R7-Office — Interfax](https://interfax.com/newsroom/top-stories/110513/)
 - [Privacy Guides discussion — claims against ONLYOFFICE](https://discuss.privacyguides.net/t/serious-claims-made-against-onlyoffice/11644)
-- [P7-Office / NKT company profile — TAdviser](https://tadviser.com/index.php/Company:P7-Office_(formerly_New_Communication_Technologies,_NKT))
 - [Ascensio System SIA — Latvian company register (Lursoft)](https://company.lursoft.lv/en/ascensio-system/40103265308)
 - [BLOMSTEIN — EU sanctions on IT and software compliance](https://www.blomstein.com/en/news/sanctions-101)
 
@@ -106,7 +104,6 @@ A legal entity that cannot independently resist compulsion from its US parent is
 
 - [Startpage — "Relisted on PrivacyTools" (ownership disclosure)](https://www.startpage.com/privacy-please/startpage-articles/startpage-relisted-on-privacytools)
 - [Startpage — Privacy Policy (Google AdSense disclosure)](https://www.startpage.com/en/privacy-policy/)
-- [Startpage — Vanish Terms (LLM provider disclosure)](https://www.startpage.com/en/vanish-terms/)
 - [Startpage — Support Privacy Policy (Zendesk disclosure)](https://www.startpage.com/en/support-privacy-policy/)
 - [Deep research: 360° Vendor Trust & Ethics Audit — Startpage](tmp/deepresearches/startpage.md) (internal, 63/100 score)
 

@@ -17,7 +17,7 @@ function resolveTsPath(fromDir, specifier) {
   ];
 
   for (const candidate of candidates) {
-    if (fs.existsSync(candidate)) {
+    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
       return candidate;
     }
   }
@@ -93,14 +93,23 @@ function validateUSVendorComparisons(alternatives) {
         failures.push(`${alternative.id}: vendor entry has an invalid name.`);
       }
 
-      if (vendor.trustScoreStatus !== 'pending') {
+      if (vendor.trustScoreStatus === 'ready') {
+        // Ready vendors must have reservations — a profile without reservations is not "ready"
+        const reservations = vendor.reservations ?? [];
+        if (reservations.length === 0) {
+          failures.push(
+            `${alternative.id}:${vendor.id} has trustScoreStatus="ready" but zero reservations.`,
+          );
+        }
+        if (typeof vendor.trustScore !== 'number') {
+          failures.push(
+            `${alternative.id}:${vendor.id} has trustScoreStatus="ready" but missing numeric trustScore.`,
+          );
+        }
+      } else if (vendor.trustScoreStatus !== 'pending') {
         failures.push(
-          `${alternative.id}:${vendor.id} has trustScoreStatus="${String(vendor.trustScoreStatus)}" (expected "pending").`,
+          `${alternative.id}:${vendor.id} has unexpected trustScoreStatus="${String(vendor.trustScoreStatus)}".`,
         );
-      }
-
-      if (Object.prototype.hasOwnProperty.call(vendor, 'trustScore')) {
-        failures.push(`${alternative.id}:${vendor.id} unexpectedly has a numeric trustScore field.`);
       }
 
       if (seenIds.has(vendor.id)) {

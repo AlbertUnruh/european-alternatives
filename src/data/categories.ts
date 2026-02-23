@@ -13,14 +13,14 @@ export const categories: Category[] = [
     name: 'Email Services',
     description: 'Hosted email providers and suites',
     emoji: '✉️',
-    usGiants: ['Gmail', 'Outlook.com', 'Yahoo Mail'],
+    usGiants: ['Gmail', 'Outlook.com', 'Outlook', 'Yahoo Mail'],
   },
   {
     id: 'mail-client',
     name: 'Mail Clients',
     description: 'Desktop and mobile email apps',
     emoji: '📨',
-    usGiants: ['Microsoft Outlook (Desktop)'],
+    usGiants: ['Microsoft Outlook (Desktop)', 'Outlook'],
   },
   {
     id: 'search-engine',
@@ -34,7 +34,7 @@ export const categories: Category[] = [
     name: 'Social Media',
     description: 'Social networking platforms',
     emoji: '👥',
-    usGiants: ['Facebook', 'Instagram', 'X/Twitter', 'LinkedIn'],
+    usGiants: ['Facebook', 'Instagram', 'X/Twitter', 'LinkedIn', 'Facebook Groups', 'Reddit'],
   },
   {
     id: 'messaging',
@@ -132,7 +132,7 @@ export const categories: Category[] = [
     name: 'AI & Machine Learning',
     description: 'Artificial intelligence platforms and tools',
     emoji: '🤖',
-    usGiants: ['OpenAI', 'Google AI', 'AWS AI'],
+    usGiants: ['OpenAI', 'Google AI', 'AWS AI', 'Google Translate', 'AWS Translate', 'OpenAI DALL-E', 'Google Imagen', 'Nano Banana Pro', 'Midjourney', 'Anthropic API', 'OpenAI API'],
   },
   {
     id: 'hosting',

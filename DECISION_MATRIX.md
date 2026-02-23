@@ -16,7 +16,7 @@ Alternatives are evaluated in two tiers based on headquarters jurisdiction. Each
 | **Open-source requirement**      | None (but rewarded in scoring)                       | **Full open-source required**                                                    |
 | **Proprietary allowed?**         | Yes                                                  | No                                                                               |
 | **Partial open-source allowed?** | Yes                                                  | No                                                                               |
-| **Trust score cap**              | None (1-10)                                          | US entries capped at 4 (lifted if self-hostable)                                 |
+| **Trust score cap**              | EU cap 9.7, non-EU cap 9.5                           | US entries capped at 5.0 (FOSS base class overrides to cap 10.0)                 |
 | **Rationale**                    | European jurisdiction + GDPR provides baseline trust | Without European legal protections, only full source transparency can compensate |
 
 ### Why This Asymmetry Exists
@@ -82,79 +82,108 @@ Only when concerns are **both severe and unmitigable** does G8 trigger denial �
 
 ---
 
-## Scoring Criteria (Trust Score)
+## Scoring Criteria — Alignment v2 (Trust Score)
 
-Alternatives that pass all gateway criteria are scored on a 1-10 scale. The formula is deterministic and implemented in `src/utils/trustScore.ts`.
+Alternatives that pass all gateway criteria are scored on a 0-10 scale (one decimal place). The formula is deterministic and implemented in `src/utils/trustScore.ts`, with constants defined in `src/data/scoringConfig.ts`.
 
-> **Note on scale clamping:** The individual scoring components sum to a theoretical maximum of 11 (Jurisdiction 4 + Open-Source 3 + Privacy Signals 2 + Sovereignty Bonus 2). Reservation penalties can push the raw total below 1. The scoring algorithm clamps the result to the **[1, 10]** range via `clampScore()`. In practice: an alternative that maxes out every category earns a perfect 10 even though the unclamped sum exceeds it, an alternative that misses a minor criterion can still reach 10 if the Sovereignty Bonus compensates, and an alternative with heavy reservation penalties never drops below 1.
+The score has two layers: a **base alignment score** determined by structural factors (jurisdiction + open-source status), and a **dimensional operational score** built from evidence-based reservations (penalties) and positive signals. The full scoring model is documented in `agents/AGENT_TRUST_SCORING.md`.
 
-### Open-Source Level (0-3 points)
+### Base Class (Structural Trust)
 
-Open-source transparency is the strongest signal of trustworthiness after jurisdiction.
+Every alternative is assigned exactly one base class. Classification is automatic based on open-source level and country, with manual override available when auto-detection would be wrong.
 
-| Level                   | Points | What It Means                                                                                                                           |
-|-------------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| **Full open-source**    | 3      | Client AND server code publicly available under OSI-approved license. Anyone can audit, fork, or self-host.                             |
-| **Partial open-source** | 2      | Client code is open but server/backend is proprietary (e.g., Tuta, Proton). Users can verify client behavior but must trust the server. |
-| **Proprietary**         | 1      | Closed-source. Privacy and security claims cannot be independently verified.                                                            |
+| Priority | Condition                                     | Base Class  | Base Score |
+|----------|-----------------------------------------------|-------------|------------|
+| 1        | `openSourceLevel: 'full'`                     | `foss`      | 80         |
+| 2        | EU member state                               | `eu`        | 70         |
+| 3        | European non-EU (CH, NO, GB, IS)              | `nonEU`     | 65         |
+| 4        | Pan-European (`eu` meta)                      | `eu`        | 70         |
+| 5        | United States                                 | `us`        | 20         |
+| 6        | All other jurisdictions                       | `rest`      | 40         |
+| —        | Autocracy (CN, RU — via manual override only) | `autocracy` | 10         |
 
-**Preference order: full open-source > partial open-source > proprietary.** This is reflected directly in the score.
+Full open-source (`foss`) takes priority over jurisdiction — a fully open-source project from any country gets base 80. This reflects the project's conviction that verifiable source code is the strongest trust signal after European jurisdiction.
 
-### Jurisdiction (0-4 points)
+### Dimensional Operational Score (0-32 points)
 
-Jurisdiction scoring follows a trust hierarchy rooted in the project's threat model (FISA Section 702, CLOUD Act, EO 12333). EU member states under GDPR provide the strongest legal shield. European non-EU countries (CH, NO, GB, IS) have adequacy decisions but are not directly bound by GDPR. Sanctioned or authoritarian jurisdictions (RU, CN, etc.) are denied at the gateway level (G7) and never scored.
+Four operational dimensions measure trust beyond structural factors. Each dimension starts at **50% of its maximum** (the baseline). Reservations with penalties subtract from the baseline (with recency decay). Positive signals add back. Each dimension is clamped to `[0, max]`.
 
-| Jurisdiction                     | Points | Rationale                                                                 |
-|----------------------------------|--------|---------------------------------------------------------------------------|
-| EU member state                  | 4      | Direct GDPR applicability, EU court jurisdiction                          |
-| European non-EU (CH, NO, GB, IS) | 3      | Adequacy decisions, strong privacy laws, but not directly GDPR-bound      |
-| Pan-European (`eu`)              | 3      | Cross-border entity, not tied to a single EU member state                 |
-| Other (non-European, non-US)     | 2      | No European legal framework, but also no FISA/CLOUD Act exposure          |
-| United States                    | 1      | FISA 702, CLOUD Act, EO 12333 — structural threat to European users' data |
-| Sanctioned/authoritarian         | —      | Denied at gateway (G7), not scored                                        |
+| Dimension   | Max    | Baseline (50%) | What It Measures                                                             |
+|-------------|--------|----------------|------------------------------------------------------------------------------|
+| Security    | 12     | 6              | Audits, disclosure process, vulnerability handling, security architecture    |
+| Governance  | 8      | 4              | Ownership clarity, structural opacity, legal clarity, stability signals      |
+| Reliability | 6      | 3              | Incident history, status transparency, release cadence, maintenance maturity |
+| Contract    | 6      | 3              | Exportability, deletion rights, fair renewals/cancellation, anti-lock-in     |
+| **Total**   | **32** | **16**         |                                                                              |
 
-### Privacy Signals (0-2 points)
+A vetted alternative with zero reservations and zero positive signals receives an operational score of 16 (the baseline). Penalties reduce this; positive signals increase it toward the dimension maximums.
 
-| Signal Group      | Points            | Tags                                                         |
-|-------------------|-------------------|--------------------------------------------------------------|
-| Primary privacy   | +1 (if any match) | `privacy`, `gdpr`, `encryption`, `zero-knowledge`, `no-logs` |
-| Secondary privacy | +1 (if any match) | `offline`, `federated`, `local`                              |
+### Reservation Penalties
 
-> **Strict allowlist:** Privacy tags are evaluated against the exact allowlists above (defined in `src/types/index.ts` as `PRIMARY_PRIVACY_TAGS` and `SECONDARY_PRIVACY_TAGS`). Only tags that appear in these lists contribute to the privacy-signal score. Descriptive tags like `e2ee`, `no-tracking`, `zero-access`, `local-first`, or `federation` carry semantic meaning for users but do not score on their own — entries using them should also include the corresponding scoring tag (e.g., `encryption`, `zero-knowledge`, `local`, `federated`) to receive credit.
+Reservations carry structured penalty data: a **tier** (which dimension to subtract from) and an **amount**. Penalties are evidence-based and scaled by recency decay for incident-based issues.
 
-### Sovereignty Bonus (0-2 points)
+| Recency    | Multiplier | Rationale                      |
+|------------|------------|--------------------------------|
+| < 1 year   | 1.0        | Recent and fully relevant      |
+| 1-3 years  | 0.5        | Aging but still notable        |
+| 3-5 years  | 0.25       | Historical, reduced weight     |
+| >= 5 years | 0.1        | Legacy, minimal ongoing impact |
 
-Software that can be run entirely on infrastructure the user controls — whether a self-hosted server or a local device — provides **technical sovereignty** on top of any legal protections. Even if a European SaaS provider is compromised, self-hosted data stays on your infrastructure. This breaks the FISA compulsion chain: there is no third-party company to serve with a data request.
+Structural or ongoing issues (no date) receive full weight (1.0).
 
-| Condition                   | Points |
-|-----------------------------|--------|
-| `selfHostable: true`        | +2     |
-| Not self-hostable (default) | 0      |
+**Cumulative penalty cap:** Total effective penalties (after recency decay) are capped at **15 points**. No alternative loses more than 15 points from penalties, regardless of how many reservations exist. If the sum exceeds 15, each tier's penalties are scaled down proportionally to preserve relative severity distribution. This prevents runaway penalization while maintaining differentiation between clean and problematic alternatives.
 
-The `selfHostable` field is `true` when the software can be fully operated on user-controlled infrastructure (own server, own device) without relying on any third-party server for core functionality. This includes:
-- **Server software with self-hosting support** — Nextcloud, Mastodon, Jitsi, Vaultwarden, etc.
-- **Local-first tools** — KeePassXC, LibreOffice, Ollama — where all data stays on the user's device.
-- **Self-hosting platforms** — Home Assistant, openHAB, Raspberry Pi ecosystem.
+### Hard Caps
 
-It does **not** include SaaS-only services, client applications that depend on a remote server for core functionality, or VPN/browser software that inherently connects to external infrastructure.
+Each base class has a ceiling that cannot be exceeded, enforcing sovereignty boundaries.
 
-### Reservation Penalties (deducted from score)
+| Base Class  | Cap        |
+|-------------|------------|
+| `foss`      | 100 (10.0) |
+| `eu`        | 97 (9.7)   |
+| `nonEU`     | 95 (9.5)   |
+| `rest`      | 70 (7.0)   |
+| `us`        | 50 (5.0)   |
+| `autocracy` | 30 (3.0)   |
 
-Reservations reduce the trust score based on severity. The values below are the **maximum** penalty per reservation — the actual deduction may be lower depending on context, mitigating factors, and how many reservations compound.
+**Ad-surveillance cap:** Alternatives with a core ad-surveillance business model are additionally capped at 45 (4.5). The lowest applicable cap wins.
 
-| Severity | Max Penalty | When Applied                                                      |
-|----------|-------------|-------------------------------------------------------------------|
-| Major    | up to -3    | Serious incidents, systemic issues, or critical trust failures    |
-| Moderate | up to -2    | Notable concerns that users should be aware of                    |
-| Minor    | up to -1    | Small caveats or historical incidents with limited ongoing impact |
+### Score Computation
 
-### US Hard Cap
+The final score follows this formula:
 
-US-based entries are capped at a maximum trust score of **4**, reflecting the jurisdictional threat of FISA 702, the CLOUD Act, and EO 12333 to European users' data.
+```
+raw = baseScore + operationalTotal
+capped = min(raw, lowestApplicableCap)
+final = clamp(capped, 0, 100)
+displayed = round(final) / 10    (shown as X.X / 10)
+```
 
-**Exception — self-hostable entries:** The cap does **not** apply when `selfHostable: true`. Self-hosting on user-controlled infrastructure fully breaks the FISA compulsion chain — the US company has no data to produce under compulsion, because the user runs everything on their own (presumably European) infrastructure. Combined with full open-source (required for US entries by G6), the user can audit the code and verify no data exfiltration. The jurisdictional threat is structurally neutralized.
+### Interpreting the Score Scale
 
-This means a US-based, fully open-source, self-hostable alternative can score above 4 — the sovereignty bonus and openness score are not wasted.
+Vetted alternative scores intentionally cluster in the **7.0-10.0 range** for European and FOSS entries. This is by design, not a deficiency.
+
+**Why base class dominates:** The base score (65-80 for European/FOSS entries) constitutes the majority of the final score because structural trust — jurisdiction and open-source license — is the primary signal this project cares about. A European company under GDPR with full source transparency has already cleared the highest bar. Operational dimensions provide differentiation *within* a class, not between classes.
+
+**Why the 50% baseline exists:** Vetted alternatives have been researched and scored with evidence. Awarding 50% of each dimension's maximum by default reflects that inclusion itself implies demonstrated credibility — these are real, maintained products that passed all gateway criteria. Penalties subtract from this baseline when evidence of problems exists; positive signals raise it when evidence of excellence exists.
+
+**Practical score floors** (maximum penalties, no positive signals):
+
+| Base Class | Floor Score    | Rationale                                                                               |
+|------------|----------------|-----------------------------------------------------------------------------------------|
+| `foss`     | ~8.1           | Even heavily penalized FOSS retains structural advantage of verifiable code             |
+| `eu`       | ~7.1           | Even heavily penalized EU retains GDPR jurisdictional shield                            |
+| `nonEU`    | ~6.6           | European non-EU retains strong privacy law baseline                                     |
+| `rest`     | ~4.1           | Non-European, non-FOSS: structural trust is limited                                     |
+| `us`       | ~2.1 (cap 5.0) | Low base reflects jurisdictional risk; cap prevents exceeding 5.0 regardless of signals |
+
+These floors are intentional. They reflect the project's core thesis: structural factors (where a company is incorporated, whether its code is auditable) matter more than any single operational incident. A European company that has had security issues is still structurally safer for European users than a US company with a clean record, because the legal compulsion threat (FISA 702, CLOUD Act) is a permanent structural risk, not an incident.
+
+**Score differentiation happens within classes.** Two EU proprietary alternatives might score 7.5 and 8.8 — the difference comes entirely from their operational track records (audits, incidents, governance transparency, contract fairness). This is where the dimensional scoring provides value.
+
+### Pending Alternatives (Non-Vetted)
+
+Alternatives that have not yet been through deep research and formal scoring display **"Trust Score Pending"** instead of a numeric score. Internally, a simplified heuristic is used for sorting only — it estimates penalties from reservation severity, infers penalty tiers from reservation text, and estimates positive signals from tags. Non-vetted alternatives also receive a dimensional discount (dimensions start at 25% of max instead of 50%) to reflect lower confidence. These heuristic scores are never displayed to users.
 
 ---
 
@@ -180,11 +209,11 @@ Alternatives that store user data but do not offer standardized data export — 
 
 This trigger applies to any service that stores user data in the cloud or on vendor-controlled infrastructure. It does **not** apply to purely local/offline tools with no cloud storage component — if data never leaves the user's device, there is no portability concern.
 
-| Condition | Action |
-|---|---|
+| Condition                                                                            | Action                                                     |
+|--------------------------------------------------------------------------------------|------------------------------------------------------------|
 | Service stores user data but offers no standardized export (JSON, CSV, open formats) | Add `minor` reservation citing data portability limitation |
-| Service stores user data and provides standardized export | No reservation needed |
-| Tool is purely local/offline with no cloud storage | Not applicable |
+| Service stores user data and provides standardized export                            | No reservation needed                                      |
+| Tool is purely local/offline with no cloud storage                                   | Not applicable                                             |
 
 ### Hosting Transparency (Reservation Trigger)
 
@@ -199,10 +228,10 @@ This does **not** disqualify a service. Hosting choices are operational decision
 
 If neither condition applies:
 
-| Condition | Reservation Severity | Rationale |
-|---|---|---|
-| Primary infrastructure on US-owned cloud, no E2E encryption, not self-hostable | `moderate` | CLOUD Act exposure via infrastructure provider; European jurisdiction partially undermined |
-| Primary infrastructure on US-owned cloud, partial mitigation (e.g., server-side encryption with provider-managed keys) | `minor` | Reduced but not eliminated exposure; provider-managed keys can be compelled alongside the data |
+| Condition                                                                                                              | Reservation Severity | Rationale                                                                                      |
+|------------------------------------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------|
+| Primary infrastructure on US-owned cloud, no E2E encryption, not self-hostable                                         | `moderate`           | CLOUD Act exposure via infrastructure provider; European jurisdiction partially undermined     |
+| Primary infrastructure on US-owned cloud, partial mitigation (e.g., server-side encryption with provider-managed keys) | `minor`              | Reduced but not eliminated exposure; provider-managed keys can be compelled alongside the data |
 
 **Scope limits:**
 - This trigger targets the **primary hosting infrastructure** where user data is stored and processed. Incidental US dependencies (a CDN edge node, a single third-party API call) do not trigger it.
@@ -214,8 +243,9 @@ Each reservation includes:
 - **id** — unique identifier
 - **text / textDe** — English and German description
 - **severity** — `major`, `moderate`, or `minor`
-- **date** — when the incident occurred (if applicable)
+- **date** — when the incident occurred (if applicable; used for recency decay)
 - **sourceUrl** — link to evidence (required for major/moderate)
+- **penalty** (optional) — structured penalty with `tier` (security, governance, reliability, or contract) and `amount` (positive integer, subtracted from the matching dimension). Omit only for informational-only reservations that should not affect the score; when omitted, the engine estimates the penalty from severity and text
 
 ---
 
@@ -237,17 +267,16 @@ This ensures transparency and prevents re-litigation of settled decisions.
 Is the company genuinely headquartered in Europe?
 ├── YES (Tier 1: European)
 │   └── Passes all gateway criteria (G1-G5, G7-G8)?
-│       ├── YES → INCLUDED (scored 1-10, reservations if needed)
-│       │   ├── Full open-source    → +3 points
-│       │   ├── Partial open-source → +2 points
-│       │   ├── Proprietary         → +1 point (still allowed)
-│       │   └── Self-hostable       → +2 sovereignty bonus
+│       ├── YES → INCLUDED (scored 0-10, reservations if needed)
+│       │   ├── Full open-source    → base class 'foss' (base 80)
+│       │   ├── Partial / proprietary → base class 'eu' or 'nonEU' (base 65-70)
+│       │   └── + operational dimensions (security, governance, reliability, contract)
 │       └── NO  → DENIED (documented in DENIED_ALTERNATIVES.md)
 │
 └── NO (Tier 2: Non-European)
     └── Is it fully open-source (client + server, OSI license)?
         ├── YES → Passes all gateway criteria (G1-G5, G7-G8)?
-        │   ├── YES → INCLUDED (scored; US cap at 4, lifted if self-hostable)
+        │   ├── YES → INCLUDED (base class 'foss'; cap at 10.0)
         │   └── NO  → DENIED
         └── NO  → NOT ELIGIBLE (non-European + not fully open-source)
 ```
@@ -256,15 +285,15 @@ Is the company genuinely headquartered in Europe?
 
 ## Examples Demonstrating Consistency
 
-| Alternative     | Country           | Open Source | Outcome                              | Reasoning                                                                                                               |
-|-----------------|-------------------|-------------|--------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **Nextcloud**   | DE                | Full        | Included (score ~9.8)                | European, fully open-source, privacy-focused                                                                            |
-| **Netcup**      | DE                | None        | Included (lower score)               | European jurisdiction provides trust baseline; proprietary is penalized in score but allowed                            |
-| **Bitwarden**   | US                | Full        | Included (self-hostable, cap lifted) | Non-European, but fully open-source + self-hostable breaks FISA compulsion chain; US cap does not apply                 |
-| **black.com**   | AT                | None        | Included (with reservations)         | European jurisdiction provides trust baseline; proprietary + founder SEC history documented as reservations, not denial |
-| **Hubitat**     | US                | None        | Not eligible                         | Non-European AND proprietary — fails G6                                                                                 |
-| **Cryptostorm** | CA                | —           | Denied                               | Fails G1: claimed Iceland but actually Vancouver, Canada. Also fails G8.                                                |
-| **ONLYOFFICE**  | RU (via LV shell) | Full        | Denied                               | Fails G1 (shell company) and G7 (sanctions exposure to Russia)                                                          |
+| Alternative     | Country           | Open Source | Outcome                      | Reasoning                                                                                                                           |
+|-----------------|-------------------|-------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| **Nextcloud**   | DE                | Full        | Included (high score)        | Base class `foss` (base 80) + strong operational signals; EU + FOSS is the highest-trust combination                                |
+| **Netcup**      | DE                | None        | Included (lower score)       | Base class `eu` (base 70); proprietary lacks the `foss` base class boost but European jurisdiction provides trust baseline          |
+| **Bitwarden**   | US                | Full        | Included (FOSS base class)   | Base class `foss` (base 80) overrides US origin; full open-source + self-hostable provides structural trust despite US jurisdiction |
+| **black.com**   | AT                | None        | Included (with reservations) | Base class `eu` (base 70); founder SEC history documented as reservations with governance penalties, not denial                     |
+| **Hubitat**     | US                | None        | Not eligible                 | Non-European AND proprietary — fails G6                                                                                             |
+| **Cryptostorm** | CA                | —           | Denied                       | Fails G1: claimed Iceland but actually Vancouver, Canada. Also fails G8.                                                            |
+| **ONLYOFFICE**  | RU (via LV shell) | Full        | Denied                       | Fails G1 (shell company) and G7 (sanctions exposure to Russia)                                                                      |
 
 ---
 
