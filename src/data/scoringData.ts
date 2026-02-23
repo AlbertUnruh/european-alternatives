@@ -25,30 +25,3 @@ export const scoringMetadata: Record<string, ScoringMetadata> = {
   'vikunja': { baseClassOverride: 'foss' },
 };
 
-// Scoring metadata for vetted US vendors.
-
-export const usVendorScoringMetadata: Record<string, ScoringMetadata> = {
-  'atlassian': {}, // B2B subscription model, not ad-funded
-  'bing': { isAdSurveillance: true },
-  'gmail': { isAdSurveillance: true },
-  'google-analytics': { isAdSurveillance: true },
-  'google-authenticator': { isAdSurveillance: true },
-  'google-chrome': { isAdSurveillance: true },
-  'google-docs': { isAdSurveillance: true },
-  'google-drive': { isAdSurveillance: true },
-  'google-gemini': { isAdSurveillance: true },
-  'google-home': { isAdSurveillance: true },
-  'google-maps': { isAdSurveillance: true },
-  'google-meet': { isAdSurveillance: true },
-  'google-search': { isAdSurveillance: true },
-  'google-translate': { isAdSurveillance: true },
-  'google-workspace': { isAdSurveillance: true },
-  'meta': { isAdSurveillance: true },
-  'microsoft': {}, // Primarily enterprise/cloud revenue, not ad-surveillance core
-  'nano-banana-pro': { isAdSurveillance: true },
-  'reddit': { isAdSurveillance: true },
-  'whatsapp': { isAdSurveillance: true },
-  'x-corp': { isAdSurveillance: true },
-  'yahoo': { isAdSurveillance: true },
-  'youtube': { isAdSurveillance: true },
-};

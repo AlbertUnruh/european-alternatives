@@ -65,7 +65,7 @@ Further concerns:
 
 - [TU Berlin — switches to Collabora Online due to sanctions](https://www.tu.berlin/en/campusmanagement/news-details/umstellung-tubcloud-auf-collabora-online)
 - [University of Mainz — switches to open-source ONLYOFFICE version](https://www.en-zdv.uni-mainz.de/2023/05/30/software-onlyoffice-will-be-switched-to-the-open-source-version/)
-- [Leibniz University Hannover — discontinues ONLYOFFICE](https://www.luis.uni-hannover.de/en/news/details/news/neues-online-office-paket-an-der-luh
+- [Leibniz University Hannover — discontinues ONLYOFFICE](https://www.luis.uni-hannover.de/en/news/details/news/neues-online-office-paket-an-der-luh)
 - [DMS Solutions — cuts off relations with ONLYOFFICE](https://dms-solutions.co/news/dms-solutions-cuts-off-business-relations-with-onlyoffice-due-to-onlyoffice-close-ties-with-russia/)
 - [soft Xpansion — terminates cooperation with Ascensio System SIA](https://softxpansion.global/resources/prypynyaye-spivpratsyu-z-ascensio-system-sia)
 - [FOSS Force — Lyon adopts OnlyOffice: From Russia With Love](https://fossforce.com/2025/07/lyon-france-adopts-onlyoffice-from-russia-with-love/)

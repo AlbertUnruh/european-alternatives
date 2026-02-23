@@ -4,7 +4,7 @@ import { researchAlternatives } from './researchAlternatives';
 import { reservationsById } from './trustOverrides';
 import { scoringMetadata } from './scoringData';
 import { positiveSignalsById } from './positiveSignals';
-import { assignBaseClass, calculateTrustScoreV11, withEstimatedPenalties } from '../utils/trustScore';
+import { assignBaseClass, calculateSimpleTrustScore, calculateTrustScoreV11, withEstimatedPenalties } from '../utils/trustScore';
 import { buildUSVendorComparisons } from './usVendors';
 
 const pricingLikeTagKeys = new Set(['free', 'freemium', 'paid', 'free-and-paid']);
@@ -106,7 +106,16 @@ function mergeCatalogue(): Alternative[] {
       trustScoreStatus = 'ready';
       trustScoreBreakdown = result.breakdown;
     } else {
-      trustScore = undefined;
+      // Non-vetted: compute heuristic score for internal sorting only.
+      // UI still shows "Trust Score Pending" (gated by trustScoreStatus).
+      const heuristic = calculateSimpleTrustScore({
+        country: alternative.country,
+        openSourceLevel,
+        tags: alternative.tags,
+        selfHostable: alternative.selfHostable,
+        reservations,
+      });
+      trustScore = heuristic.score;
       trustScoreStatus = 'pending';
     }
 
