@@ -1811,14 +1811,6 @@ export const reservationsById: Record<string, Reservation[]> = {
       sourceUrl: 'https://github.com/Chocobozzz/PeerTube/releases/tag/v7.1.1',
       penalty: { tier: 'security', amount: 4 },
     },
-    {
-      id: 'community-license-not-osi',
-      text: 'Community license terms include usage restrictions, so model licensing is not fully open-source equivalent.',
-      textDe: 'Die Community-Lizenz enthält Nutzungseinschränkungen und ist damit nicht vollständig mit Open-Source-Lizenzen gleichzusetzen.',
-      severity: 'moderate',
-      sourceUrl: 'https://stability.ai/community-license-agreement',
-      penalty: { tier: 'governance', amount: 2 },
-    },
   ],
   startmail: [
     {

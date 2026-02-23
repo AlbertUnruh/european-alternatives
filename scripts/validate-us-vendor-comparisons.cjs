@@ -93,14 +93,22 @@ function validateUSVendorComparisons(alternatives) {
         failures.push(`${alternative.id}: vendor entry has an invalid name.`);
       }
 
-      if (vendor.trustScoreStatus !== 'pending') {
+      if (vendor.trustScoreStatus !== 'pending' && vendor.trustScoreStatus !== 'ready') {
         failures.push(
-          `${alternative.id}:${vendor.id} has trustScoreStatus="${String(vendor.trustScoreStatus)}" (expected "pending").`,
+          `${alternative.id}:${vendor.id} has trustScoreStatus="${String(vendor.trustScoreStatus)}" (expected "pending" or "ready").`,
         );
       }
 
-      if (Object.prototype.hasOwnProperty.call(vendor, 'trustScore')) {
-        failures.push(`${alternative.id}:${vendor.id} unexpectedly has a numeric trustScore field.`);
+      if (vendor.trustScoreStatus === 'ready' && typeof vendor.trustScore !== 'number') {
+        failures.push(
+          `${alternative.id}:${vendor.id} has trustScoreStatus="ready" but trustScore is not a number (got ${typeof vendor.trustScore}).`,
+        );
+      }
+
+      if (vendor.trustScoreStatus === 'pending' && Object.prototype.hasOwnProperty.call(vendor, 'trustScore') && vendor.trustScore !== undefined) {
+        failures.push(
+          `${alternative.id}:${vendor.id} has trustScoreStatus="pending" but unexpectedly has a trustScore value.`,
+        );
       }
 
       if (seenIds.has(vendor.id)) {

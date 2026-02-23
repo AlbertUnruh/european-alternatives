@@ -48,7 +48,7 @@ export function assignBaseClass(
 function yearsSince(dateStr: string): number {
   const then = new Date(dateStr);
   const now = new Date();
-  return (now.getTime() - then.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+  return Math.max(0, (now.getTime() - then.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
 }
 
 /** Recency multiplier: structural/ongoing penalties (no date) get 1.0. */

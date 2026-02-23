@@ -28,6 +28,7 @@ export const scoringMetadata: Record<string, ScoringMetadata> = {
 // Scoring metadata for vetted US vendors.
 
 export const usVendorScoringMetadata: Record<string, ScoringMetadata> = {
+  'atlassian': {}, // B2B subscription model, not ad-funded
   'bing': { isAdSurveillance: true },
   'gmail': { isAdSurveillance: true },
   'google-analytics': { isAdSurveillance: true },
@@ -43,6 +44,7 @@ export const usVendorScoringMetadata: Record<string, ScoringMetadata> = {
   'google-translate': { isAdSurveillance: true },
   'google-workspace': { isAdSurveillance: true },
   'meta': { isAdSurveillance: true },
+  'microsoft': {}, // Primarily enterprise/cloud revenue, not ad-surveillance core
   'nano-banana-pro': { isAdSurveillance: true },
   'reddit': { isAdSurveillance: true },
   'whatsapp': { isAdSurveillance: true },
